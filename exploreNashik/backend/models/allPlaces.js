@@ -1,0 +1,76 @@
+const mongoose = require("mongoose");
+
+const placeSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    // image: {
+    //   type: String,
+    //   required: true,
+    // },
+    category: {
+      type: String,
+      required: true,
+    },
+    subcategory: {
+      type: String,
+      required: true,
+    },
+
+    description: {
+      type: String,
+      required: true,
+    },
+    location: {
+      type: String,
+      required: true,
+    },
+
+    distance: {
+      type: Number,
+      required: true,
+    },
+
+    bestTime: {
+      type: String,
+    },
+    timings: {
+      type: String,
+    },
+
+    entry_fee: {
+      type: String,
+    },
+    contact_number: {
+      type: String,
+    },
+
+    cuisine: {
+      type: [String],
+    },
+    priceRange: {
+      type: String,
+    },
+
+    rating: {
+      type: Number,
+    },
+    reviews: {
+      type: Number,
+    },
+    difficulty: {
+      type: String,
+    },
+
+    services: {
+      type: [String],
+    },
+
+
+
+  },
+  { timestamps: true },
+);
+module.exports = mongoose.model("Place", placeSchema);
