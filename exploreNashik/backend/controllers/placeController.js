@@ -17,7 +17,7 @@ exports.getAllPlaces = async (req, res) => {
 exports.createPlace = async (req, res) => {
     try {
         const newPlace =await  place.create(req.body);
-        res.status(201).json(place);
+        res.status(201).json(newPlace);
     } catch (error) {
     res.status(400).json({ error: error.message });       
     }
