@@ -10,7 +10,7 @@ const places = [
     price_range: "₹₹",
     speciality: null,
     popular_dish: null,
-    distance_from_city_km: null,
+    distance: null,
     best_time: null,
     entry_fee: null,
     services: null,
@@ -43,13 +43,10 @@ const places = [
     location: { address: "College Road, Nashik", lat: 19.995, lng: 73.780 },
     best_places: null,
     timings: "5:00 PM - 10:30 PM",
-    price_range: "₹",
-    speciality: null,
+ 
     popular_dish: "Pani Puri",
     distance_from_city_km: null,
-    best_time: null,
-    entry_fee: null,
-    services: null,
+   
     contact_number: null,
     rating: 4.2
   },

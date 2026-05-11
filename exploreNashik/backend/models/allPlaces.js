@@ -6,10 +6,18 @@ const placeSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    // image: {
-    //   type: String,
-    //   required: true,
-    // },
+   images: [
+  {
+    imageUrl: {
+      type: String,
+      required: true
+    },
+    publicId: {
+      type: String,
+      required: true
+    }
+  }
+], 
     category: {
       type: String,
       required: true,
