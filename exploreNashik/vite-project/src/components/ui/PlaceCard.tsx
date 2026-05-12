@@ -1,7 +1,14 @@
+
 const PlaceCard = ({ place }: any) => {
+
   return (
+    
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-      
+
+
+
+
+
       {/* Image */}
       <div className="relative">
         <img
@@ -9,7 +16,7 @@ const PlaceCard = ({ place }: any) => {
           alt={place.name}
           className="w-full h-48 object-cover"
         />
-
+  
         {/* Category */}
         <span className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full">
           {place.category}
