@@ -17,7 +17,7 @@ const places = [
     subCategory: "Forts",
     name: "Tringalwadi Fort",
     location: { address: "Igatpuri", lat: 19.7, lng: 73.65 },
-    distance: 45,
+    distance: 45, 
     timings: "6 AM - 6 PM",
     entry_fee: "Free",
     difficulty: "Easy",

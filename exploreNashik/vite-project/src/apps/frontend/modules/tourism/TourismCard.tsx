@@ -19,7 +19,7 @@ type Props = {
   place: Place;
 };
 
-const TourismCard: React.FC<Props> = ({ place }) => {
+const TourismCard: React.FC<Props> = ({ place= { id: 0, name: "", image: "", category: "", distance_from_nashik_km: 0, description: ""} }) => {
   return (
     <>
       <div className="mt-10 mx-5 mb-6">

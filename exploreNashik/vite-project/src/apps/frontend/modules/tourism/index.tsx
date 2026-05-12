@@ -1,7 +1,6 @@
-import { placeData } from "../../content/data";
+// import { placeData } from "../.";
 import FilterSection from "../../filter/index";
 import HeroBaner from "./HeroBaner";
-import TourismCard from "./TourismCard";
 function Tourism() {
   return (
     <>
@@ -9,7 +8,7 @@ function Tourism() {
       <FilterSection />
       {/* <PlaceCard place={placeData} /> */}
 
-      <TourismCard place={placeData} />
+      {/* <TourismCard/> */}
     </>
   );
 }
