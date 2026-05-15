@@ -12,7 +12,7 @@ const PlaceCard = ({ place }: any) => {
       {/* Image */}
       <div className="relative">
         <img
-          src={place.image}
+          src={place.images[0]?.imageUrl}
           alt={place.name}
           className="w-full h-48 object-cover"
         />

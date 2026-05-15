@@ -240,9 +240,9 @@ const ExplorePage = () => {
         setLoading(true);
 
         const res = await axios.get("http://localhost:5000/api/getPlaces");
-        console.log(res);
+        console.log(res?.data);
 
-        setPlaces(res.data.data || []);
+        setPlaces(res.data || []);
       } catch (error) {
         console.error("API fetch failed:", error);
       } finally {
@@ -292,6 +292,7 @@ const ExplorePage = () => {
     if (sortBy === "rating") {
       result.sort((a, b) => b.rating - a.rating);
     }
+    //new s
 
     if (sortBy === "reviews") {
       result.sort((a, b) => b.reviews - a.reviews);
