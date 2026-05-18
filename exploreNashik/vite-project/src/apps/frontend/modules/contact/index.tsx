@@ -1,6 +1,6 @@
+import axios from "axios";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
-import axios from "axios";
 // Define form data type
 type ContactFormData = {
   name: string;
@@ -17,53 +17,22 @@ export default function ContactForm() {
     reset,
   } = useForm<ContactFormData>();
 
-  // const onSubmit = async (data: ContactFormData) => {
-  //   try {
-  //     console.log("Form Data:", data);
-  //     await new Promise((resolve) => setTimeout(resolve, 1500));
-  //     alert("Message sent successfully!");
-  //     reset();
-  //   } catch (error) {
-  //     alert("Something went wrong");
-  //   }
-  // };
-
-
-// const onSubmit = async (data: ContactFormData) => {
-//   try {
-//     console.log("Form Data:", data);
-
-//     const response = await fetch(
-//       "http://localhost:5000/api/contact",
-//       {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(data),
-//       }
-//     );
-
-//     const result = await response.json();
-
-//     if (result.success) {
-//       alert("Message Sent Successfully");
-//       reset();
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+ 
 
 const onSubmit = async (data: ContactFormData) => {
+    console.log("FORM SUBMITTED", data);
+  try {
+    const response = await axios.post(
+      "http://localhost:5000/api/about",
+      data
+    );
 
-const response = await axios.post(
-  "http://localhost:5000/api/about",data
-);
-
-console.log(response);
-}
-
+    console.log(response);
+    reset();
+  } catch (error) {
+    console.error(error);
+  }
+};
   return (
     <div className="flex items-center justify-center p-4">
       <div className="grid md:grid-cols-2 border rounded-2xl shadow-md overflow-hidden max-w-4xl w-full md:h-[420px]">
@@ -87,7 +56,7 @@ console.log(response);
           <h2 className="text-xl font-semibold mb-4 text-center">Contact Us</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
 
-            {/* Name */}
+        {/* Name */}
             <div>
               <input
                 type="text"
@@ -98,9 +67,9 @@ console.log(response);
                 })}
                 className="w-full border rounded-md p-2 text-sm focus:ring-2 focus:ring-blue-400 outline-none"
               />
-              {errors.name && (
+              {/* {errors.name && (
                 <p className="text-red-500 text-xs">{errors.name.message}</p>
-              )}
+              )} */}
             </div>
 
             {/* Email */}
@@ -117,23 +86,12 @@ console.log(response);
                 })}
                 className="w-full border rounded-md p-2 text-sm focus:ring-2 focus:ring-blue-400 outline-none"
               />
-              {errors.email && (
+              {/* {errors.email && (
                 <p className="text-red-500 text-xs">{errors.email.message}</p>
-              )}
+              )} */}
             </div>
 
-            {/* Subject */}
-            {/* <div>
-              <input
-                type="text"
-                placeholder="Subject"
-                {...register("subject", { required: "Subject is required" })}
-                className="w-full border rounded-md p-2 text-sm focus:ring-2 focus:ring-blue-400 outline-none"
-              />
-              {errors.subject && (
-                <p className="text-red-500 text-xs">{errors.subject.message}</p>
-              )}
-            </div> */}
+          
 
             {/* Message */}
             <div>
@@ -146,9 +104,9 @@ console.log(response);
                 className="w-full border rounded-md p-2 text-sm focus:ring-2 focus:ring-blue-400 outline-none"
                 rows={3}
               />
-              {errors.message && (
+              {/* {errors.message && (
                 <p className="text-red-500 text-xs">{errors.message.message}</p>
-              )}
+              )} */}
             </div>
 
             {/* Submit */}

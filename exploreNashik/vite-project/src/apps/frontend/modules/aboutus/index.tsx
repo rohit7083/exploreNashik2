@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import axios from "axios";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
-
 // Form Types
 type ContactForm = {
   name: string;
@@ -20,11 +20,20 @@ export default function AboutUs() {
     reset,
   } = useForm<ContactForm>();
 
-  const onSubmit = (data: ContactForm) => {
-    console.log("Form Data:", data);
-    reset();
-  };
+ const onSubmit = async (data: ContactForm) => {
+    console.log("FORM SUBMITTED", data);
+  try {
+    const response = await axios.post(
+      "http://localhost:5000/api/about",
+      data
+    );
 
+    console.log(response);
+    reset();
+  } catch (error) {
+    console.error(error);
+  }
+};
   return (
     <div className="min-h-screen bg-background text-foreground px-4 md:px-10 py-10">
       {/* Hero Section */}
