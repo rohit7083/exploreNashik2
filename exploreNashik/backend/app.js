@@ -14,5 +14,6 @@ app.use(express.json());
 
 // routes
 app.use("/api", require("./routes/placeRoutes"));
+app.use("/api", require("./routes/contactRoutes"));
 
 module.exports = app;

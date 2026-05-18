@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
-
+import axios from "axios";
 // Define form data type
 type ContactFormData = {
   name: string;
   email: string;
-  subject: string;
+  // subject: string;
   message: string;
 };
 
@@ -17,16 +17,52 @@ export default function ContactForm() {
     reset,
   } = useForm<ContactFormData>();
 
-  const onSubmit = async (data: ContactFormData) => {
-    try {
-      console.log("Form Data:", data);
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      alert("Message sent successfully!");
-      reset();
-    } catch (error) {
-      alert("Something went wrong");
-    }
-  };
+  // const onSubmit = async (data: ContactFormData) => {
+  //   try {
+  //     console.log("Form Data:", data);
+  //     await new Promise((resolve) => setTimeout(resolve, 1500));
+  //     alert("Message sent successfully!");
+  //     reset();
+  //   } catch (error) {
+  //     alert("Something went wrong");
+  //   }
+  // };
+
+
+// const onSubmit = async (data: ContactFormData) => {
+//   try {
+//     console.log("Form Data:", data);
+
+//     const response = await fetch(
+//       "http://localhost:5000/api/contact",
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(data),
+//       }
+//     );
+
+//     const result = await response.json();
+
+//     if (result.success) {
+//       alert("Message Sent Successfully");
+//       reset();
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+const onSubmit = async (data: ContactFormData) => {
+
+const response = await axios.post(
+  "http://localhost:5000/api/about",data
+);
+
+console.log(response);
+}
 
   return (
     <div className="flex items-center justify-center p-4">
@@ -49,7 +85,6 @@ export default function ContactForm() {
         {/* RIGHT SIDE FORM */}
         <div className="p-4 flex flex-col justify-center md:overflow-hidden overflow-y-auto">
           <h2 className="text-xl font-semibold mb-4 text-center">Contact Us</h2>
-
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
 
             {/* Name */}
@@ -88,7 +123,7 @@ export default function ContactForm() {
             </div>
 
             {/* Subject */}
-            <div>
+            {/* <div>
               <input
                 type="text"
                 placeholder="Subject"
@@ -98,7 +133,7 @@ export default function ContactForm() {
               {errors.subject && (
                 <p className="text-red-500 text-xs">{errors.subject.message}</p>
               )}
-            </div>
+            </div> */}
 
             {/* Message */}
             <div>
