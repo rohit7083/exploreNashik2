@@ -5,6 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
+import { Toaster, toast } from 'sonner';
+
 // Form Types
 type ContactForm = {
   name: string;
@@ -20,7 +22,9 @@ export default function AboutUs() {
     reset,
   } = useForm<ContactForm>();
 
+
  const onSubmit = async (data: ContactForm) => {
+
     console.log("FORM SUBMITTED", data);
   try {
     const response = await axios.post(
@@ -29,15 +33,26 @@ export default function AboutUs() {
     );
 
     console.log(response);
+
     reset();
+toast("Event has been created", { position: "top-right" })
   } catch (error) {
     console.error(error);
   }
+
 };
+
+
+
+
   return (
+    
     <div className="min-h-screen bg-background text-foreground px-4 md:px-10 py-10">
-      {/* Hero Section */}
+      {/* Hero Section */}        
       <section className="text-center max-w-4xl mx-auto">
+         
+<Toaster />
+
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -101,7 +116,6 @@ export default function AboutUs() {
         <Card className="rounded-2xl shadow-md h-fit">
           <CardContent className="p-6">
             <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               {/* Name */}
               <div>
@@ -154,6 +168,7 @@ export default function AboutUs() {
                   </p>
                 )}
               </div>
+                         
 
               <Button type="submit" className="w-full rounded-2xl">
                 Send Message
