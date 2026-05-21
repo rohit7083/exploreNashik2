@@ -48,7 +48,7 @@ const placeSchema = new mongoose.Schema(
       type: String,
     },
 
-    entry_fee: {
+    entryFee: {
       type: String,
     },
     contact_number: {
@@ -73,6 +73,9 @@ const placeSchema = new mongoose.Schema(
     },
 
     services: {
+      type: [String],
+    },
+    facilities: {
       type: [String],
     },
   },
