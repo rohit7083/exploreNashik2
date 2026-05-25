@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 
 const PlaceCard = ({ place }: any) => {
   const navigate = useNavigate();
   const handleOpen = () => {
     navigate("/open-card", { state: { place } });
   }
+  const [showLocation, setShowLocation] = useState(false);
+
   return (
     <div onClick={handleOpen} className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden">
       {/* Image */}
@@ -40,9 +43,32 @@ const PlaceCard = ({ place }: any) => {
 
         <div className="flex justify-between mt-3 text-xs">
           <span className="text-gray-500">⏰ {place.timings}</span>
+
           <span className="text-green-600 font-medium">{place.entryFee}</span>
+
+
+
         </div>
+        <span className="text-black-600 font-xs flex justify-between mt-3 text-xs">Distance : {place.distance} km (From CBS , Nashik)</span>
+        <span className="text-black-600 font-xs flex justify-between mt-3 text-xs">Difficulty : {place.difficulty}</span>
+
+        {/* Button */}
+        <button
+          onClick={() => setShowLocation(!showLocation)}
+          className="bg-blue-500 text-white px-2 py-1 text-xs rounded-md mt-2"
+        >
+          {showLocation ? "Hide Location" : "Map"}
+        </button>
+
+        {/* Map Location Show on Click */}
+        {showLocation && (
+          <p className="text-base text-gray-400 mt-2">
+            📍 {place.mapLocation}
+          </p>
+        )}
+
       </div>
+
     </div>
   );
 };
