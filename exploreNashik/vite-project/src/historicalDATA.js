@@ -1,79 +1,10 @@
 const places = [
+
+ 
+
   {
-    category: "place of visit",
-    subCategory: "historical places",
-    name: "Harihar Fort",
-    location:
-      "Harihar Fort, Nirgudpada Village, Trimbakeshwar Taluka, Nashik District, Maharashtra 422212, India",
-    distance: 40,
-    timings: "6:00 AM - 6:00 PM",
-    entry_fee: "Free",
-    difficulty: "Hard",
-    description: `Harihar Fort, also known as Harshagad, is a historic hill fort in Nashik district, famous for its iconic near-vertical rock-cut staircase and thrilling trekking experience. Located in the Sahyadri mountain range near Trimbakeshwar, it offers breathtaking panoramic views and is a favorite among adventure enthusiasts.`,
-  },
-  {
-    category: "place of visit",
-    subCategory: "historical places",
-    name: "Tringalwadi Fort",
-    location:
-      "Tringalwadi Fort, Tringalwadi Village, Igatpuri Taluka, Nashik District, Maharashtra, India",
-    distance: 45,
-    timings: "6:00 AM - 6:00 PM",
-    entry_fee: "Free",
-    difficulty: "Easy",
-    description: `Tringalwadi Fort is a scenic hill fort near Igatpuri, known for its easy trekking route, lush greenery, and peaceful surroundings. The fort offers beautiful valley views and is ideal for beginners, nature lovers, and weekend trekkers.`,
-  },
-  {
-    category: "place of visit",
-    subCategory: "historical places",
-    name: "Anjaneri Fort",
-    location:
-      "Anjaneri Fort, Anjaneri Village, Trimbakeshwar Taluka, Nashik District, Maharashtra, India",
-    distance: 17,
-    timings: "6:00 AM - 6:00 PM",
-    entry_fee: "Free",
-    difficulty: "Medium",
-    description: `Anjaneri Fort is a historically and religiously significant hill fort believed to be the birthplace of Lord Hanuman. Located near Trimbakeshwar, it combines spiritual importance with scenic trekking trails and panoramic mountain views.`,
-  },
-  {
-    category: "place of visit",
-    subCategory: "historical places",
-    name: "Salher Fort",
-    location:
-      "Salher Fort, Salher Village, Baglan Taluka, Nashik District, Maharashtra, India",
-    distance: 110,
-    timings: "6:00 AM - 6:00 PM",
-    entry_fee: "Free",
-    difficulty: "Hard",
-    description: `Salher Fort is one of the highest forts in Maharashtra and holds major historical significance due to the famous Battle of Salher. Known for its challenging trek and spectacular summit views, it is a must-visit for serious trekkers and history enthusiasts.`,
-  },
-  {
-    category: "place of visit",
-    subCategory: "historical places",
-    name: "Mulher Fort",
-    location:
-      "Mulher Fort, Mulher Village, Baglan Taluka, Nashik District, Maharashtra, India",
-    distance: 105,
-    timings: "6:00 AM - 6:00 PM",
-    entry_fee: "Free",
-    difficulty: "Medium",
-    description: `Mulher Fort is a historically important hill fort in the Baglan region, known for its scenic trekking routes and ancient fort structures. It offers a rewarding trekking experience with beautiful views of surrounding Sahyadri landscapes.`,
-  },
-  {
-    category: "place of visit",
-    subCategory: "historical places",
-    name: "Hatgad Fort",
-    location:
-      "Hatgad Fort, Near Saputara Border, Nashik District, Maharashtra, India",
-    distance: 120,
-    timings: "6:00 AM - 6:00 PM",
-    entry_fee: "Free",
-    difficulty: "Easy",
-    description: `Hatgad Fort is a historic fort located near the Maharashtra-Gujarat border, offering scenic views of the surrounding hills and valleys. Its easy trekking route makes it suitable for beginners and casual travelers.`,
-  },
-  {
-    category: "place of visit",
-    subCategory: "historical places",
+    category: "place of Visit",
+    subcategory: "historical places",
     name: "Dhodap Fort",
     location:
       "Dhodap Fort, Dhodambe Village, Kalwan Taluka, Nashik District, Maharashtra, India",
@@ -84,8 +15,8 @@ const places = [
     description: `Dhodap Fort is the second-highest fort peak in Maharashtra and is famous for its challenging trekking route and historic significance. It attracts experienced trekkers looking for adventure and dramatic mountain views.`,
   },
   {
-    category: "place of visit",
-    subCategory: "historical places",
+    category: "place of Visit",
+    subcategory: "historical places",
     name: "Kavnai Fort",
     location:
       "Kavnai Fort, Kavnai Village, Igatpuri Taluka, Nashik District, Maharashtra, India",
@@ -96,8 +27,8 @@ const places = [
     description: `Kavnai Fort is a peaceful trekking destination near Igatpuri, known for its scenic beauty, calm surroundings, and moderate trekking trail. It is a great choice for trekkers seeking a quieter offbeat experience.`,
   },
   {
-    category: "place of visit",
-    subCategory: "historical places",
+    category: "place of Visit",
+    subcategory: "historical places",
     name: "Indrai Fort",
     location:
       "Indrai Fort, Chandwad Taluka, Nashik District, Maharashtra, India",
@@ -108,7 +39,7 @@ const places = [
     description: `Indrai Fort is a historic hill fort located in the Chandwad range, offering moderate trekking opportunities and scenic views of the surrounding landscapes. It is known for its historical ruins and peaceful environment.`,
   },
   {
-    category: "place of visit",
+    category: "placeOfVisit",
     subCategory: "historical places",
     name: "Chandwad Fort",
     location: "Chandwad Fort, Chandwad, Nashik District, Maharashtra, India",
@@ -119,7 +50,7 @@ const places = [
     description: `Chandwad Fort is a historically significant fort with easy accessibility, making it suitable for beginners and family visitors. It offers insight into regional history along with pleasant views of the surrounding area.`,
   },
   {
-    category: "place of visit",
+    category: "placeOfVisit",
     subCategory: "historical places",
     name: "Galna Fort",
     location:
@@ -131,7 +62,7 @@ const places = [
     description: `Galna Fort is an ancient hill fort near Malegaon, known for its impressive architecture, historic gateways, and scenic trekking routes. It is a rewarding destination for history lovers and trekkers alike.`,
   },
   {
-    category: "place of visit",
+    category: "placeOfVisit",
     subCategory: "historical places",
     name: "Alang Fort",
     location:
@@ -143,7 +74,7 @@ const places = [
     description: `Alang Fort is part of the legendary Alang-Madan-Kulang trekking circuit and is considered one of Maharashtra’s toughest treks. It is ideal for experienced adventure seekers looking for extreme trekking challenges.`,
   },
   {
-    category: "place of visit",
+    category: "placeOfVisit",
     subCategory: "historical places",
     name: "Madan Fort",
     location:
@@ -155,7 +86,7 @@ const places = [
     description: `Madan Fort is a rugged and demanding trekking destination in the AMK range, known for steep climbs, thrilling routes, and stunning mountain scenery. It is recommended for experienced trekkers only.`,
   },
   {
-    category: "place of visit",
+    category: "placeOfVisit",
     subCategory: "historical places",
     name: "Kulang Fort",
     location:
@@ -167,7 +98,7 @@ const places = [
     description: `Kulang Fort is a rugged hill fort in the Sahyadri range, famous for its adventurous trekking routes and remote natural beauty. It forms part of the challenging AMK circuit popular among seasoned trekkers.`,
   },
   {
-    category: "place of visit",
+    category: "placeOfVisit",
     subCategory: "historical places",
     name: "Aundha Fort",
     location:
@@ -179,7 +110,7 @@ const places = [
     description: `Aundha Fort is a scenic trekking destination in the Kalwan region, offering moderate trekking difficulty, natural beauty, and panoramic views of the surrounding hills. It is a great choice for weekend explorers.`,
   },
   {
-    category: "place of visit",
+    category: "placeOfVisit",
     subCategory: "historical places",
     name: "Pandavleni Caves",
     location:

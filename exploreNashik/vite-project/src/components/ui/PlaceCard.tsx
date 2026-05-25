@@ -1,14 +1,12 @@
+import { useNavigate } from "react-router-dom";
 
 const PlaceCard = ({ place }: any) => {
-
+  const navigate = useNavigate();
+  const handleOpen = () => {
+    navigate("/open-card", { state: { place } });
+  }
   return (
-    
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-
-
-
-
-
+    <div onClick={handleOpen} className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden">
       {/* Image */}
       <div className="relative">
         <img
@@ -16,7 +14,7 @@ const PlaceCard = ({ place }: any) => {
           alt={place.name}
           className="w-full h-48 object-cover"
         />
-  
+
         {/* Category */}
         <span className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full">
           {place.category}
@@ -38,15 +36,11 @@ const PlaceCard = ({ place }: any) => {
           {place.shortDescription}
         </p>
 
-        <p className="text-xs text-gray-400 mt-2">
-          📍 {place.location}
-        </p>
+        <p className="text-xs text-gray-400 mt-2">📍 {place.location}</p>
 
         <div className="flex justify-between mt-3 text-xs">
           <span className="text-gray-500">⏰ {place.timings}</span>
-          <span className="text-green-600 font-medium">
-            {place.entryFee}
-          </span>
+          <span className="text-green-600 font-medium">{place.entryFee}</span>
         </div>
       </div>
     </div>

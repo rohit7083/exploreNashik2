@@ -91,6 +91,10 @@ const placeSchema = new mongoose.Schema(
     facilities: {
       type: [String],
     },
+    mapLocation: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true },
 );

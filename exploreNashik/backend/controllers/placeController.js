@@ -130,11 +130,14 @@ exports.createPlace = async (req, res) => {
 
     res.status(201).json(newPlace);
   } catch (error) {
-    console.error(error);
-    res.status(400).json({
-      error: error.message,
-    });
-  }
+  console.error("CREATE ERROR:", error);
+
+  return res.status(500).json({
+    success: false,
+    message: error.message,
+    stack: error.stack,
+  });
+}
 };
 
 // Update place
@@ -179,8 +182,11 @@ exports.updatePlace = async (req, res) => {
 
     res.status(200).json(updatedPlace);
   } catch (error) {
-    res.status(400).json({
-      error: error.message,
+    console.log(error);
+    console.error("REAL ERROR:", error);
+    return res.status(500).json({
+      message: error.message,
+      error,
     });
   }
 };
