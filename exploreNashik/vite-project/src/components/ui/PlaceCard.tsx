@@ -54,16 +54,21 @@ const PlaceCard = ({ place }: any) => {
 
         {/* Button */}
         <button
-          onClick={() => setShowLocation(!showLocation)}
+          onClick={() => {
+            // e.stopPropagation(); 
+            window.open(place.mapLocation, "_blank");
+          }}
           className="bg-blue-500 text-white px-2 py-1 text-xs rounded-md mt-2"
         >
-          {showLocation ? "Hide Location" : "Map"}
+          Map
         </button>
 
         {/* Map Location Show on Click */}
         {showLocation && (
           <p className="text-base text-gray-400 mt-2">
             📍 {place.mapLocation}
+            console.log(mapLocation);
+
           </p>
         )}
 
