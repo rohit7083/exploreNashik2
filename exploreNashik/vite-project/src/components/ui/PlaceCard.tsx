@@ -50,18 +50,8 @@ const PlaceCard = ({ place }: any) => {
         <span className="text-black-600 font-xs flex justify-between mt-3 text-xs">Distance : {place.distance} km (From CBS , Nashik)</span>
         <span className="text-black-600 font-xs flex justify-between mt-3 text-xs">Difficulty : {place.difficulty}</span>
 
-        {/* Button */}
-        <button
-          onClick={(e) => {
-            e.stopPropagation(); // card click थांबवेल
-            window.open(place.mapLocation, "_blank");
-          }}
-          className="bg-blue-500 text-white px-2 py-1 text-xs rounded-md mt-2"
-        >
-          Map
-        </button>
 
-        
+
 
       </div>
 
