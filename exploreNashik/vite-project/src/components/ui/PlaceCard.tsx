@@ -1,13 +1,18 @@
 import { useNavigate } from "react-router-dom";
+import { Button } from "./button";
 
 const PlaceCard = ({ place }: any) => {
   const navigate = useNavigate();
   const handleOpen = () => {
     navigate("/open-card", { state: { place } });
-  }
+  };
 
   return (
-    <div onClick={handleOpen} className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden">
+    <div
+      
+      className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden"
+    >
+      <div onClick={handleOpen}>
       {/* Image */}
       <div className="relative">
         <img
@@ -43,18 +48,20 @@ const PlaceCard = ({ place }: any) => {
           <span className="text-gray-500">⏰ {place.timings}</span>
 
           <span className="text-green-600 font-medium">{place.entryFee}</span>
-
-
-
         </div>
-        <span className="text-black-600 font-xs flex justify-between mt-3 text-xs">Distance : {place.distance} km (From CBS , Nashik)</span>
-        <span className="text-black-600 font-xs flex justify-between mt-3 text-xs">Difficulty : {place.difficulty}</span>
-
-
-
-
+        <span className="text-black-600 font-xs flex justify-between mt-3 text-xs">
+          Distance : {place.distance} km (From CBS , Nashik)
+        </span>
+        <span className="text-black-600 font-xs flex justify-between mt-3 text-xs">
+          Difficulty : {place.difficulty}
+        </span>
       </div>
-
+      </div>
+<a href={place.mapLocation} target="_blank" rel="noopener noreferrer">
+      <Button  className="flex-1 bg-black hover:bg-gray-800 mt-4">
+       Map
+      </Button>
+      </a>
     </div>
   );
 };
