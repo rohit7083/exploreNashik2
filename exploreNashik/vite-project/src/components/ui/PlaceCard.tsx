@@ -1,12 +1,10 @@
 import { useNavigate } from "react-router-dom";
-// import React, { useState } from "react";
 
 const PlaceCard = ({ place }: any) => {
   const navigate = useNavigate();
   const handleOpen = () => {
     navigate("/open-card", { state: { place } });
   }
-  // const [showLocation, setShowLocation] = useState(false);
 
   return (
     <div onClick={handleOpen} className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden">
@@ -54,8 +52,8 @@ const PlaceCard = ({ place }: any) => {
 
         {/* Button */}
         <button
-          onClick={() => {
-            // e.stopPropagation(); 
+          onClick={(e) => {
+            e.stopPropagation(); // card click थांबवेल
             window.open(place.mapLocation, "_blank");
           }}
           className="bg-blue-500 text-white px-2 py-1 text-xs rounded-md mt-2"
@@ -63,14 +61,7 @@ const PlaceCard = ({ place }: any) => {
           Map
         </button>
 
-        {/* Map Location Show on Click */}
-        {/* {showLocation && (
-          <p className="text-base text-gray-400 mt-2">
-            📍 {place.mapLocation}
-            console.log(mapLocation);
-
-          </p>
-        )} */}
+        
 
       </div>
 
