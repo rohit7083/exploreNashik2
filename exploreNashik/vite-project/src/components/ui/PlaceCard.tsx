@@ -5,13 +5,14 @@ const PlaceCard = ({ place }: any) => {
   const navigate = useNavigate();
   const handleOpen = () => {
     navigate("/open-card", { state: { place } });
-  };
+  }; 
 
   return (
     <div
 
       className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden"
     >
+      
       <div onClick={handleOpen}>
         {/* Image */}
         <div className="relative">
