@@ -5,14 +5,14 @@ const PlaceCard = ({ place }: any) => {
   const navigate = useNavigate();
   const handleOpen = () => {
     navigate("/open-card", { state: { place } });
-  }; 
+  };
 
   return (
     <div
 
       className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-xl transition overflow-hidden"
     >
-      
+
       <div onClick={handleOpen}>
         {/* Image */}
         <div className="relative">
@@ -53,9 +53,9 @@ const PlaceCard = ({ place }: any) => {
           <span className="text-black-600 font-xs flex justify-between mt-3 text-xs">
             Distance : {place.distance} km (From CBS , Nashik)
           </span>
-          <span className="text-black-600 font-xs flex justify-between mt-3 text-xs">
+          {place.difficulty && (<span className="text-black-600 font-xs flex justify-between mt-3 text-xs">
             Difficulty : {place.difficulty}
-          </span>
+          </span>)}
         </div>
       </div>
       <a href={place.mapLocation} target="_blank" rel="noopener noreferrer">
