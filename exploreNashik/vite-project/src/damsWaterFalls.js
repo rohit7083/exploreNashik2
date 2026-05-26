@@ -1,15 +1,5 @@
 [
-  {
-    "name": "Kadwa Dam",
-    "category": "place to visit",
-    "subcategory": "dam",
-    "description": "Scenic dam near Pimpalgaon Baswant, surrounded by greenery.",
-    "location": "Pimpalgaon Baswant, Nashik District, Maharashtra, India",
-    "distance": 30,
-    "bestTime": "Monsoon",
-    "timings": "Open all day",
-    "entry_fee": "Free"
-  },
+
   {
     "name": "Waghad Dam",
     "category": "place to visit",

@@ -1,47 +1,7 @@
 // restaurant
 
 [
-  {
-    name: "Sadhana Restaurant",
-    category: "food",
-    subCategory: "Restaurants",
-    description:
-      "Famous for authentic Maharashtrian food served in traditional style near vineyards.",
-    location: "Gangapur Road, Nashik",
-    distance: 10,
-    cuisine: ["Maharashtrian", "Indian"],
-    timings: "11:00 AM - 10:30 PM",
 
-    contact_number: "+919822123456",
-    rating: 4.5,
-  },
-  {
-    name: "Shamsundar Misal",
-    category: "food",
-    subCategory: "Restaurants",
-    description: "Legendary spot for spicy Nashik-style misal pav.",
-    location: "Panchavati, Nashik",
-    distance: 3,
-    cuisine: ["Street Food", "Maharashtrian"],
-    timings: "8:00 AM - 9:00 PM",
-
-    contact_number: null,
-    rating: 4.6,
-  },
-  {
-    name: "Barbeque Ville",
-    category: "food",
-    subCategory: "Restaurants",
-    description:
-      "Popular BBQ buffet restaurant with live grill and unlimited food.",
-    location: "College Road, Nashik",
-    distance: 2,
-    cuisine: ["BBQ", "Buffet", "Indian"],
-    timings: "12:00 PM - 11:00 PM",
-
-    contact_number: "+919890123456",
-    rating: 4.3,
-  },
   {
     name: "Spice Route",
     category: "food",

@@ -6,18 +6,7 @@ const placeSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    // images: [
-    //   {
-    //     imageUrl: {
-    //       type: String,
-    //       required: true,
-    //     },
-    //     publicId: {
-    //       type: String,
-    //       required: true,
-    //     },
-    //   },
-    // ],
+
 
     images: [
       {
@@ -95,6 +84,11 @@ const placeSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    contact:{
+      type:Number,
+
+    }
+    
   },
   { timestamps: true },
 );
