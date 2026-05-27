@@ -117,6 +117,11 @@ const PlaceCard = ({ place }: any) => {
       label: "🍽 Cuisine",
       category: "food", // only for food
     },
+    {
+      key: "services",
+      label: "services",
+      category: "place to visit",
+    }
   ];
 
   return (
