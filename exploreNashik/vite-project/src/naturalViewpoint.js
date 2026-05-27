@@ -1,48 +1,5 @@
 [
-  {
-    "name": "Anjaneri Hills Viewpoint",
-    "category": "place to visit",
-    "subcategory": "Viewpoint",
-    "description": "Anjaneri Hills Viewpoint is a scenic destination near Trimbakeshwar, known for its breathtaking panoramic views of Nashik city, surrounding forests, and the Sahyadri mountain ranges. It is a popular spot for trekkers, photographers, and nature lovers seeking peaceful sunrise, sunset, and fresh mountain air experiences.",
-    "location": "Anjaneri, Trimbakeshwar Taluka, Nashik District, Maharashtra, India",
-    "distance": 17,
-    "bestTime": "Monsoon, Winter",
-    "timings": "6 AM - 6 PM",
-    "entry_fee": "Free"
-  },
-  {
-    "name": "Brahmagiri Viewpoint",
-    "category": "place to visit",
-    "subcategory": "Viewpoint",
-    "description": "Brahmagiri Viewpoint is a stunning mountain destination near Trimbak, offering mesmerizing sunrise views, deep valleys, and lush green hill landscapes. It is a favorite among adventure seekers, spiritual travelers, and photographers looking to enjoy the natural beauty of the Western Ghats.",
-    "location": "Brahmagiri Hills, Trimbak, Nashik District, Maharashtra, India",
-    "distance": 30,
-    "bestTime": "Monsoon",
-    "timings": "6 AM - 6 PM",
-    "entry_fee": "Free"
-  },
-  {
-    "name": "Harihar Base Viewpoint",
-    "category": "place to visit",
-    "subcategory": "Viewpoint",
-    "description": "Harihar Base Viewpoint offers beautiful scenic views of green valleys, farmlands, and surrounding mountain landscapes at the base of the famous Harihar Fort. It is a peaceful destination for visitors who want to enjoy nature, photography, and the dramatic beauty of the Sahyadri region.",
-    "location": "Nirgudpada Village, Trimbakeshwar Taluka, Nashik District, Maharashtra, India",
-    "distance": 40,
-    "bestTime": "Monsoon",
-    "timings": "Open all day",
-    "entry_fee": "Free"
-  },
-  {
-    "name": "Igatpuri Mountain Viewpoint",
-    "category": "place to visit",
-    "subcategory": "Viewpoint",
-    "description": "Igatpuri Mountain Viewpoint is one of the most scenic destinations near Nashik, famous for mist-covered hills, waterfalls, railway valley views, and refreshing weather. It attracts road trippers, nature enthusiasts, and photographers, especially during the monsoon season.",
-    "location": "Igatpuri, Nashik District, Maharashtra, India",
-    "distance": 45,
-    "bestTime": "Monsoon",
-    "timings": "Open all day",
-    "entry_fee": "Free"
-  },
+ 
   {
     "name": "Camel Valley Viewpoint",
     "category": "place to visit",
@@ -153,48 +110,6 @@
     "timings": "8 AM - 5 PM",
     "entry_fee": "₹50 approx"
   },
-  {
-    "name": "Ashoka Hilltop",
-    "category": "place to visit",
-    "subcategory": "Viewpoint",
-    "description": "Ashoka Hilltop is a scenic elevated destination offering spectacular 360-degree views of valleys, mountain ghats, and surrounding landscapes. It is a peaceful place for sightseeing, short road trips, and photography lovers.",
-    "location": "Kasara Ghat, Nashik District, Maharashtra, India",
-    "distance": 55,
-    "bestTime": "Monsoon",
-    "timings": "Open all day",
-    "entry_fee": "Free"
-  },
-  {
-    "name": "Trimbak Forest Viewpoint",
-    "category": "place to visit",
-    "subcategory": "Viewpoint",
-    "description": "Trimbak Forest Viewpoint is a peaceful natural destination surrounded by dense greenery, fresh mountain air, and scenic forest landscapes. It is perfect for visitors seeking quiet nature escapes, photography, and relaxing drives near Trimbakeshwar.",
-    "location": "Trimbak, Nashik District, Maharashtra, India",
-    "distance": 28,
-    "bestTime": "Monsoon, Winter",
-    "timings": "Open all day",
-    "entry_fee": "Free"
-  },
-  {
-    "name": "Saputara Border Valley View",
-    "category": "place to visit",
-    "subcategory": "Viewpoint",
-    "description": "Saputara Border Valley View is a scenic mountain viewpoint near the Maharashtra-Gujarat border, known for expansive valley views, cool weather, and beautiful monsoon landscapes. It is ideal for road trips, sightseeing, and nature photography.",
-    "location": "Saputara Road, Nashik District, Maharashtra, India",
-    "distance": 120,
-    "bestTime": "Monsoon",
-    "timings": "Open all day",
-    "entry_fee": "Free"
-  },
-  {
-    "name": "Bhandardara Backwater View",
-    "category": "place to visit",
-    "subcategory": "Lake",
-    "description": "Bhandardara Backwater View offers stunning lake and mountain scenery with peaceful surroundings, making it a perfect destination for camping, photography, and nature escapes. It is especially beautiful during monsoon and winter with misty landscapes.",
-    "location": "Near Bhandardara, Igatpuri Region, Maharashtra, India",
-    "distance": 70,
-    "bestTime": "Winter, Monsoon",
-    "timings": "Open all day",
-    "entry_fee": "Free"
-  }
+ 
+
 ]

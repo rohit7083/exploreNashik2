@@ -8,18 +8,27 @@ const placeSchema = new mongoose.Schema(
     },
 
 
-    images: [
-      {
-        imageUrl: {
-          type: String,
-          required: true,
-        },
-        publicId: {
-          type: String,
-          required: true,
-        },
+    images: {
+  type: [
+    {
+      imageUrl: {
+        type: String,
+        required: true,
       },
-    ],
+      publicId: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
+  required: true,
+  validate: {
+    validator: function (value) {
+      return value.length > 0;
+    },
+    message: "At least one image is required",
+  },
+},
     category: {
       type: String,
       required: true,
