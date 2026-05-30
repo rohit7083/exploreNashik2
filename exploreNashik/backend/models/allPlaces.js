@@ -7,28 +7,27 @@ const placeSchema = new mongoose.Schema(
       required: true,
     },
 
-
     images: {
-  type: [
-    {
-      imageUrl: {
-        type: String,
-        required: true,
-      },
-      publicId: {
-        type: String,
-        required: true,
+      type: [
+        {
+          imageUrl: {
+            type: String,
+            required: true,
+          },
+          publicId: {
+            type: String,
+            
+          },
+        },
+      ],
+      required: true,
+      validate: {
+        validator: function (value) {
+          return value.length > 0;
+        },
+        message: "At least one image is required",
       },
     },
-  ],
-  required: true,
-  validate: {
-    validator: function (value) {
-      return value.length > 0;
-    },
-    message: "At least one image is required",
-  },
-},
     category: {
       type: String,
       required: true,
@@ -93,11 +92,9 @@ const placeSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    contact:{
-      type:Number,
-
-    }
-    
+    contact: {
+      type: Number,
+    },
   },
   { timestamps: true },
 );

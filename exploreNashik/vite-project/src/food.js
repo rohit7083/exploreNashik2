@@ -2,90 +2,7 @@
 
 [
 
-  {
-    name: "Spice Route",
-    category: "food",
-    subCategory: "Restaurants",
-    description:
-      "Fine dining restaurant offering multi-cuisine menu with elegant ambiance.",
-    location: "Pathardi Phata, Nashik",
-    distance: 6,
-    cuisine: ["Indian", "Chinese", "Continental"],
-    timings: "11:30 AM - 11:00 PM",
 
-    contact_number: "+912536789012",
-    rating: 4.2,
-  },
-  {
-    name: "Little Italy",
-    category: "food",
-    subCategory: "Restaurants",
-    description:
-      "Pure veg Italian restaurant known for pizzas, pasta, and desserts.",
-    location: "Gangapur Road, Nashik",
-    distance: 8,
-    cuisine: ["Italian", "Vegetarian"],
-    timings: "12:00 PM - 11:00 PM",
-
-    contact_number: "+919876543210",
-    rating: 4.4,
-  },
-  {
-    name: "Curry Leaves",
-    category: "food",
-    subCategory: "Restaurants",
-    description:
-      "South Indian restaurant famous for dosa, idli, and filter coffee.",
-    location: "Canada Corner, Nashik",
-    distance: 2,
-    cuisine: ["South Indian"],
-    timings: "7:00 AM - 10:30 PM",
-
-    contact_number: null,
-    rating: 4.3,
-  },
-  {
-    name: "River Dine Restaurant",
-    category: "food",
-    subCategory: "Restaurants",
-    description:
-      "Restaurant with scenic river view offering North Indian and Chinese cuisine.",
-    location: "Godavari River, Nashik",
-    distance: 3,
-    cuisine: ["North Indian", "Chinese"],
-    timings: "11:00 AM - 11:00 PM",
-
-    contact_number: null,
-    rating: 4.1,
-  },
-  {
-    name: "The Sidewalk",
-    category: "food",
-    subCategory: "Restaurants",
-    description:
-      "Trendy restaurant offering fusion dishes and modern ambiance.",
-    location: "College Road, Nashik",
-    distance: 2,
-    cuisine: ["Fusion", "Continental"],
-    timings: "12:00 PM - 11:30 PM",
-
-    contact_number: null,
-    rating: 4.2,
-  },
-  {
-    name: "Hotel Panchavati Yatri",
-    category: "food",
-    subCategory: "Restaurants",
-    description:
-      "Well-known pure veg restaurant serving traditional Indian meals.",
-    location: "Vakilwadi, Nashik",
-    distance: 1,
-    cuisine: ["Indian", "Vegetarian"],
-    timings: "7:00 AM - 10:30 PM",
-
-    contact_number: "+912532345678",
-    rating: 4.2,
-  },
   {
     name: "Barbeque Nation Nashik",
     category: "food",
@@ -145,32 +62,11 @@
 
     popular_dish: "Misal Pav",
     rating: 4.3,
-  },
-  {
-    name: "Chaat Bazaar Nashik",
-    category: "food",
-    subCategory: "Street Food",
-    description: "Street-style chaat including pani puri, bhel, and sev puri.",
-    location: "College Road, Nashik",
-    timings: "5:00 PM - 10:30 PM",
-
-    popular_dish: "Pani Puri",
-    rating: 4.2,
   })
 ][
   // ☕📦 2. Cafes (Nashik)
 
-  ({
-    name: "Cafe Bliss",
-    category: "food",
-    subCategory: "Cafes",
-    description: "Cozy cafe known for coffee, desserts, and relaxing ambiance.",
-    location: "Gangapur Road, Nashik",
-    timings: "10:00 AM - 11:00 PM",
-
-    speciality: "Coffee & Desserts",
-    rating: 4.4,
-  },
+  (
   {
     name: "Cafe Coffee Day (CCD)",
     category: "food",

@@ -220,3 +220,84 @@ exports.deletePlace = async (req, res) => {
     });
   }
 };
+
+
+
+
+
+
+// Bulk image upload साठी controller
+exports.addImagesInbulk = async (req, res) => {
+  try {
+    const images = await Promise.all(
+      req.files.map(async (file) => {
+        const response = await axios.get(file.path, {
+          responseType: "arraybuffer",
+        });
+
+        const originalBuffer = Buffer.from(response.data);
+
+        const compressedBuffer = await sharp(originalBuffer)
+          .resize({
+            width: 1200,
+            withoutEnlargement: true,
+          })
+          .jpeg({
+            quality: 70,
+            mozjpeg: true,
+          })
+          .toBuffer();
+
+        const uploaded = await uploadToCloudinary(compressedBuffer);
+
+        await cloudinary.uploader.destroy(file.filename);
+
+        return {
+          imageUrl: uploaded.secure_url,
+          publicId: uploaded.public_id,
+        };
+      })
+    );
+
+    return res.status(200).json({
+      success: true,
+      images,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+
+//bulk json upload साठी script with image url
+exports.bulkUploadProducts = async (req, res) => {
+  try {
+    const products = req.body;
+
+    if (!Array.isArray(products)) {
+      return res.status(400).json({
+        success: false,
+        message: "Request body must be an array",
+      });
+    }
+
+    const result = await place.insertMany(products, {
+      ordered: false,
+    });
+
+    return res.status(201).json({
+      success: true,
+      count: result.length,
+    });
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};

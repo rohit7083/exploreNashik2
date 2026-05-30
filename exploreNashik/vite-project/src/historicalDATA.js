@@ -1,19 +1,5 @@
 const places = [
 
- 
-
-  {
-    category: "place of Visit",
-    subcategory: "historical places",
-    name: "Dhodap Fort",
-    location:
-      "Dhodap Fort, Dhodambe Village, Kalwan Taluka, Nashik District, Maharashtra, India",
-    distance: 80,
-    timings: "6:00 AM - 6:00 PM",
-    entry_fee: "Free",
-    difficulty: "Hard",
-    description: `Dhodap Fort is the second-highest fort peak in Maharashtra and is famous for its challenging trekking route and historic significance. It attracts experienced trekkers looking for adventure and dramatic mountain views.`,
-  },
   {
     category: "place of Visit",
     subcategory: "historical places",

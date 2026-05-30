@@ -38,4 +38,17 @@ router.put(
 // Delete place
 router.delete("/deletePlaces/:id", placeController.deletePlace);
 
+router.post(
+  "/addImagesInbulk",
+  upload.array("images", 50),
+  placeController.addImagesInbulk
+);
+
+router.post(
+  "/bulkUploadProducts",
+  upload.array("images", 50),
+  placeController.bulkUploadProducts
+);
+
+
 module.exports = router;
