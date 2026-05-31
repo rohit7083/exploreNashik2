@@ -1,83 +1,4 @@
-// restaurant
-
 [
-
-
-  {
-    name: "Barbeque Nation Nashik",
-    category: "food",
-    subCategory: "Restaurants",
-    description: "Chain restaurant known for live grill and buffet experience.",
-    location: "City Centre Mall, Nashik",
-    distance: 2,
-    cuisine: ["BBQ", "Buffet"],
-    timings: "12:00 PM - 11:00 PM",
-    contact_number: "+918888888888",
-    rating: 4.3,
-  },
-][
-  // 🌮📦 1. Street Food (Nashik)
-
-  ({
-    name: "Shamsundar Misal",
-    category: "food",
-    subCategory: "Street Food",
-    description:
-      "One of the most famous places for spicy Nashik-style misal pav.",
-    location: "Panchavati, Nashik",
-    timings: "8:00 AM - 9:00 PM",
-
-    popular_dish: "Misal Pav",
-    rating: 4.6,
-  },
-  {
-    name: "Tushar Misal",
-    category: "food",
-    subCategory: "Street Food",
-    description: "Very popular local misal spot with authentic spicy flavor.",
-    location: "College Road, Nashik",
-    timings: "8:00 AM - 8:00 PM",
-
-    popular_dish: "Misal Pav",
-    rating: 4.5,
-  },
-  {
-    name: "Sayantara Sabudana Vada",
-    category: "food",
-    subCategory: "Street Food",
-    description: "Famous for crispy sabudana vada and chutney.",
-    location: "Tilak Wadi, Nashik",
-    timings: "7:00 AM - 7:00 PM",
-
-    popular_dish: "Sabudana Vada",
-    rating: 4.5,
-  },
-  {
-    name: "Ambika Misal",
-    category: "food",
-    subCategory: "Street Food",
-    description: "Budget-friendly misal with strong spicy taste.",
-    location: "CBS, Nashik",
-    timings: "8:00 AM - 6:00 PM",
-
-    popular_dish: "Misal Pav",
-    rating: 4.3,
-  })
-][
-  // ☕📦 2. Cafes (Nashik)
-
-  (
-  {
-    name: "Cafe Coffee Day (CCD)",
-    category: "food",
-    subCategory: "Cafes",
-    description: "Popular chain cafe for coffee and quick snacks.",
-    location: "College Road, Nashik",
-    timings: "9:00 AM - 11:00 PM",
-
-    speciality: "Coffee",
-    rating: 4.1,
-  },
   {
     name: "The Chocolate Room",
     category: "food",
@@ -110,7 +31,7 @@
 
     speciality: "Bakery & Coffee",
     rating: 4.3,
-  })
+  }
 ][
   // 🥘📦 3. Local Special Food (Nashik)
 

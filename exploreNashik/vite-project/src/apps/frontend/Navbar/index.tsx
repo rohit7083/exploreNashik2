@@ -28,6 +28,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
       <div className="flex items-center justify-between px-5 h-16">
         {/* Logo + Desktop Menu grouped at start */}
+       
         <div className="flex items-center h-16">
           <span className="font-bold text-lg text-black dark:text-white whitespace-nowrap mr-4">
             Discover <span className="text-red-800">Nashik</span>

@@ -200,7 +200,7 @@ const PlaceCard = ({ place }: any) => {
                   </span>
 
                   <span className="text-right">
-                    {value}
+                    {value}{" "}
                     {field.suffix && field.suffix}
                   </span>
                 </div>
