@@ -159,14 +159,14 @@ const PlaceCard = ({ place }: any) => {
           </h2>
 
           {/* Description */}
-          <p className="text-sm text-gray-500 mt-1 line-clamp-2 min-h-[40px]">
+          {/* <p className="text-sm text-gray-500 mt-1 line-clamp-2 min-h-[40px]">
             {place.shortDescription}
-          </p>
+          </p> */}
 
           {/* Location */}
           {place.location && (
-            <p className="text-sm text-gray-500 mt-0 flex items-start gap-2 leading-5">
-              <span>📍</span>
+            <p className="text-sm text-gray-500 mt-1   flex items-start gap-2 leading-5">
+              {/* <span>📍</span> */}
               <span className="line-clamp-2">
                 {place.location}
               </span>
