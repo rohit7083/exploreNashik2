@@ -1,40 +1,4 @@
 [
-  {
-    name: "The Chocolate Room",
-    category: "food",
-    subCategory: "Cafes",
-    description: "Dessert cafe famous for waffles, brownies, and shakes.",
-    location: "Canada Corner, Nashik",
-    timings: "11:00 AM - 11:00 PM",
-
-    speciality: "Desserts",
-    rating: 4.3,
-  },
-  {
-    name: "Cafe 52",
-    category: "food",
-    subCategory: "Cafes",
-    description: "Modern cafe with stylish interiors and fast food options.",
-    location: "College Road, Nashik",
-    timings: "11:00 AM - 11:30 PM",
-
-    speciality: "Snacks & Coffee",
-    rating: 4.2,
-  },
-  {
-    name: "Brew Bakes Cafe",
-    category: "food",
-    subCategory: "Cafes",
-    description: "Trendy cafe offering bakery items, coffee, and pizzas.",
-    location: "Gangapur Road, Nashik",
-    timings: "10:00 AM - 11:00 PM",
-
-    speciality: "Bakery & Coffee",
-    rating: 4.3,
-  }
-][
-  // 🥘📦 3. Local Special Food (Nashik)
-
   ({
     name: "Misal Pav",
     category: "food",
@@ -74,7 +38,7 @@
     rating: 4.4,
   },
   {
-    name: "Kanda Bhaji",
+    name: "kanda Bhaji",
     category: "food",
     subCategory: "Local Special Food",
     description: "Crispy onion fritters, popular during monsoon.",

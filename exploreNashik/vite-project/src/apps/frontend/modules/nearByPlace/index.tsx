@@ -201,7 +201,7 @@ const NearbyPlaces = () => {
       <div className="bg-gradient-to-r from-black via-gray-900 to-black text-white">
        <div className="max-w-[1600px] mx-auto px-8 lg:px-12 xl:px-16 py-10">
 
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className="text-2xl md:text-5xl font-bold">
             Nearby Places Around Nashik 🌄
           </h1>
 

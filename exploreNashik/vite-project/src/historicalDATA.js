@@ -1,17 +1,6 @@
 const places = [
 
-  {
-    category: "place of Visit",
-    subcategory: "historical places",
-    name: "Kavnai Fort",
-    location:
-      "Kavnai Fort, Kavnai Village, Igatpuri Taluka, Nashik District, Maharashtra, India",
-    distance: 50,
-    timings: "6:00 AM - 6:00 PM",
-    entry_fee: "Free",
-    difficulty: "Medium",
-    description: `Kavnai Fort is a peaceful trekking destination near Igatpuri, known for its scenic beauty, calm surroundings, and moderate trekking trail. It is a great choice for trekkers seeking a quieter offbeat experience.`,
-  },
+ 
   {
     category: "place of Visit",
     subcategory: "historical places",

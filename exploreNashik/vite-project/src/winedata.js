@@ -41,20 +41,7 @@
     services: ["Wine Tasting", "Stay", "Pool", "Restaurant"],
     rating: 4.5,
   },
-  {
-    name: "Grover Zampa Vineyards",
-    category: "wine",
-    subCategory: "Wineries",
-    description:
-      "A well-known premium winery recognized for producing export-quality wines, Grover Zampa offers informative guided tours explaining the complete wine-making journey from grape cultivation to fermentation, aging, and bottling. It is a great destination for visitors interested in learning about professional wine production.",
-    location: "Sanjegaon, Nashik",
-    distance: 25,
-    timings: "10:00 AM - 6:00 PM",
-    entry_fee: "₹500 approx",
-    contact_number: "+912536622345",
-    services: ["Wine Tours", "Wine Tasting"],
-    rating: 4.3,
-  },
+
   {
     name: "Vallonne Vineyards",
     category: "wine",
@@ -83,20 +70,7 @@
     includes: ["Guide", "Wine tasting", "Cellar visit"],
     rating: 4.7,
   },
-  {
-    name: "Grover Zampa Wine Tour",
-    category: "wine",
-    subCategory: "Wine Tours",
-    description:
-      "An engaging educational wine tour that introduces visitors to grape cultivation, fermentation, storage, aging techniques, and bottling processes. The experience is designed for wine learners and enthusiasts who want a behind-the-scenes understanding of professional winery operations.",
-    location: "Grover Zampa Vineyards, Nashik",
-    distance: 25,
-    timings: "10 AM - 5 PM",
-    entry_fee: "₹500",
-    contact_number: null,
-    includes: ["Winery visit", "Wine tasting"],
-    rating: 4.3,
-  },
+  
   {
     name: "Vallonne Wine Tour",
     category: "wine",
