@@ -1,7 +1,9 @@
-import { Button } from "@/components/ui/button"
-import NightView from "../../../assets/nightview.jpg"
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import NightView from "../../../assets/bannrnsk1.png";
 
 function BannerOne() {
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -32,7 +34,7 @@ function BannerOne() {
           >
             Discover the beauty of vineyards and culture
           </p>
-          <Button size="lg">Explore</Button>
+            <Button size="lg" onClick={()=> navigate('./explore')}>Explore</Button>
         </div>
       </div>
     </div>
