@@ -233,14 +233,24 @@ const ExplorePage = () => {
   const [selectedSub, setSelectedSub] = useState("");
   const [sortBy, setSortBy] = useState("rating");
 
-    // Fetch API data
-    useEffect(() => {
-      const fetchPlaces = async () => {
-        try {
-          setLoading(true);
+  // // <<<<<<< Updated upstream
+  //   // Fetch API data
+  //   useEffect(() => {
+  //     const fetchPlaces = async () => {
+  //       try {
+  //         setLoading(true);
 
-          const res = await axios.get("http://localhost:5000/api/getPlaces");
-          console.log(res?.data);
+  //         const res = await axios.get("http://localhost:5000/api/getPlaces");
+  //         console.log(res?.data);
+// =======
+  // Fetch API data
+  useEffect(() => {
+    const fetchPlaces = async () => {
+      try {
+        setLoading(true);
+        const res = await axios.get("http://localhost:5000/api/getPlaces");
+        console.log(res?.data);
+// >>>>>>> Stashed changes
 
           setPlaces(res.data || []);
         } catch (error) {

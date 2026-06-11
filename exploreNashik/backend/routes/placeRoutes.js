@@ -40,7 +40,7 @@ router.delete("/deletePlaces/:id", placeController.deletePlace);
 
 router.post(
   "/addImagesInbulk",
-  upload.array("images", 50),
+  upload.array("images", 20),
   placeController.addImagesInbulk
 );
 
