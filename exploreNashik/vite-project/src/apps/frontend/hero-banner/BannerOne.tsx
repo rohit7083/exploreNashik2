@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import NightView from "../../../assets/bannrnsk1.png";
+import NightView from "../../../assets/pic1.png";
 
 function BannerOne() {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ function BannerOne() {
       style={{
         position: "relative",
         width: "100%",
-        height: "60vh",
+        height: "80vh",
         minHeight: "380px",
         backgroundImage: `url(${NightView})`,
         backgroundSize: "cover",

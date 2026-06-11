@@ -233,25 +233,25 @@ const ExplorePage = () => {
   const [selectedSub, setSelectedSub] = useState("");
   const [sortBy, setSortBy] = useState("rating");
 
-  // Fetch API data
-  useEffect(() => {
-    const fetchPlaces = async () => {
-      try {
-        setLoading(true);
+    // Fetch API data
+    useEffect(() => {
+      const fetchPlaces = async () => {
+        try {
+          setLoading(true);
 
-        const res = await axios.get("http://localhost:5000/api/getPlaces");
-        console.log(res?.data);
+          const res = await axios.get("http://localhost:5000/api/getPlaces");
+          console.log(res?.data);
 
-        setPlaces(res.data || []);
-      } catch (error) {
-        console.error("API fetch failed:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+          setPlaces(res.data || []);
+        } catch (error) {
+          console.error("API fetch failed:", error);
+        } finally {
+          setLoading(false);
+        }
+      };
 
-    fetchPlaces();
-  }, []);
+      fetchPlaces();
+    }, []);
 
   // Current sub categories
   const currentSubs =

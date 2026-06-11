@@ -43,12 +43,12 @@ const placeSchema = new mongoose.Schema(
     },
     location: {
       type: String,
-      required: true,
+      // required: true,
     },
 
     distance: {
       type: Number,
-      required: true,
+      // required: true,
     },
 
     bestTime: {
@@ -81,6 +81,9 @@ const placeSchema = new mongoose.Schema(
     difficulty: {
       type: String,
     },
+    bestPlaces: {
+      type: [String],
+    },
 
     services: {
       type: [String],
@@ -90,7 +93,7 @@ const placeSchema = new mongoose.Schema(
     },
     mapLocation: {
       type: String,
-      required: true,
+      // required: true,
     },
     contact: {
       type: Number,
