@@ -1,0 +1,204 @@
+{
+  "boatingPlaces": [
+    {
+      "id": 1,
+      "name": "Gangapur Dam Boating",
+      "slug": "gangapur-dam-boating",
+      "location": "Gangapur Dam, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Lake Boating",
+      "rating": 4.4,
+      "timing": "08:00 AM - 07:00 PM",
+      "entryFee": {
+        "adult": 150,
+        "child": 100,
+        "currency": "INR"
+      },
+      "boatTypes": [
+        "Speed Boat",
+        "Pedal Boat",
+        "Family Boat"
+      ],
+      "facilities": [
+        "Parking",
+        "Food Stalls",
+        "Photography Spot",
+        "Seating Area"
+      ],
+      "image": "/images/gangapur-dam.jpg",
+      "gallery": [
+        "/images/gangapur-dam-1.jpg",
+        "/images/gangapur-dam-2.jpg"
+      ],
+      "shortDescription": "One of Nashik’s most popular boating destinations with beautiful sunset views.",
+      "longDescription": "Gangapur Dam is one of the most famous boating locations in Nashik, attracting visitors looking for scenic views and relaxing water activities. The location offers boating experiences including speed boats, pedal boats, and family rides. The surrounding natural beauty, cool breeze, and sunset views make it a favorite weekend destination for couples, families, and tourists. Food stalls and photography points nearby add to the overall experience."
+    },
+    {
+      "id": 2,
+      "name": "Darna Dam Boating",
+      "slug": "darna-dam-boating",
+      "location": "Darna Dam, Igatpuri, Nashik, Maharashtra",
+      "city": "Igatpuri",
+      "state": "Maharashtra",
+      "type": "Lake Boating",
+      "rating": 4.3,
+      "timing": "08:30 AM - 06:30 PM",
+      "entryFee": {
+        "adult": 200,
+        "child": 120,
+        "currency": "INR"
+      },
+      "boatTypes": [
+        "Row Boat",
+        "Motor Boat",
+        "Family Boat"
+      ],
+      "facilities": [
+        "Parking",
+        "Nature View",
+        "Picnic Spot",
+        "Food Area"
+      ],
+      "image": "/images/darna-dam.jpg",
+      "gallery": [
+        "/images/darna-dam-1.jpg",
+        "/images/darna-dam-2.jpg"
+      ],
+      "shortDescription": "A peaceful boating location surrounded by mountains and greenery.",
+      "longDescription": "Darna Dam boating offers a peaceful and scenic experience surrounded by hills and greenery near Igatpuri. It is a perfect place for visitors who want to enjoy calm waters and beautiful landscapes. The boating options include family boats and row boats suitable for all age groups. During monsoon and winter, the natural beauty around the dam becomes even more attractive for tourists and photographers."
+    },
+    {
+      "id": 3,
+      "name": "Vaitarna Lake Boating",
+      "slug": "vaitarna-lake-boating",
+      "location": "Vaitarna Lake, Igatpuri, Maharashtra",
+      "city": "Igatpuri",
+      "state": "Maharashtra",
+      "type": "Lake Adventure Boating",
+      "rating": 4.2,
+      "timing": "09:00 AM - 06:00 PM",
+      "entryFee": {
+        "adult": 250,
+        "child": 150,
+        "currency": "INR"
+      },
+      "boatTypes": [
+        "Kayaking",
+        "Speed Boat",
+        "Fishing Boat"
+      ],
+      "facilities": [
+        "Adventure Activities",
+        "Parking",
+        "Camping Nearby",
+        "Photography Spot"
+      ],
+      "image": "/images/vaitarna-lake.jpg",
+      "gallery": [
+        "/images/vaitarna-lake-1.jpg",
+        "/images/vaitarna-lake-2.jpg"
+      ],
+      "shortDescription": "A scenic lake boating destination popular for kayaking and adventure.",
+      "longDescription": "Vaitarna Lake is known for adventure boating activities and beautiful landscapes. Visitors can enjoy kayaking, speed boating, and peaceful boat rides while surrounded by hills and calm waters. It is an ideal destination for nature lovers, adventure enthusiasts, and camping groups looking for an enjoyable outdoor experience."
+    },
+    {
+      "id": 4,
+      "name": "Kashyapi Dam Boating",
+      "slug": "kashyapi-dam-boating",
+      "location": "Kashyapi Dam, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Dam Boating",
+      "rating": 4.1,
+      "timing": "08:00 AM - 06:00 PM",
+      "entryFee": {
+        "adult": 120,
+        "child": 80,
+        "currency": "INR"
+      },
+      "boatTypes": [
+        "Pedal Boat",
+        "Family Boat"
+      ],
+      "facilities": [
+        "Parking",
+        "Nature Spot",
+        "Relaxation Area"
+      ],
+      "image": "/images/kashyapi-dam.jpg",
+      "gallery": [
+        "/images/kashyapi-dam-1.jpg",
+        "/images/kashyapi-dam-2.jpg"
+      ],
+      "shortDescription": "A peaceful dam-side boating experience near Nashik.",
+      "longDescription": "Kashyapi Dam boating is a quiet and relaxing experience for visitors wanting to spend time in nature. The calm water and surrounding greenery create a peaceful atmosphere suitable for family outings and short weekend trips. The area is also known for photography and enjoying scenic landscapes."
+    },
+    {
+      "id": 5,
+      "name": "Harihar Fort Lake Boating",
+      "slug": "harihar-fort-lake-boating",
+      "location": "Near Harihar Fort, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Nature Boating",
+      "rating": 4.0,
+      "timing": "09:00 AM - 05:30 PM",
+      "entryFee": {
+        "adult": 180,
+        "child": 100,
+        "currency": "INR"
+      },
+      "boatTypes": [
+        "Small Boat",
+        "Family Boat"
+      ],
+      "facilities": [
+        "Parking",
+        "Nature View",
+        "Photography"
+      ],
+      "image": "/images/harihar-fort-lake.jpg",
+      "gallery": [
+        "/images/harihar-fort-lake-1.jpg",
+        "/images/harihar-fort-lake-2.jpg"
+      ],
+      "shortDescription": "A hidden boating spot near the famous Harihar Fort.",
+      "longDescription": "Harihar Fort Lake boating offers visitors a peaceful environment close to nature and hills. It is an excellent place for those who enjoy calm boating experiences and scenic beauty. The area is less crowded and ideal for couples, photographers, and nature enthusiasts."
+    },
+    {
+      "id": 6,
+      "name": "Bhandardara Lake Boating",
+      "slug": "bhandardara-lake-boating",
+      "location": "Bhandardara, Ahmednagar (Near Nashik), Maharashtra",
+      "city": "Bhandardara",
+      "state": "Maharashtra",
+      "type": "Lake Boating",
+      "rating": 4.6,
+      "timing": "08:00 AM - 06:30 PM",
+      "entryFee": {
+        "adult": 250,
+        "child": 150,
+        "currency": "INR"
+      },
+      "boatTypes": [
+        "Row Boat",
+        "Speed Boat",
+        "Private Boat"
+      ],
+      "facilities": [
+        "Camping",
+        "Parking",
+        "Food Area",
+        "Photography Spot"
+      ],
+      "image": "/images/bhandardara-lake.jpg",
+      "gallery": [
+        "/images/bhandardara-lake-1.jpg",
+        "/images/bhandardara-lake-2.jpg"
+      ],
+      "shortDescription": "A breathtaking boating destination near Nashik with mountain views.",
+      "longDescription": "Bhandardara Lake is one of the most scenic destinations near Nashik, famous for boating, camping, and stunning mountain landscapes. Visitors can enjoy peaceful lake rides, adventure boating, and photography opportunities. The calm environment and beautiful views make it an ideal destination for nature lovers and weekend travelers."
+    }
+  ]
+}

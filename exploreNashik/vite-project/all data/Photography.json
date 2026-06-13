@@ -1,0 +1,221 @@
+{
+  "photographyPlaces": [
+    {
+      "id": 1,
+      "name": "Pandav Leni Caves",
+      "slug": "pandav-leni-caves",
+      "location": "Pandav Leni, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Historical Photography Spot",
+      "rating": 4.6,
+      "timing": "08:00 AM - 06:00 PM",
+      "entryFee": {
+        "adult": 25,
+        "child": 10,
+        "currency": "INR"
+      },
+      "bestPhotographyTime": "Sunrise & Golden Hour",
+      "photographyTypes": [
+        "Landscape",
+        "Portrait",
+        "Drone View",
+        "Nature",
+        "Historical"
+      ],
+      "facilities": [
+        "Parking",
+        "View Point",
+        "Food Stalls",
+        "Rest Area"
+      ],
+      "image": "/images/pandav-leni.jpg",
+      "gallery": [
+        "/images/pandav-leni-1.jpg",
+        "/images/pandav-leni-2.jpg"
+      ],
+      "shortDescription": "A popular hilltop location for sunrise, cityscape, and historical photography.",
+      "longDescription": "Pandav Leni Caves is one of the best photography places in Nashik, offering stunning city views, ancient caves, and scenic hilltop landscapes. The sunrise and sunset lighting make it ideal for portrait, travel, and nature photography. Visitors can capture wide-angle city views, historical carvings, and dramatic landscapes from the top."
+    },
+    {
+      "id": 2,
+      "name": "Gangapur Dam",
+      "slug": "gangapur-dam",
+      "location": "Gangapur Dam, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Nature Photography Spot",
+      "rating": 4.5,
+      "timing": "06:00 AM - 07:00 PM",
+      "entryFee": {
+        "adult": 0,
+        "child": 0,
+        "currency": "INR"
+      },
+      "bestPhotographyTime": "Sunset",
+      "photographyTypes": [
+        "Landscape",
+        "Sunset",
+        "Nature",
+        "Portrait",
+        "Water Reflection"
+      ],
+      "facilities": [
+        "Parking",
+        "Tea Stalls",
+        "Nature View"
+      ],
+      "image": "/images/gangapur-dam-photo.jpg",
+      "gallery": [
+        "/images/gangapur-dam-1.jpg",
+        "/images/gangapur-dam-2.jpg"
+      ],
+      "shortDescription": "A scenic dam-side destination famous for sunset photography.",
+      "longDescription": "Gangapur Dam is one of Nashik’s top photography spots known for breathtaking sunset views and calm water reflections. Photographers often visit to capture landscapes, portraits, and golden-hour shots. The peaceful atmosphere and lakeside scenery make it a favorite place for reels, cinematic videos, and travel photography."
+    },
+    {
+      "id": 3,
+      "name": "Someshwar Waterfall",
+      "slug": "someshwar-waterfall",
+      "location": "Someshwar, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Waterfall Photography Spot",
+      "rating": 4.4,
+      "timing": "07:00 AM - 06:30 PM",
+      "entryFee": {
+        "adult": 0,
+        "child": 0,
+        "currency": "INR"
+      },
+      "bestPhotographyTime": "Monsoon & Early Morning",
+      "photographyTypes": [
+        "Nature",
+        "Waterfall",
+        "Portrait",
+        "Cinematic"
+      ],
+      "facilities": [
+        "Parking",
+        "Food Stalls",
+        "Nature Walk"
+      ],
+      "image": "/images/someshwar-waterfall.jpg",
+      "gallery": [
+        "/images/someshwar-waterfall-1.jpg",
+        "/images/someshwar-waterfall-2.jpg"
+      ],
+      "shortDescription": "A beautiful waterfall spot ideal for monsoon photography.",
+      "longDescription": "Someshwar Waterfall is a peaceful photography destination popular during the monsoon season. The flowing water, surrounding greenery, and natural ambiance make it an excellent location for portrait, nature, and cinematic photography. Early morning visits offer soft natural light for better photography results."
+    },
+    {
+      "id": 4,
+      "name": "Sula Vineyards",
+      "slug": "sula-vineyards",
+      "location": "Gangapur Road, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Lifestyle Photography Spot",
+      "rating": 4.7,
+      "timing": "11:00 AM - 10:00 PM",
+      "entryFee": {
+        "adult": 600,
+        "child": 0,
+        "currency": "INR"
+      },
+      "bestPhotographyTime": "Golden Hour & Evening",
+      "photographyTypes": [
+        "Portrait",
+        "Lifestyle",
+        "Fashion",
+        "Sunset",
+        "Travel"
+      ],
+      "facilities": [
+        "Parking",
+        "Restaurant",
+        "Cafe",
+        "Wine Tasting",
+        "Garden Area"
+      ],
+      "image": "/images/sula-vineyards.jpg",
+      "gallery": [
+        "/images/sula-vineyards-1.jpg",
+        "/images/sula-vineyards-2.jpg"
+      ],
+      "shortDescription": "A premium photography destination with vineyards and aesthetic views.",
+      "longDescription": "Sula Vineyards is one of the most Instagram-worthy places in Nashik for photography. The lush green vineyards, sunset viewpoints, modern architecture, and beautiful outdoor spaces make it ideal for portraits, fashion shoots, travel photography, and cinematic reels."
+    },
+    {
+      "id": 5,
+      "name": "Anjaneri Hills",
+      "slug": "anjaneri-hills",
+      "location": "Trimbakeshwar Road, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Hill Photography Spot",
+      "rating": 4.6,
+      "timing": "06:00 AM - 06:00 PM",
+      "entryFee": {
+        "adult": 0,
+        "child": 0,
+        "currency": "INR"
+      },
+      "bestPhotographyTime": "Sunrise",
+      "photographyTypes": [
+        "Landscape",
+        "Nature",
+        "Adventure",
+        "Portrait",
+        "Mountain"
+      ],
+      "facilities": [
+        "Parking",
+        "Trekking Route",
+        "Nature View"
+      ],
+      "image": "/images/anjaneri-hills.jpg",
+      "gallery": [
+        "/images/anjaneri-hills-1.jpg",
+        "/images/anjaneri-hills-2.jpg"
+      ],
+      "shortDescription": "A hilltop destination with scenic mountain and sunrise photography.",
+      "longDescription": "Anjaneri Hills is a paradise for landscape and travel photographers in Nashik. The mountain trails, misty weather, greenery, and sunrise views provide incredible opportunities for capturing nature and adventure shots. It is also popular for drone and trekking photography."
+    },
+    {
+      "id": 6,
+      "name": "Coin Museum Garden",
+      "slug": "coin-museum-garden",
+      "location": "Anjaneri, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Garden Photography Spot",
+      "rating": 4.2,
+      "timing": "09:00 AM - 05:00 PM",
+      "entryFee": {
+        "adult": 20,
+        "child": 10,
+        "currency": "INR"
+      },
+      "bestPhotographyTime": "Morning",
+      "photographyTypes": [
+        "Nature",
+        "Portrait",
+        "Garden",
+        "Family Photography"
+      ],
+      "facilities": [
+        "Parking",
+        "Garden",
+        "Walking Area"
+      ],
+      "image": "/images/coin-museum.jpg",
+      "gallery": [
+        "/images/coin-museum-1.jpg",
+        "/images/coin-museum-2.jpg"
+      ],
+      "shortDescription": "A peaceful garden area suitable for portrait and family photography.",
+      "longDescription": "Coin Museum Garden offers greenery, open spaces, and peaceful surroundings for photography enthusiasts. It is suitable for portrait shoots, family photography, and casual content creation. Morning visits provide soft natural lighting and a calm environment."
+    }
+  ]
+}

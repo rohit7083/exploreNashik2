@@ -1,0 +1,151 @@
+{
+  "campingPlaces": [
+    {
+      "id": 1,
+      "name": "Gangapur Dam Camping",
+      "slug": "gangapur-dam-camping",
+      "location": "Gangapur Dam, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Lakeside Camping",
+      "rating": 4.4,
+      "timing": "Check-in: 04:00 PM | Check-out: 10:00 AM",
+      "entryFee": {
+        "adult": 1200,
+        "child": 800,
+        "currency": "INR"
+      },
+      "activities": [
+        "Tent Stay",
+        "Bonfire",
+        "Stargazing",
+        "Photography",
+        "Nature Walk"
+      ],
+      "facilities": [
+        "Parking",
+        "Washroom",
+        "Tent Stay",
+        "Food Available",
+        "Campfire Area"
+      ],
+      "image": "/images/gangapur-dam-camping.jpg",
+      "gallery": [
+        "/images/gangapur-dam-camping-1.jpg",
+        "/images/gangapur-dam-camping-2.jpg"
+      ],
+      "shortDescription": "A peaceful camping destination near Gangapur Dam with scenic sunset views.",
+      "longDescription": "Gangapur Dam Camping is one of the best camping experiences in Nashik city, offering beautiful lakeside views and a peaceful environment. Visitors can enjoy overnight tent stays, bonfires, stargazing, and relaxing moments near the water. The location becomes especially beautiful during winter and monsoon seasons, making it ideal for couples, friends, and family outings."
+    },
+    {
+      "id": 2,
+      "name": "Someshwar Camping",
+      "slug": "someshwar-camping",
+      "location": "Someshwar, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Nature Camping",
+      "rating": 4.2,
+      "timing": "Check-in: 03:00 PM | Check-out: 09:00 AM",
+      "entryFee": {
+        "adult": 1000,
+        "child": 700,
+        "currency": "INR"
+      },
+      "activities": [
+        "Tent Stay",
+        "Bonfire",
+        "Nature Walk",
+        "Photography",
+        "Outdoor Games"
+      ],
+      "facilities": [
+        "Parking",
+        "Basic Washroom",
+        "Food Available",
+        "Campfire Area"
+      ],
+      "image": "/images/someshwar-camping.jpg",
+      "gallery": [
+        "/images/someshwar-camping-1.jpg",
+        "/images/someshwar-camping-2.jpg"
+      ],
+      "shortDescription": "A quiet camping place in Someshwar surrounded by greenery.",
+      "longDescription": "Someshwar Camping is a peaceful camping destination in Nashik city, ideal for people looking for a quick getaway close to nature. Visitors can enjoy campfires, outdoor activities, and overnight tent stays in a calm environment. The greenery and nearby attractions make it a suitable destination for families and small groups."
+    },
+    {
+      "id": 3,
+      "name": "Kashyapi Dam Camping",
+      "slug": "kashyapi-dam-camping",
+      "location": "Kashyapi Dam, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Dam Side Camping",
+      "rating": 4.5,
+      "timing": "Check-in: 04:00 PM | Check-out: 10:00 AM",
+      "entryFee": {
+        "adult": 1300,
+        "child": 850,
+        "currency": "INR"
+      },
+      "activities": [
+        "Bonfire",
+        "Tent Stay",
+        "Photography",
+        "Nature Walk",
+        "Stargazing"
+      ],
+      "facilities": [
+        "Parking",
+        "Tent Stay",
+        "Food Available",
+        "Washroom",
+        "Campfire Area"
+      ],
+      "image": "/images/kashyapi-dam-camping.jpg",
+      "gallery": [
+        "/images/kashyapi-dam-camping-1.jpg",
+        "/images/kashyapi-dam-camping-2.jpg"
+      ],
+      "shortDescription": "A scenic dam-side camping location with peaceful surroundings.",
+      "longDescription": "Kashyapi Dam Camping offers a refreshing outdoor experience surrounded by greenery and calm waters. It is popular among local visitors who want a relaxing weekend camping trip near Nashik city. Visitors can enjoy tent stays, photography, bonfires, and beautiful sunrise views."
+    },
+    {
+      "id": 4,
+      "name": "Anjaneri Hills Camping",
+      "slug": "anjaneri-hills-camping",
+      "location": "Anjaneri, Trimbakeshwar Road, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Hill Camping",
+      "rating": 4.6,
+      "timing": "Check-in: 03:00 PM | Check-out: 09:00 AM",
+      "entryFee": {
+        "adult": 1500,
+        "child": 900,
+        "currency": "INR"
+      },
+      "activities": [
+        "Hill Trekking",
+        "Tent Stay",
+        "Bonfire",
+        "Photography",
+        "Sunrise View"
+      ],
+      "facilities": [
+        "Parking",
+        "Tent Stay",
+        "Washroom",
+        "Food Available",
+        "Campfire Area"
+      ],
+      "image": "/images/anjaneri-camping.jpg",
+      "gallery": [
+        "/images/anjaneri-camping-1.jpg",
+        "/images/anjaneri-camping-2.jpg"
+      ],
+      "shortDescription": "A hill camping destination near Anjaneri with trekking and sunrise views.",
+      "longDescription": "Anjaneri Hills Camping is one of the most scenic camping spots near Nashik city, ideal for adventure and nature lovers. The campsite offers hill trekking, overnight tent stays, bonfires, and breathtaking sunrise views. It is a perfect destination for groups, trekkers, and photographers looking for a memorable outdoor experience."
+    }
+  ]
+}

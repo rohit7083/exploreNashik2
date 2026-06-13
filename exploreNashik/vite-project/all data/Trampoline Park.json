@@ -1,0 +1,132 @@
+{
+  "trampolineParks": [
+    {
+      "id": 1,
+      "name": "Sky Jumper Trampoline Park Nashik",
+      "slug": "sky-jumper-trampoline-park-nashik",
+      "location": "College Road, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Indoor Trampoline Park",
+      "rating": 4.5,
+      "timing": "11:00 AM - 10:00 PM",
+      "entryFee": {
+        "adult": 500,
+        "child": 400,
+        "currency": "INR",
+        "note": "Price may vary based on session duration"
+      },
+      "activities": [
+        "Trampoline Jumping",
+        "Foam Pit",
+        "Wall Climbing",
+        "Obstacle Course",
+        "Basketball Dunk Zone",
+        "Kids Play Zone"
+      ],
+      "facilities": [
+        "Parking",
+        "Locker Facility",
+        "Cafe",
+        "Birthday Party Area",
+        "Washroom",
+        "Safety Equipment"
+      ],
+      "ageGroup": [
+        "Kids",
+        "Teenagers",
+        "Adults"
+      ],
+      "image": "/images/sky-jumper-nashik.jpg",
+      "gallery": [
+        "/images/sky-jumper-1.jpg",
+        "/images/sky-jumper-2.jpg"
+      ],
+      "shortDescription": "A fun indoor trampoline park in Nashik with jumping zones and adventure activities.",
+      "longDescription": "Sky Jumper Trampoline Park Nashik is one of the most exciting indoor entertainment destinations for kids, teenagers, and adults. The park offers wall-to-wall trampolines, foam pits, obstacle zones, climbing activities, and basketball dunk areas. It is ideal for birthday celebrations, family outings, fitness activities, and fun group experiences. Visitors can enjoy a safe and energetic environment with trained staff and proper safety measures."
+    },
+    {
+      "id": 2,
+      "name": "FunZania Adventure & Trampoline Park",
+      "slug": "funzania-adventure-trampoline-park",
+      "location": "Pathardi Phata, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Adventure & Trampoline Park",
+      "rating": 4.4,
+      "timing": "10:00 AM - 09:00 PM",
+      "entryFee": {
+        "adult": 450,
+        "child": 350,
+        "currency": "INR"
+      },
+      "activities": [
+        "Trampoline Jumping",
+        "Soft Play Area",
+        "Adventure Games",
+        "Slides",
+        "Foam Pit",
+        "Kids Activities"
+      ],
+      "facilities": [
+        "Parking",
+        "Food Court",
+        "Birthday Party Area",
+        "Washroom",
+        "Safety Equipment"
+      ],
+      "ageGroup": [
+        "Kids",
+        "Family",
+        "Teenagers"
+      ],
+      "image": "/images/funzania-nashik.jpg",
+      "gallery": [
+        "/images/funzania-1.jpg",
+        "/images/funzania-2.jpg"
+      ],
+      "shortDescription": "A family-friendly trampoline and indoor play zone in Nashik.",
+      "longDescription": "FunZania Adventure & Trampoline Park is a fun indoor entertainment destination in Nashik designed for families and children. It features trampoline jumping areas, slides, obstacle games, and activity zones for kids. The park is commonly chosen for birthday parties, weekend outings, and fun recreational experiences with family and friends."
+    },
+    {
+      "id": 3,
+      "name": "Fun Planet Indoor Trampoline Zone",
+      "slug": "fun-planet-indoor-trampoline-zone",
+      "location": "Canada Corner, Nashik, Maharashtra",
+      "city": "Nashik",
+      "state": "Maharashtra",
+      "type": "Kids Trampoline Park",
+      "rating": 4.2,
+      "timing": "10:30 AM - 09:30 PM",
+      "entryFee": {
+        "adult": 300,
+        "child": 250,
+        "currency": "INR"
+      },
+      "activities": [
+        "Mini Trampoline",
+        "Kids Jump Zone",
+        "Slides",
+        "Soft Play",
+        "Arcade Games"
+      ],
+      "facilities": [
+        "Parking",
+        "Snack Counter",
+        "Washroom",
+        "Party Hall"
+      ],
+      "ageGroup": [
+        "Kids",
+        "Toddlers"
+      ],
+      "image": "/images/fun-planet.jpg",
+      "gallery": [
+        "/images/fun-planet-1.jpg",
+        "/images/fun-planet-2.jpg"
+      ],
+      "shortDescription": "A kids-friendly indoor trampoline and gaming zone in Nashik.",
+      "longDescription": "Fun Planet Indoor Trampoline Zone is a popular indoor entertainment venue in Nashik mainly focused on children’s activities. It provides mini trampoline areas, soft play zones, slides, and arcade games. Families frequently visit for weekend entertainment, birthday parties, and kids’ recreational activities."
+    }
+  ]
+}

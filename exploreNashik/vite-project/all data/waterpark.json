@@ -1,0 +1,179 @@
+[
+  {
+    "id": 1,
+    "name": "Shubham Water World",
+    "images": [
+      {
+        "imageUrl": "/images/shubham-water-world.jpg",
+        "publicId": "shubham-water-world"
+      },
+      {
+        "imageUrl": "/images/shubham-water-world-1.jpg",
+        "publicId": "shubham-water-world-1"
+      },
+      {
+        "imageUrl": "/images/shubham-water-world-2.jpg",
+        "publicId": "shubham-water-world-2"
+      }
+    ],
+    "category": "Experiences",
+    "subcategory": "Waterpark",
+    "description": "A popular family-friendly water park in Nashik with exciting rides and water attractions.",
+    "location": "Anjaneri, Trimbakeshwar Road, Nashik, Maharashtra",
+    "distance": 20,
+    "bestTime": "Summer",
+    "timings": "10:00 AM - 06:00 PM",
+    "entryFee": "Adult: ₹700, Child: ₹500",
+    "rating": 4.2,
+    "facilities": [
+      "Wave Pool",
+      "Rain Dance",
+      "Water Slides",
+      "Kids Pool",
+      "Food Court",
+      "Locker Facility",
+      "Changing Room",
+      "Parking"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Shagun Resort & Water Park",
+    "images": [
+      {
+        "imageUrl": "/images/shagun-water-park.jpg",
+        "publicId": "shagun-water-park"
+      },
+      {
+        "imageUrl": "/images/shagun-water-park-1.jpg",
+        "publicId": "shagun-water-park-1"
+      },
+      {
+        "imageUrl": "/images/shagun-water-park-2.jpg",
+        "publicId": "shagun-water-park-2"
+      }
+    ],
+    "category": "Experiences",
+    "subcategory": "Waterpark",
+    "description": "A relaxing water park and resort near Igatpuri perfect for families.",
+    "location": "Ghoti, Igatpuri Road, Nashik, Maharashtra",
+    "distance": 45,
+    "bestTime": "Summer",
+    "timings": "09:00 AM - 06:00 PM",
+    "entryFee": "Adult: ₹800, Child: ₹600",
+    "rating": 4.0,
+    "facilities": [
+      "Swimming Pool",
+      "Rain Dance",
+      "Adventure Activities",
+      "Restaurant",
+      "Resort Stay",
+      "Parking"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Aqua Park Ozar",
+    "images": [
+      {
+        "imageUrl": "/images/aqua-park-ozar.jpg",
+        "publicId": "aqua-park-ozar"
+      },
+      {
+        "imageUrl": "/images/aqua-park-ozar-1.jpg",
+        "publicId": "aqua-park-ozar-1"
+      },
+      {
+        "imageUrl": "/images/aqua-park-ozar-2.jpg",
+        "publicId": "aqua-park-ozar-2"
+      }
+    ],
+    "category": "Experiences",
+    "subcategory": "Waterpark",
+    "description": "A budget-friendly local water park near Ozar in Nashik.",
+    "location": "Ozar, Nashik, Maharashtra",
+    "distance": 25,
+    "bestTime": "Summer",
+    "timings": "10:00 AM - 05:30 PM",
+    "entryFee": "Adult: ₹500, Child: ₹350",
+    "rating": 3.9,
+    "facilities": [
+      "Water Slides",
+      "Kids Pool",
+      "Food Area",
+      "Changing Room",
+      "Parking"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Wet N Joy Shirdi",
+    "images": [
+      {
+        "imageUrl": "/images/wet-n-joy-shirdi.jpg",
+        "publicId": "wet-n-joy-shirdi"
+      },
+      {
+        "imageUrl": "/images/wet-n-joy-1.jpg",
+        "publicId": "wet-n-joy-1"
+      },
+      {
+        "imageUrl": "/images/wet-n-joy-2.jpg",
+        "publicId": "wet-n-joy-2"
+      }
+    ],
+    "category": "Experiences",
+    "subcategory": "Waterpark",
+    "description": "One of Maharashtra’s biggest water parks near Nashik.",
+    "location": "Shirdi, Maharashtra",
+    "distance": 90,
+    "bestTime": "Summer",
+    "timings": "10:00 AM - 06:00 PM",
+    "entryFee": "Adult: ₹1200, Child: ₹900",
+    "rating": 4.5,
+    "facilities": [
+      "Wave Pool",
+      "Lazy River",
+      "Thrill Rides",
+      "Rain Dance",
+      "Food Court",
+      "Locker Facility",
+      "Parking"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Shangrila Resort & Waterpark",
+    "images": [
+      {
+        "imageUrl": "/images/shangrila-waterpark.jpg",
+        "publicId": "shangrila-waterpark"
+      },
+      {
+        "imageUrl": "/images/shangrila-1.jpg",
+        "publicId": "shangrila-1"
+      },
+      {
+        "imageUrl": "/images/shangrila-2.jpg",
+        "publicId": "shangrila-2"
+      }
+    ],
+    "category": "Experiences",
+    "subcategory": "Waterpark",
+    "description": "A famous resort and water park on the Mumbai-Nashik highway.",
+    "location": "Mumbai-Nashik Highway, Bhiwandi, Maharashtra",
+    "distance": 120,
+    "bestTime": "Summer",
+    "timings": "09:00 AM - 06:00 PM",
+    "entryFee": "Adult: ₹900, Child: ₹650",
+    "rating": 4.1,
+    "facilities": [
+      "Wave Pool",
+      "Rain Dance",
+      "Slides",
+      "Restaurant",
+      "Locker Facility",
+      "Parking"
+    ]
+  }
+]
