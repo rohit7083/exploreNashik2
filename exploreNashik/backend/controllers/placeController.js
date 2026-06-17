@@ -130,14 +130,14 @@ exports.createPlace = async (req, res) => {
 
     res.status(201).json(newPlace);
   } catch (error) {
-  console.error("CREATE ERROR:", error);
+    console.error("CREATE ERROR:", error);
 
-  return res.status(500).json({
-    success: false,
-    message: error.message,
-    stack: error.stack,
-  });
-}
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+      stack: error.stack,
+    });
+  }
 };
 
 // Update place
@@ -223,12 +223,11 @@ exports.deletePlace = async (req, res) => {
 
 
 
-
-
-
 // Bulk image upload साठी controller
 exports.addImagesInbulk = async (req, res) => {
   try {
+
+
     const images = await Promise.all(
       req.files.map(async (file) => {
         const response = await axios.get(file.path, {
