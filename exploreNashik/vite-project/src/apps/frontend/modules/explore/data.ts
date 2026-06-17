@@ -512,10 +512,10 @@ export const subCategories: Record<
     { id: "Ghats", label: "Ghats", icon: "🌊" },
   ],
   Food: [
-    { id: "Restaurants", label: "Restaurants", icon: "🍽️" },
+    { id: "Restaurant", label: "Restaurants", icon: "🍽️" },
     { id: "Street Food", label: "Street Food", icon: "🌮" },
-    { id: "Cafes", label: "Cafes", icon: "☕" },
-    { id: "Local Special Food", label: "Local Special", icon: "🥘" },
+    { id: "Cafe", label: "Cafes", icon: "☕" },
+    { id: "local", label: "Local Special", icon: "🥘" },
   ],
   Stay: [
     { id: "Hotels", label: "Hotels", icon: "🏨" },

@@ -537,7 +537,7 @@ const ExplorePage = () => {
   const filteredPlaces = useMemo(() => {
 
     const subCategoryGroups: Record<string, string[]> = {
-      Dam: ["Dam", "lake"],
+      Dam: ["Dam", "lake","Waterfall"],
     };
     let result = [...places];
 
