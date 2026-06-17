@@ -390,48 +390,140 @@
 //   },
 // ];
 
+
+
+//********************************** */
+// export const mainCategories = [
+//   { id: "all", label: "All Places", icon: "🗺️" },
+//   { id: "places", label: "Places to Visit", icon: "🏞️" },
+//   { id: "religious", label: "Religious", icon: "🛕" },
+//   { id: "food", label: "Food & Dining", icon: "🍴" },
+//   { id: "stay", label: "Stay", icon: "🏨" },
+//   { id: "wine", label: "Wine Tourism", icon: "🍷" },
+//   // { id: "events", label: "Events", icon: "🎉" },
+//   { id: "shopping", label: "Shopping", icon: "🛍️" },
+//   // { id: "travel", label: "Travel Guide", icon: "🚗" },
+//   // { id: "hidden", label: "Hidden Gems", icon: "📸" },
+//   { id: "experiences", label: "Experiences", icon: "🧭" },
+// ];
+
+// export const subCategories: Record<
+//   string,
+//   { id: string; label: string; icon: string }[]
+// > = {
+//   places: [
+//     { id: "Tourist Attractions", label: "Tourist Attractions", icon: "🏛️" },
+//     { id: "Historical Places", label: "Historical Places", icon: "🏰" },
+//     { id: "Nature & Viewpoints", label: "Nature & Viewpoints", icon: "🌿" },
+//     { id: "Dams & Waterfalls", label: "Dams & Waterfalls", icon: "💧" },
+//   ],
+//   religious: [
+//     { id: "Temples", label: "Temples", icon: "🛕" },
+//     { id: "Pilgrimage Spots", label: "Pilgrimage Spots", icon: "🙏" },
+//     { id: "Ghats", label: "Ghats", icon: "🌊" },
+//   ],
+//   food: [
+//     { id: "Restaurants", label: "Restaurants", icon: "🍽️" },
+//     { id: "Street Food", label: "Street Food", icon: "🌮" },
+//     { id: "Cafes", label: "Cafes", icon: "☕" },
+//     { id: "Local Special Food", label: "Local Special", icon: "🥘" },
+//   ],
+//   stay: [
+//     { id: "Hotels", label: "Hotels", icon: "🏨" },
+//     { id: "Resorts", label: "Resorts", icon: "🏖️" },
+//     { id: "Budget Stay", label: "Budget Stay", icon: "🛏️" },
+//     { id: "Farmhouses", label: "Farmhouses", icon: "🏡" },
+//   ],
+//   wine: [
+//     { id: "Wineries", label: "Wineries", icon: "🍷" },
+//     { id: "Wine Tours", label: "Wine Tours", icon: "🗺️" },
+//     { id: "Wine Tasting", label: "Wine Tasting", icon: "🍇" },
+//   ],
+//   // events: [
+//   //   { id: "Kumbh Mela", label: "Kumbh Mela", icon: "🎪" },
+//   //   { id: "Local Events", label: "Local Events", icon: "🎉" },
+//   //   { id: "Cultural Festivals", label: "Cultural Festivals", icon: "🎭" },
+//   // ],
+//   shopping: [
+//     { id: "Markets", label: "Markets", icon: "🛒" },
+//     { id: "Malls", label: "Malls", icon: "🏬" },
+//     { id: "Local Products", label: "Local Products", icon: "🎁" },
+//   ],
+//   // travel: [
+//   //   { id: "How to Reach", label: "How to Reach", icon: "✈️" },
+//   //   { id: "Local Transport", label: "Local Transport", icon: "🚌" },
+//   //   { id: "Best Time to Visit", label: "Best Time", icon: "📅" },
+//   //   { id: "Itineraries", label: "Itineraries", icon: "🗒️" },
+//   // ],
+//   // hidden: [
+//   //   { id: "Offbeat Places", label: "Offbeat Places", icon: "🔭" },
+//   //   { id: "Less Known Spots", label: "Less Known", icon: "🔍" },
+//   // ],
+//   experiences: [
+//     { id: "Water park", label: "Waterpark", icon: "🥾" },
+//     { id: "Boating", label: "Boating", icon: "⛵" },
+//     { id: "Camping", label: "Camping", icon: "⛺" },
+//     { id: "Photography Spots", label: "Photography", icon: "📷" },
+//     { id: "Trampoline Park", label: "Trampoline Park", icon: "📷" },
+
+//   ],
+// };
+
+// // Map each subcategory id back to its parent main category
+// export const subToMain: Record<string, string> = Object.entries(
+//   subCategories,
+// ).reduce(
+//   (acc, [mainId, subs]) => {
+//     subs.forEach((s) => (acc[s.id] = mainId));
+//     return acc;
+//   },
+//   {} as Record<string, string>,
+// );
+
+//******************************* */
+
+
+// gautami update
+
 export const mainCategories = [
   { id: "all", label: "All Places", icon: "🗺️" },
-  { id: "places", label: "Places to Visit", icon: "🏞️" },
-  { id: "religious", label: "Religious", icon: "🛕" },
-  { id: "food", label: "Food & Dining", icon: "🍴" },
-  { id: "stay", label: "Stay", icon: "🏨" },
-  { id: "wine", label: "Wine Tourism", icon: "🍷" },
-  // { id: "events", label: "Events", icon: "🎉" },
-  { id: "shopping", label: "Shopping", icon: "🛍️" },
-  // { id: "travel", label: "Travel Guide", icon: "🚗" },
-  // { id: "hidden", label: "Hidden Gems", icon: "📸" },
-  { id: "experiences", label: "Experiences", icon: "🧭" },
+  { id: "place of Visit", label: "Places to Visit", icon: "🏞️" },
+  { id: "Religious", label: "Religious", icon: "🛕" },
+  { id: "Food", label: "Food & Dining", icon: "🍴" },
+  { id: "Stay", label: "Stay", icon: "🏨" },
+  { id: "Wine Tourism", label: "Wine Tourism", icon: "🍷" },
+  { id: "Shopping", label: "Shopping", icon: "🛍️" },
+  { id: "Experiences", label: "Experiences", icon: "🧭" },
 ];
 
 export const subCategories: Record<
   string,
   { id: string; label: string; icon: string }[]
 > = {
-  places: [
+"place of Visit": [
     { id: "Tourist Attractions", label: "Tourist Attractions", icon: "🏛️" },
-    { id: "Historical Places", label: "Historical Places", icon: "🏰" },
-    { id: "Nature & Viewpoints", label: "Nature & Viewpoints", icon: "🌿" },
-    { id: "Dams & Waterfalls", label: "Dams & Waterfalls", icon: "💧" },
+    { id: "historical places", label: "Historical Places", icon: "🏰" },
+    { id: "Viewpoint", label: "Nature & Viewpoints", icon: "🌿" },
+    { id: "Dam", label: "Dams & Waterfalls", icon: "💧" },
   ],
-  religious: [
+  Religious: [
     { id: "Temples", label: "Temples", icon: "🛕" },
     { id: "Pilgrimage Spots", label: "Pilgrimage Spots", icon: "🙏" },
     { id: "Ghats", label: "Ghats", icon: "🌊" },
   ],
-  food: [
+  Food: [
     { id: "Restaurants", label: "Restaurants", icon: "🍽️" },
     { id: "Street Food", label: "Street Food", icon: "🌮" },
     { id: "Cafes", label: "Cafes", icon: "☕" },
     { id: "Local Special Food", label: "Local Special", icon: "🥘" },
   ],
-  stay: [
+  Stay: [
     { id: "Hotels", label: "Hotels", icon: "🏨" },
     { id: "Resorts", label: "Resorts", icon: "🏖️" },
     { id: "Budget Stay", label: "Budget Stay", icon: "🛏️" },
     { id: "Farmhouses", label: "Farmhouses", icon: "🏡" },
   ],
-  wine: [
+  "Wine Tourism": [
     { id: "Wineries", label: "Wineries", icon: "🍷" },
     { id: "Wine Tours", label: "Wine Tours", icon: "🗺️" },
     { id: "Wine Tasting", label: "Wine Tasting", icon: "🍇" },
@@ -441,7 +533,7 @@ export const subCategories: Record<
   //   { id: "Local Events", label: "Local Events", icon: "🎉" },
   //   { id: "Cultural Festivals", label: "Cultural Festivals", icon: "🎭" },
   // ],
-  shopping: [
+  Shopping: [
     { id: "Markets", label: "Markets", icon: "🛒" },
     { id: "Malls", label: "Malls", icon: "🏬" },
     { id: "Local Products", label: "Local Products", icon: "🎁" },
@@ -456,7 +548,7 @@ export const subCategories: Record<
   //   { id: "Offbeat Places", label: "Offbeat Places", icon: "🔭" },
   //   { id: "Less Known Spots", label: "Less Known", icon: "🔍" },
   // ],
-  experiences: [
+  Experiences: [
     { id: "Water park", label: "Waterpark", icon: "🥾" },
     { id: "Boating", label: "Boating", icon: "⛵" },
     { id: "Camping", label: "Camping", icon: "⛺" },
