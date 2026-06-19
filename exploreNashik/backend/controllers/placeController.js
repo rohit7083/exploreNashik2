@@ -62,9 +62,6 @@ exports.getPlaceById = async (req, res) => {
 // User image upload करतो → आधी Cloudinary वर जाते → मग ती image परत download होते → compress होते → पुन्हा Cloudinary वर upload होते → original image delete होते
 
 const uploadToCloudinary = (buffer, folder = "places") => {
-  //   हा function image चा buffer घेतो आणि Cloudinary वर upload करतो.
-  // folder = "places" म्हणजे image Cloudinary मध्ये places folder मध्ये save होईल.
-
   return new Promise((resolve, reject) => {
     const stream = cloudinary.uploader.upload_stream(
       {
@@ -221,22 +218,68 @@ exports.deletePlace = async (req, res) => {
   }
 };
 
-
-
 // Bulk image upload साठी controller
+// exports.addImagesInbulk = async (req, res) => {
+//   try {
+
+//     const images = await Promise.all(
+//       req.files.map(async (file) => {
+//         const response = await axios.get(file.path, {
+//           responseType: "arraybuffer",
+//         });
+
+//         const originalBuffer = Buffer.from(response.data);
+
+//         const compressedBuffer = await sharp(originalBuffer)
+//           .resize({
+//             width: 1200,
+//             withoutEnlargement: true,
+//           })
+//           .jpeg({
+//             quality: 70,
+//             mozjpeg: true,
+//           })
+//           .toBuffer();
+
+//         const uploaded = await uploadToCloudinary(compressedBuffer);
+
+//         await cloudinary.uploader.destroy(file.filename);
+
+//         return {
+//           imageUrl: uploaded.secure_url,
+//           publicId: uploaded.public_id,
+//         };
+//       })
+//     );
+
+//     return res.status(200).json({
+//       success: true,
+//       images,
+//     });
+//   } catch (error) {
+//     return res.status(500).json({
+//       success: false,
+//       message: error.message,
+//     });
+//   }
+// };
+
 exports.addImagesInbulk = async (req, res) => {
   try {
-
-
+    if (!req.files?.length) {
+      return res.status(400).json({
+        success: false,
+        message: "No images uploaded",
+      });
+    }
+    console.log(req.files);
     const images = await Promise.all(
       req.files.map(async (file) => {
         const response = await axios.get(file.path, {
           responseType: "arraybuffer",
         });
 
-        const originalBuffer = Buffer.from(response.data);
-
-        const compressedBuffer = await sharp(originalBuffer)
+        const compressedBuffer = await sharp(response.data)
           .resize({
             width: 1200,
             withoutEnlargement: true,
@@ -249,28 +292,27 @@ exports.addImagesInbulk = async (req, res) => {
 
         const uploaded = await uploadToCloudinary(compressedBuffer);
 
-        await cloudinary.uploader.destroy(file.filename);
-
         return {
           imageUrl: uploaded.secure_url,
           publicId: uploaded.public_id,
         };
-      })
+      }),
     );
 
-    return res.status(200).json({
+    res.status(200).json({
       success: true,
       images,
     });
   } catch (error) {
+    console.log("FULL ERROR:", error);
+
     return res.status(500).json({
       success: false,
       message: error.message,
+      error: error,
     });
   }
 };
-
-
 //bulk json upload साठी script with image url
 exports.bulkUploadProducts = async (req, res) => {
   try {

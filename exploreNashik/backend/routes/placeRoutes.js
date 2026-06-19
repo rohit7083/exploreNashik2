@@ -43,7 +43,6 @@ router.post(
   upload.array("images", 20),
   placeController.addImagesInbulk
 );
-
 router.post(
   "/bulkUploadProducts",
   upload.array("images", 50),
