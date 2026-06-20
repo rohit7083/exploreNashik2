@@ -552,7 +552,7 @@ export const subCategories: Record<
     { id: "Water park", label: "Waterpark", icon: "🥾" },
     { id: "Boating", label: "Boating", icon: "⛵" },
     { id: "Camping", label: "Camping", icon: "⛺" },
-    { id: "Photography Spots", label: "Photography", icon: "📷" },
+    { id: "Photography", label: "Photography", icon: "📷" },
     { id: "Trampoline Park", label: "Trampoline Park", icon: "📷" },
 
   ],
