@@ -12,47 +12,59 @@ interface Attraction {
 
 const attractions: Attraction[] = [
   {
-    id: 1,
-    name: "Sula Vineyards",
-    image:
-      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb",
-    description: "India's most famous winery with tours & tastings.",
-    location: "Nashik",
-  },
-  {
-    id: 2,
-    name: "Trimbakeshwar Temple",
-    image:
-      "https://images.unsplash.com/photo-1599661046827-dacff0c0f09a",
-    description: "One of the 12 Jyotirlingas dedicated to Lord Shiva.",
-    location: "Trimbak",
-  },
-  {
-    id: 3,
-    name: "Pandavleni Caves",
-    image:
-      "https://images.unsplash.com/photo-1582562124811-c09040d0a901",
-    description: "Ancient Buddhist caves with scenic hill views.",
-    location: "Nashik",
-  },
-  {
-    id: 4,
-    name: "Anjneri Hills",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-    description:
-      "Popular trekking destination believed to be Hanuman's birthplace.",
-    location: "Anjneri",
-  },
-  {
-    id: 5,
-    name: "Gangapur Dam",
-    image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-    description:
-      "Beautiful reservoir offering peaceful sunset views.",
-    location: "Nashik",
-  },
+  id: 1,
+  name: "Trimbakeshwar Temple",
+  image:
+    "https://res.cloudinary.com/dq7re39ys/image/upload/v1781953290/places/yylgphy5edahqgdzvmrc.jpg",
+  description:
+    "One of the twelve sacred Jyotirlingas of Lord Shiva and a major pilgrimage destination in India.",
+  location: "Trimbak",
+},
+{
+  id: 2,
+  name: "Sula Vineyards",
+  image:
+    "https://res.cloudinary.com/dq7re39ys/image/upload/v1781947900/tourism-app/bzxz7zjah55ibxsglawn.png",
+  description:
+    "India's most famous winery offering vineyard tours, wine tastings, and stunning views of the surrounding hills.",
+  location: "Gangapur Road, Nashik",
+},
+ {
+  id: 6,
+  name: "Harihar Fort",
+  image:
+    "https://res.cloudinary.com/dq7re39ys/image/upload/v1779533882/places/cngz8ouajmgrz1ispun9.jpg",
+  description:
+    "Famous for its steep rock-cut staircase and breathtaking trekking experience.",
+  location: "Trimbak Range",
+},
+{
+  id: 7,
+  name: "Ramkund",
+  image:    "https://res.cloudinary.com/dq7re39ys/image/upload/v1781953286/places/ho16ohej07zc7u1tp1px.jpg",
+  description:
+    "Sacred bathing ghat on the Godavari River, an important pilgrimage site.",
+  location: "Panchavati",
+},
+{
+  id: 8,
+  name: "Kalaram Temple",
+  image:
+    "https://res.cloudinary.com/dq7re39ys/image/upload/v1781953294/places/v9bzvxfhiufjojiier3v.jpg",
+  description:
+    "Historic temple dedicated to Lord Rama, known for its black stone architecture.",
+  location: "Panchavati",
+},
+{
+  id: 9,
+  name: "Saptashrungi Devi Temple",
+  image:
+    "https://res.cloudinary.com/dq7re39ys/image/upload/v1781953294/places/ylsojugqfnhjzleh1hz7.jpg",
+  description:
+    "One of Maharashtra's most revered Shakti Peethas, located amidst seven hills.",
+  location: "Vani",
+},
+
 ];
 
 const TopAttraction = () => {
@@ -78,7 +90,7 @@ const TopAttraction = () => {
         {/* Header */}
         <div className="mb-10">
           <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
-            Top Attractions
+            Top Attractions 
           </h2>
           <p className="text-gray-500 dark:text-gray-400 mt-2">
             Essential information to plan your perfect Nashik trip

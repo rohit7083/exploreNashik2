@@ -491,7 +491,7 @@ export const mainCategories = [
   { id: "Religious", label: "Religious", icon: "🛕" },
   { id: "Food", label: "Food & Dining", icon: "🍴" },
   { id: "Stay", label: "Stay", icon: "🏨" },
-  { id: "Wine Tourism", label: "Wine Tourism", icon: "🍷" },
+  { id: "Wine", label: "Wine Tourism", icon: "🍷" },
   { id: "Shopping", label: "Shopping", icon: "🛍️" },
   { id: "Experiences", label: "Experiences", icon: "🧭" },
 ];
@@ -501,7 +501,7 @@ export const subCategories: Record<
   { id: string; label: string; icon: string }[]
 > = {
 "place of Visit": [
-    { id: "Tourist Attractions", label: "Tourist Attractions", icon: "🏛️" },
+    // { id: "Tourist Attractions", label: "Tourist Attractions", icon: "🏛️" },
     { id: "historical places", label: "Historical Places", icon: "🏰" },
     { id: "Viewpoint", label: "Nature & Viewpoints", icon: "🌿" },
     { id: "Dam", label: "Dams & Waterfalls", icon: "💧" },
@@ -509,13 +509,14 @@ export const subCategories: Record<
   Religious: [
     { id: "Temples", label: "Temples", icon: "🛕" },
     { id: "Pilgrimage Spots", label: "Pilgrimage Spots", icon: "🙏" },
-    { id: "Ghats", label: "Ghats", icon: "🌊" },
   ],
   Food: [
     { id: "Restaurant", label: "Restaurants", icon: "🍽️" },
     { id: "Street Food", label: "Street Food", icon: "🌮" },
     { id: "Cafe", label: "Cafes", icon: "☕" },
     { id: "local", label: "Local Special", icon: "🥘" },
+        { id: "Misal", label: "Misal", icon: "☕" },
+
   ],
   Stay: [
     { id: "Hotels", label: "Hotels", icon: "🏨" },
@@ -523,11 +524,11 @@ export const subCategories: Record<
     { id: "Budget Stay", label: "Budget Stay", icon: "🛏️" },
     { id: "Farmhouses", label: "Farmhouses", icon: "🏡" },
   ],
-  "Wine Tourism": [
-    { id: "Wineries", label: "Wineries", icon: "🍷" },
-    { id: "Wine Tours", label: "Wine Tours", icon: "🗺️" },
-    { id: "Wine Tasting", label: "Wine Tasting", icon: "🍇" },
-  ],
+  // "Wine": [
+    // { id: "Wineries", label: "Wineries", icon: "🍷" },
+    // { id: "Wine Tours", label: "Wine Tours", icon: "🗺️" },
+    // { id: "Wine Tasting", label: "Wine Tasting", icon: "🍇" },
+  // ],
   // events: [
   //   { id: "Kumbh Mela", label: "Kumbh Mela", icon: "🎪" },
   //   { id: "Local Events", label: "Local Events", icon: "🎉" },
