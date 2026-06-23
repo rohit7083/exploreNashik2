@@ -24,17 +24,17 @@ function BannerOne() {
         <div className="max-w-xl">
           <h1
             style={{ fontSize: "clamp(32px, 6vw, 70px)" }}
-            className="text-white mb-2.5"
+            className="text-white mb-2.5 font-serif font-bold "
           >
             Explore Nashik
           </h1>
           <p
             style={{ fontSize: "clamp(14px, 2vw, 20px)" }}
-            className="text-white mb-7"
+            className="text-white mb-7 "
           >
             Discover the beauty of vineyards and culture
           </p>
-            <Button size="lg" onClick={()=> navigate('./explore')}>Explore</Button>
+            <Button size="lg" style={{backgroundColor:"#9F0712"}} onClick={()=> navigate('./explore')}>Explore</Button>
         </div>
       </div>
     </div>

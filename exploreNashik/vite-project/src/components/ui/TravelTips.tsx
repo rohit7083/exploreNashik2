@@ -20,8 +20,12 @@ const tips = [
     desc: "Marathi is the local language. Hindi and English widely understood.",
   },
 ];
+import { useNavigate } from "react-router-dom";
 
 const TravelTips = () => {
+
+    const navigate = useNavigate();
+
   return (
     <section className="w-full bg-gray-50 dark:bg-gray-900 py-16 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
@@ -57,10 +61,13 @@ const TravelTips = () => {
 
         {/* Button */}
         <div className="flex justify-center mt-10">
-          <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-md transition">
-            🚗 Complete Travel Guide →
-          </button>
-        </div>
+      <button
+        onClick={() => navigate("/travel-info")}
+        className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-md transition"
+      >
+        🚗 Complete Travel Guide →
+      </button>
+    </div>
 
       </div>
     </section>

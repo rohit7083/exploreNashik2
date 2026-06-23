@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Sheet } from "@/components/ui/sheet";
 import { useTheme } from "@/context/ThemeContext";
-import { Menu, Moon, Search, Sun, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -56,8 +55,8 @@ const Navbar = () => {
 
         {/* Desktop Search + Theme Toggle */}
         <div className="hidden md:flex items-center gap-2 relative">
-          <Input placeholder="Search..." className="pr-8 w-48" />
-          <Search className="absolute left-[calc(100%-4.5rem)] text-gray-400" size={16} />
+          {/* <Input placeholder="Search..." className="pr-8 w-48" />
+          <Search className="absolute left-[calc(100%-4.5rem)] text-gray-400" size={16} /> */}
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </Button>

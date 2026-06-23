@@ -536,7 +536,7 @@ export const subCategories: Record<
   // ],
   Shopping: [
     { id: "Markets", label: "Markets", icon: "🛒" },
-    { id: "Malls", label: "Malls", icon: "🏬" },
+    { id: "Mall", label: "Mall", icon: "🏬" },
     { id: "Local Products", label: "Local Products", icon: "🎁" },
   ],
   // travel: [

@@ -5,10 +5,10 @@ type Stat = {
 };
 
 const stats: Stat[] = [
-  { number: "50+", label: "Tourist Spots", icon: "📍" },
+  { number: "56+", label: "Historic Forts", icon: "🏰" },
   { number: "30+", label: "Wineries", icon: "🍷" },
-  { number: "12", label: "Jyotirlinga nearby", icon: "🛕" },
-  { number: "4", label: "Kumbh Mela site", icon: "🙏" },
+  { number: "90+", label: "Tourist Spots", icon: "📍" },
+  { number: "1", label: "Jyotirlinga", icon: "🛕" }
 ];
 
 const QuickStats = () => {
