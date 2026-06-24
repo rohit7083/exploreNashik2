@@ -253,7 +253,7 @@
 //       {/* Results */}
 //       <div className="max-w-7xl mx-auto px-4 py-10">
 
-       
+
 
 //        <div className="max-w-[1600px] mx-auto px-8 lg:px-12 xl:px-16 py-10">
 
@@ -286,8 +286,8 @@
 
 //   </div>
 // </div>
-       
-     
+
+
 //       </div>
 //     </div>
 //   );
@@ -330,6 +330,10 @@ const NearbyPlaces = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
+  //pagenation code
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+
   useEffect(() => {
     const fetchPlaces = async () => {
       try {
@@ -338,6 +342,8 @@ const NearbyPlaces = () => {
         const res = await axios.get<Place[]>(
           "http://localhost:5000/api/getPlaces"
         );
+        //pagenation
+        setCurrentPage(1);
 
         setPlaces(res.data || []);
       } catch (error) {
@@ -348,7 +354,7 @@ const NearbyPlaces = () => {
     };
 
     fetchPlaces();
-  }, []);
+  }, [searchQuery, selectedCategory]);
 
   const filteredPlaces = useMemo(() => {
     let data = [...places];
@@ -380,6 +386,17 @@ const NearbyPlaces = () => {
 
     return data;
   }, [places, searchQuery, selectedCategory]);
+
+
+  const totalPages = Math.ceil(filteredPlaces.length / itemsPerPage);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+  const currentPlaces = filteredPlaces.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   return (
     <div className="min-h-screen bg-orange-50 dark:bg-gray-900">
@@ -444,7 +461,7 @@ const NearbyPlaces = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredPlaces.map((place) => (
+            {/* {filteredPlaces.map((place) => (
               <div key={place._id} className="relative">
                 <div className="absolute top-3 right-3 z-20 bg-stone-900/90 dark:bg-black/90 text-orange-50 px-3 py-1 rounded-full text-xs shadow backdrop-blur-sm">
                   📍 {place.distance} km
@@ -452,6 +469,9 @@ const NearbyPlaces = () => {
 
                 <PlaceCard place={place} />
               </div>
+            ))} */}
+            {currentPlaces.map((place) => (
+              <PlaceCard key={place._id} place={place} />
             ))}
           </div>
         )}
@@ -466,6 +486,36 @@ const NearbyPlaces = () => {
             </p>
           </div>
         )}
+        <div className="flex justify-center items-center gap-2 mt-10">
+          <button
+            onClick={() => setCurrentPage((prev) => prev - 1)}
+            disabled={currentPage === 1}
+            className="px-4 py-2 border rounded disabled:opacity-50"
+          >
+            Prev
+          </button>
+
+          {[...Array(totalPages)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index + 1)}
+              className={`w-10 h-10 rounded ${currentPage === index + 1
+                  ? "bg-orange-500 text-white"
+                  : "border"
+                }`}
+            >
+              {index + 1}
+            </button>
+          ))}
+
+          <button
+            onClick={() => setCurrentPage((prev) => prev + 1)}
+            disabled={currentPage === totalPages}
+            className="px-4 py-2 border rounded disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );
