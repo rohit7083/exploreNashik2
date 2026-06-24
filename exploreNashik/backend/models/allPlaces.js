@@ -42,7 +42,7 @@ const placeSchema = new mongoose.Schema(
       required: true,
     },
     location: {
-      type: String,
+      type: [String],
       // required: true,
     },
 
@@ -92,7 +92,7 @@ const placeSchema = new mongoose.Schema(
       type: [String],
     },
     mapLocation: {
-      type: String,
+      type: [String],
       // required: true,
     },
     contact: {
