@@ -332,7 +332,7 @@ const NearbyPlaces = () => {
 
   //pagenation code
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 8;
+  const itemsPerPage = 3;
 
   useEffect(() => {
     const fetchPlaces = async () => {
@@ -398,6 +398,39 @@ const NearbyPlaces = () => {
     indexOfLastItem
   );
 
+  //new pagenation
+  const getPageNumbers = () => {
+    const pages = [];
+
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      pages.push(1);
+
+      if (currentPage > 3) {
+        pages.push("...");
+      }
+
+      const start = Math.max(2, currentPage - 1);
+      const end = Math.min(totalPages - 1, currentPage + 1);
+
+      for (let i = start; i <= end; i++) {
+        pages.push(i);
+      }
+
+      if (currentPage < totalPages - 2) {
+        pages.push("...");
+      }
+
+      pages.push(totalPages);
+    }
+
+    return pages;
+  };
+
+
   return (
     <div className="min-h-screen bg-orange-50 dark:bg-gray-900">
       {/* Hero Section */}
@@ -451,44 +484,54 @@ const NearbyPlaces = () => {
               {filteredPlaces.length} Found
 
             </span> */}
-<div className="flex justify-center items-center gap-2 mt-10">
-   <span className="bg-orange-600 dark:bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-              {filteredPlaces.length} Found
+            {/* pagenation */}
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                {filteredPlaces.length} Found
+              </span>
 
-            </span>
-          <button
-            onClick={() => setCurrentPage((prev) => prev - 1)}
-            disabled={currentPage === 1}
-            className="px-4 py-2 border rounded disabled:opacity-50"
-          >
-            Prev
-          </button>
+              <button
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+                className="px-3 py-2 border rounded disabled:opacity-50"
+              >
+                Prev
+              </button>
 
-          {[...Array(totalPages)].map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentPage(index + 1)}
-              className={`w-10 h-10 rounded ${currentPage === index + 1
-                ? "bg-orange-500 text-white"
-                : "border"
-                }`}
-            >
-              {index + 1}
-            </button>
-          ))}
+              {getPageNumbers().map((page, index) =>
+                page === "..." ? (
+                  <span key={index} className="px-2">
+                    ...
+                  </span>
+                ) : (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentPage(Number(page))}
+                    className={`w-10 h-10 rounded ${currentPage === page
+                        ? "bg-orange-500 text-white"
+                        : "border"
+                      }`}
+                  >
+                    {page}
+                  </button>
+                )
+              )}
 
-          <button
-            onClick={() => setCurrentPage((prev) => prev + 1)}
-            disabled={currentPage === totalPages}
-            className="px-4 py-2 border rounded disabled:opacity-50"
-          >
-            Next
-          </button>
-        </div>
-
+              <button
+                onClick={() =>
+                  setCurrentPage((prev) =>
+                    Math.min(prev + 1, totalPages)
+                  )
+                }
+                disabled={currentPage === totalPages}
+                className="px-3 py-2 border rounded disabled:opacity-50"
+              >
+                Next
+              </button>
+            </div>
           </div>
-          
-          
+
+
         )}
 
         {loading ? (
@@ -525,34 +568,45 @@ const NearbyPlaces = () => {
           </div>
         )}
         <div className="flex justify-center items-center gap-2 mt-10">
-          <button
-            onClick={() => setCurrentPage((prev) => prev - 1)}
-            disabled={currentPage === 1}
-            className="px-4 py-2 border rounded disabled:opacity-50"
-          >
-            Prev
-          </button>
+         
+              <button
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+                className="px-3 py-2 border rounded disabled:opacity-50"
+              >
+                Prev
+              </button>
 
-          {[...Array(totalPages)].map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentPage(index + 1)}
-              className={`w-10 h-10 rounded ${currentPage === index + 1
-                ? "bg-orange-500 text-white"
-                : "border"
-                }`}
-            >
-              {index + 1}
-            </button>
-          ))}
+              {getPageNumbers().map((page, index) =>
+                page === "..." ? (
+                  <span key={index} className="px-2">
+                    ...
+                  </span>
+                ) : (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentPage(Number(page))}
+                    className={`w-10 h-10 rounded ${currentPage === page
+                        ? "bg-orange-500 text-white"
+                        : "border"
+                      }`}
+                  >
+                    {page}
+                  </button>
+                )
+              )}
 
-          <button
-            onClick={() => setCurrentPage((prev) => prev + 1)}
-            disabled={currentPage === totalPages}
-            className="px-4 py-2 border rounded disabled:opacity-50"
-          >
-            Next
-          </button>
+              <button
+                onClick={() =>
+                  setCurrentPage((prev) =>
+                    Math.min(prev + 1, totalPages)
+                  )
+                }
+                disabled={currentPage === totalPages}
+                className="px-3 py-2 border rounded disabled:opacity-50"
+              >
+                Next
+              </button>
         </div>
       </div>
     </div>
