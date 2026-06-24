@@ -447,10 +447,48 @@ const NearbyPlaces = () => {
               Nearby Places
             </h2>
 
-            <span className="bg-orange-600 dark:bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+            {/* <span className="bg-orange-600 dark:bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">
               {filteredPlaces.length} Found
+
+            </span> */}
+<div className="flex justify-center items-center gap-2 mt-10">
+   <span className="bg-orange-600 dark:bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+              {filteredPlaces.length} Found
+
             </span>
+          <button
+            onClick={() => setCurrentPage((prev) => prev - 1)}
+            disabled={currentPage === 1}
+            className="px-4 py-2 border rounded disabled:opacity-50"
+          >
+            Prev
+          </button>
+
+          {[...Array(totalPages)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index + 1)}
+              className={`w-10 h-10 rounded ${currentPage === index + 1
+                ? "bg-orange-500 text-white"
+                : "border"
+                }`}
+            >
+              {index + 1}
+            </button>
+          ))}
+
+          <button
+            onClick={() => setCurrentPage((prev) => prev + 1)}
+            disabled={currentPage === totalPages}
+            className="px-4 py-2 border rounded disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
+
           </div>
+          
+          
         )}
 
         {loading ? (
@@ -500,8 +538,8 @@ const NearbyPlaces = () => {
               key={index}
               onClick={() => setCurrentPage(index + 1)}
               className={`w-10 h-10 rounded ${currentPage === index + 1
-                  ? "bg-orange-500 text-white"
-                  : "border"
+                ? "bg-orange-500 text-white"
+                : "border"
                 }`}
             >
               {index + 1}
