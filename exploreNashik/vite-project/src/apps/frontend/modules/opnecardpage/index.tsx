@@ -3,25 +3,25 @@ import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 // ✅ Types
-interface Review {
-  id: number;
-  name: string;
-  avatar: string;
-  rating: number;
-  date: string;
-  comment: string;
-}
+// interface Review {
+//   id: number;
+//   name: string;
+//   avatar: string;
+//   rating: number;
+//   date: string;
+//   comment: string;
+// }
 
 // Map Component
-const MapPlaceholder: React.FC<{ location: string }> = ({ location }) => (
-  <div className="w-full h-64 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
-    <div className="text-center">
-      <div className="text-4xl mb-2">📍</div>
-      <p className="text-gray-600 font-medium">{location}</p>
-      <p className="text-sm text-gray-500 mt-1">Interactive map coming soon</p>
-    </div>
-  </div>
-);
+// const MapPlaceholder: React.FC<{ location: string }> = ({ location }) => (
+//   <div className="w-full h-64 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
+//     <div className="text-center">
+//       <div className="text-4xl mb-2">📍</div>
+//       <p className="text-gray-600 font-medium">{location}</p>
+//       <p className="text-sm text-gray-500 mt-1">Interactive map coming soon</p>
+//     </div>
+//   </div>
+// );
 
 // Star Rating
 const StarRating: React.FC<{ rating: number }> = ({ rating }) => (
@@ -40,32 +40,32 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => (
   </div>
 );
 
-const dummyReviews: Review[] = [
-  {
-    id: 1,
-    name: "Priya Sharma",
-    avatar: "👩",
-    rating: 5,
-    date: "March 2025",
-    comment:
-      "An absolutely divine experience! The spiritual energy here is unmatched.",
-  },
-  {
-    id: 2,
-    name: "Rahul Mehta",
-    avatar: "👨",
-    rating: 4,
-    date: "February 2025",
-    comment: "Breathtaking place with deep history. Must visit during Kumbh.",
-  },
-];
+// const dummyReviews: Review[] = [
+//   {
+//     id: 1,
+//     name: "Priya Sharma",
+//     avatar: "👩",
+//     rating: 5,
+//     date: "March 2025",
+//     comment:
+//       "An absolutely divine experience! The spiritual energy here is unmatched.",
+//   },
+//   {
+//     id: 2,
+//     name: "Rahul Mehta",
+//     avatar: "👨",
+//     rating: 4,
+//     date: "February 2025",
+//     comment: "Breathtaking place with deep history. Must visit during Kumbh.",
+//   },
+// ];
 
 const AttractionDetailPage: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const [activeImage, setActiveImage] = useState<number>(0);
-  const [showAllReviews, setShowAllReviews] = useState<boolean>(false);
+  // const [showAllReviews, setShowAllReviews] = useState<boolean>(false);
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
 
   // PlaceCard madhun alela data
@@ -95,9 +95,9 @@ const AttractionDetailPage: React.FC = () => {
   // Gallery Images
   const gallery = attraction.images?.map((img: any) => img.imageUrl) || [];
 
-  const displayedReviews = showAllReviews
-    ? dummyReviews
-    : dummyReviews.slice(0, 2);
+  // const displayedReviews = showAllReviews
+  //   ? dummyReviews
+  //   : dummyReviews.slice(0, 2);
 
   return (
     <div className="min-h-screen bg-gray-50">

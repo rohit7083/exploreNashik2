@@ -13,7 +13,7 @@ export default function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: {  isSubmitting },
     reset,
   } = useForm<ContactFormData>();
 

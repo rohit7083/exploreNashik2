@@ -276,22 +276,22 @@ const stats = [
   { num: "2", label: "People building it" },
 ];
 
-const team = [
-  {
-    name: "Rohit",
-    role: "Full Stack Developer",
-    focus: "Backend, data & infrastructure",
-    initials: "R",
-    bg: "bg-orange-600 dark:bg-orange-500",
-  },
-  {
-    name: "Gautami",
-    role: "Full Stack Developer",
-    focus: "Frontend & design",
-    initials: "G",
-    bg: "bg-teal-600 dark:bg-teal-500",
-  },
-];
+// const team = [
+//   {
+//     name: "Rohit",
+//     role: "Full Stack Developer",
+//     focus: "Backend, data & infrastructure",
+//     initials: "R",
+//     bg: "bg-orange-600 dark:bg-orange-500",
+//   },
+//   {
+//     name: "Gautami",
+//     role: "Full Stack Developer",
+//     focus: "Frontend & design",
+//     initials: "G",
+//     bg: "bg-teal-600 dark:bg-teal-500",
+//   },
+// ];
 
 export default function AboutUs() {
   const {

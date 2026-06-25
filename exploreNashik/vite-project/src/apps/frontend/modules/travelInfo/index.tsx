@@ -759,16 +759,16 @@ const seasonColor: Record<string, { light: string; dark: string }> = {
 };
 
 // Map compass directions to a position on an 8-point ring (N at top, clockwise)
-const directionAngle: Record<string, number> = {
-  North: 0,
-  Northeast: 45,
-  East: 90,
-  Southeast: 135,
-  South: 180,
-  Southwest: 225,
-  West: 270,
-  Northwest: 315,
-};
+// const directionAngle: Record<string, number> = {
+//   North: 0,
+//   Northeast: 45,
+//   East: 90,
+//   Southeast: 135,
+//   South: 180,
+//   Southwest: 225,
+//   West: 270,
+//   Northwest: 315,
+// };
 
 const useThemeAwareColor = () => {
   // Resolves a light/dark color pair based on the current `dark` class on <html>.
