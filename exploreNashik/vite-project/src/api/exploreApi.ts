@@ -19,8 +19,7 @@ type Place = {
 
 export const getPlaces = async (): Promise<Place[]> => {
   const res = await axios.get<Place[]>(
-    "http://localhost:5000/api/getPlaces"
-  );
-
+  `${import.meta.env.VITE_API_URL}/api/getPlaces`
+);
   return res.data;
 };

@@ -340,8 +340,8 @@ const NearbyPlaces = () => {
         setLoading(true);
 
         const res = await axios.get<Place[]>(
-          "http://localhost:5000/api/getPlaces"
-        );
+  `${import.meta.env.VITE_API_URL}/api/getPlaces`
+);
         //pagenation
         setCurrentPage(1);
 
