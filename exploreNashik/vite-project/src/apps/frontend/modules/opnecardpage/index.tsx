@@ -12,6 +12,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 //   comment: string;
 // }
 
+
+
 // Map Component
 // const MapPlaceholder: React.FC<{ location: string }> = ({ location }) => (
 //   <div className="w-full h-64 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
