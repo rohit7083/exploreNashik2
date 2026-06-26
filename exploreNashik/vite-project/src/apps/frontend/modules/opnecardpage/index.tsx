@@ -14,16 +14,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 
 
-// Map Component
-// const MapPlaceholder: React.FC<{ location: string }> = ({ location }) => (
-//   <div className="w-full h-64 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
-//     <div className="text-center">
-//       <div className="text-4xl mb-2">📍</div>
-//       <p className="text-gray-600 font-medium">{location}</p>
-//       <p className="text-sm text-gray-500 mt-1">Interactive map coming soon</p>
-//     </div>
-//   </div>
-// );
+
 
 // Star Rating
 const StarRating: React.FC<{ rating: number }> = ({ rating }) => (
