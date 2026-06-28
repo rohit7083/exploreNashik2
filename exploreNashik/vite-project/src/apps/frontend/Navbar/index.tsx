@@ -30,7 +30,7 @@ const Navbar = () => {
        
         <div className="flex items-center h-16">
           <span className="font-bold text-lg text-black dark:text-white whitespace-nowrap mr-4">
-            Discover <span className="text-red-800">Nashik</span>
+            Discover <span className="text-red-800">नाशिक </span>
           </span>
 
           <nav className="hidden md:flex h-16 items-end">
