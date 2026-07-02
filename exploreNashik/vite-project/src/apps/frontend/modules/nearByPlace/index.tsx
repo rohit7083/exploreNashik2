@@ -339,14 +339,21 @@ const NearbyPlaces = () => {
       try {
         setLoading(true);
 
-        const res = await axios.get<Place[]>(
-  `${import.meta.env.VITE_API_URL}/api/getPlaces`
+   const res = await axios.get(
+  `${import.meta.env.VITE_API_URL}/api/getPlaces`,
+  {
+    params: {
+      page: 1,
+      limit: 1000,
+    },
+  }
 );
+
+setPlaces(res.data.places || []);
         //pagenation
         setCurrentPage(1);
 
-        setPlaces(res.data || []);
-      } catch (error) {
+        } catch (error) {
         console.error("Error fetching places:", error);
       } finally {
         setLoading(false);

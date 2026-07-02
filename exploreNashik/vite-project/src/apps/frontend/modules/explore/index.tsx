@@ -250,6 +250,7 @@
 
 
 
+import { useEffect, useRef } from "react";
 
 import { usePlaces } from "@/api/usePlaces";
 import PlaceCard from "@/components/ui/PlaceCard";
@@ -263,14 +264,51 @@ const ExplorePage = () => {
   const [selectedMain, setSelectedMain] = useState("all");
   const [selectedSub, setSelectedSub] = useState("");
   const [sortBy, setSortBy] = useState("rating");
-const { data: places = [], isLoading } = usePlaces(
+const {
+  data,
+  isLoading,
+  fetchNextPage,
+  hasNextPage,
+  isFetchingNextPage,
+} = usePlaces(
   selectedMain === "all" ? undefined : selectedMain,
   selectedSub || undefined
 );
+
+
+
+
+const loadMoreRef = useRef<HTMLDivElement | null>(null);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (
+        entries[0].isIntersecting &&
+        hasNextPage &&
+        !isFetchingNextPage
+      ) {
+        fetchNextPage();
+      }
+    },
+    {
+    threshold: 0.1,
+rootMargin: "200px",
+    }
+  );
+
+  if (loadMoreRef.current) {
+    observer.observe(loadMoreRef.current);
+  }
+
+  return () => observer.disconnect();
+}, [fetchNextPage, hasNextPage, isFetchingNextPage]);
   // Current sub categories
+  
   const currentSubs =
     selectedMain !== "all" ? subCategories[selectedMain] || [] : [];
-
+const places =
+  data?.pages.flatMap((page) => page.places) ?? [];
   // Filter + Search + Sort
   const filteredPlaces = useMemo(() => {
  
@@ -285,8 +323,9 @@ const { data: places = [], isLoading } = usePlaces(
           place.name.toLowerCase().includes(q) ||
           place.description.toLowerCase().includes(q) ||
           place.category.toLowerCase().includes(q) ||
-          place.tags?.some((tag) => tag.toLowerCase().includes(q)),
-      );
+place.tags?.some((tag: string) =>
+  tag.toLowerCase().includes(q)
+)      );
     }
 
   
@@ -306,8 +345,7 @@ const { data: places = [], isLoading } = usePlaces(
     }
 
     return result;
-  }, [places, searchQuery, selectedMain, selectedSub, sortBy]);
-
+}, [places, searchQuery, sortBy]);
   const handleMainSelect = (mainId: string) => {
     setSelectedMain(mainId);
     setSelectedSub("");
@@ -402,7 +440,7 @@ const { data: places = [], isLoading } = usePlaces(
         {/* Top Bar */}
         <div className="flex justify-between mb-6">
           <p className="text-stone-500 dark:text-gray-400">
-            {isLoading ? "Loading..." : `${filteredPlaces.length} places found`}
+            {isLoading ? "Loading..." : `${data?.pages?.[0]?.total} places found`}
           </p>
 
           <select
@@ -424,11 +462,19 @@ const { data: places = [], isLoading } = usePlaces(
             </h3>
           </div>
         ) : filteredPlaces.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {filteredPlaces.map((place) => (
-              <PlaceCard key={place.id} place={place} />
-            ))}
-          </div>
+          <>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  {filteredPlaces.map((place) => (
+    <PlaceCard key={place._id} place={place} />
+  ))}
+</div>
+
+<div ref={loadMoreRef} className="h-10" />
+
+{isFetchingNextPage && (
+  <p className="text-center py-4">Loading more...</p>
+)}
+</>
         ) : (
           <div className="text-center py-20">
             <h3 className="text-xl font-semibold mb-2 text-stone-900 dark:text-white">

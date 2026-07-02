@@ -7,21 +7,35 @@ const streamifier = require("streamifier");
 // Get all places
 exports.getAllPlaces = async (req, res) => {
   try {
+    const { category, subcategory } = req.query;
 
-    const {category, subcategory } = req.query;
+    const page = Number(req.query.page) || 1;
+    const limit = Number(req.query.limit) || 12;
+    const skip = (page - 1) * limit;
 
-const filter = {};
-if (category) {
-  filter.category = { $regex: `^${category}$`, $options: "i" };
-}
+    const filter = {};
 
-if (subcategory) {
-  filter.subcategory = { $regex: `^${subcategory}$`, $options: "i" };
-}
+    if (category) {
+      filter.category = { $regex: `^${category}$`, $options: "i" };
+    }
 
+    if (subcategory) {
+      filter.subcategory = { $regex: `^${subcategory}$`, $options: "i" };
+    }
 
-    const places = await place.find(filter);
-    res.status(200).json(places);
+    const places = await place
+      .find(filter)
+      .skip(skip)
+      .limit(limit);
+
+    const total = await place.countDocuments(filter);
+
+    res.status(200).json({
+      places,
+      page,
+      total,
+      hasMore: skip + places.length < total,
+    });
   } catch (error) {
     res.status(500).json({
       error: error.message,
