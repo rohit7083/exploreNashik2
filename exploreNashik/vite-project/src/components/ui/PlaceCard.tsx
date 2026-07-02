@@ -85,8 +85,7 @@ const PlaceCard = ({ place }: any) => {
   const navigate = useNavigate();
 
   const handleOpen = () => {
-    navigate("/open-card", { state: { place } });
-  };
+navigate(`/open-card/${place._id}`);  };
 
   // Dynamic fields config
   const cardFields = [

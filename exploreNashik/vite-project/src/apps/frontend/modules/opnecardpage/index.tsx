@@ -1,6 +1,7 @@
 import { MapPin } from "lucide-react";
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { usePlace } from "../../../../api/usePlaces";
 
 // ✅ Types
 // interface Review {
@@ -54,22 +55,29 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => (
 // ];
 
 const AttractionDetailPage: React.FC = () => {
+
   const navigate = useNavigate();
-  const location = useLocation();
 
-  const [activeImage, setActiveImage] = useState<number>(0);
-  // const [showAllReviews, setShowAllReviews] = useState<boolean>(false);
-  const [isFavorite, setIsFavorite] = useState<boolean>(false);
+  const { id } = useParams();
 
-  // PlaceCard madhun alela data
-  const attraction = location.state?.place;
-  console.log(attraction);
+  const { data: attraction, isLoading } = usePlace(id!);
+
+  const [activeImage, setActiveImage] = useState(0);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   // जर data nasel
   if (!attraction) {
+    if (isLoading) {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      Loading...
+    </div>
+  );
+}
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
+         
           <h1 className="text-2xl font-bold text-gray-800 mb-4">
             Attraction Not Found
           </h1>

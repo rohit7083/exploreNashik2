@@ -29,7 +29,7 @@ const Navbar = () => {
         {/* Logo + Desktop Menu grouped at start */}
 
         <div className="flex items-center h-16">
-          <span className="font-bold text-lg text-black dark:text-white whitespace-nowrap mr-4">
+          <span role="button" style={{ cursor: "pointer" }} onClick={() => navigate("/")} className="font-bold text-lg text-black dark:text-white whitespace-nowrap mr-4">
             Explore <span className="text-red-800 font-bold">नाशिक </span>
           </span>
 

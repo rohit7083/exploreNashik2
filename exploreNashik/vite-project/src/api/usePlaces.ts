@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getPlaces } from "./exploreApi";
+import { getPlaceById, getPlaces } from "./exploreApi";
 
 export const usePlaces = (
   category?: string,
@@ -8,5 +8,14 @@ export const usePlaces = (
   return useQuery({
     queryKey: ["places", category, subcategory],
     queryFn: () => getPlaces(category, subcategory),
+  });
+};
+
+
+export const usePlace = (id: string) => {
+  return useQuery({
+    queryKey: ["place", id],
+    queryFn: () => getPlaceById(id),
+    enabled: !!id,
   });
 };

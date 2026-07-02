@@ -23,7 +23,7 @@ function App() {
           <Route path="/history" element={<History />} />
           <Route path="/about" element={<About />} />
           <Route path="/travel-info" element={<TravelInfo/>}/>
-      <Route path="/open-card" element={<OpenCardPage/>}/>
+          <Route  path="/open-card/:id" element={<OpenCardPage/>}/>
 
         </Route>
       </Routes>

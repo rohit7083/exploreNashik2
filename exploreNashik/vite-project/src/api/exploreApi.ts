@@ -32,3 +32,13 @@ export const getPlaces = async (
 
   return res.data;
 };
+
+
+
+export const getPlaceById = async (id: string) => {
+  const res = await axios.get(
+    `${import.meta.env.VITE_API_URL}/api/places/${id}`
+  );
+
+  return res.data;
+};
