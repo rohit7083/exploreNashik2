@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sheet } from "@/components/ui/sheet";
 import { useTheme } from "@/context/ThemeContext";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Heart, Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -14,7 +14,6 @@ const items = [
   { key: "8", label: "Travel Info", path: "/travel-info" },
   { key: "8", label: "History", path: "/history" },
   { key: "7", label: "About Us", path: "/about" },
-
 ];
 
 const Navbar = () => {
@@ -22,15 +21,16 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
+  const [saved, setSaved] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
       <div className="flex items-center justify-between px-5 h-16">
         {/* Logo + Desktop Menu grouped at start */}
-       
+
         <div className="flex items-center h-16">
           <span className="font-bold text-lg text-black dark:text-white whitespace-nowrap mr-4">
-            Discover <span className="text-red-800 font-bold">नाशिक </span>
+            Explore <span className="text-red-800 font-bold">नाशिक </span>
           </span>
 
           <nav className="hidden md:flex h-16 items-end">
@@ -57,16 +57,43 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-2 relative">
           {/* <Input placeholder="Search..." className="pr-8 w-48" />
           <Search className="absolute left-[calc(100%-4.5rem)] text-gray-400" size={16} /> */}
-          <Button variant="ghost" size="icon" onClick={toggleTheme}>
-            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-          </Button>
+
+          <div className="hidden md:flex items-center gap-1">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setSaved(!saved)}
+            >
+              <Heart
+                size={20}
+                className={`transition-colors ${
+                  saved ? "fill-red-500 text-red-500" : ""
+                }`}
+              />
+            </Button>
+
+            <Button variant="ghost" size="icon" onClick={toggleTheme}>
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Hamburger + Theme Toggle */}
+
         <div className="md:hidden flex items-center gap-1">
+          <Button variant="ghost" size="icon" onClick={() => setSaved(!saved)}>
+            <Heart
+              size={20}
+              className={`transition-colors ${
+                saved ? "fill-red-500 text-red-500" : ""
+              }`}
+            />
+          </Button>
+
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </Button>
+
           <Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
             <Menu size={20} />
           </Button>

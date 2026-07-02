@@ -7,7 +7,20 @@ const streamifier = require("streamifier");
 // Get all places
 exports.getAllPlaces = async (req, res) => {
   try {
-    const places = await place.find();
+
+    const {category, subcategory } = req.query;
+
+const filter = {};
+if (category) {
+  filter.category = { $regex: `^${category}$`, $options: "i" };
+}
+
+if (subcategory) {
+  filter.subcategory = { $regex: `^${subcategory}$`, $options: "i" };
+}
+
+
+    const places = await place.find(filter);
     res.status(200).json(places);
   } catch (error) {
     res.status(500).json({

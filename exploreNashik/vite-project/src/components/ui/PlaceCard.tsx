@@ -75,14 +75,13 @@
 
 ////////////////////////////////////////////////////////////
 
-
-
-
-
+import { Heart } from "lucide-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "./button";
 
 const PlaceCard = ({ place }: any) => {
+  const [saved, setSaved] = useState(false);
   const navigate = useNavigate();
 
   const handleOpen = () => {
@@ -121,12 +120,11 @@ const PlaceCard = ({ place }: any) => {
       key: "services",
       label: "services",
       category: "place to visit",
-    }
+    },
   ];
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col h-full min-h-[550px] border border-gray-100 dark:border-gray-700">
-
       <div
         onClick={handleOpen}
         className="cursor-pointer flex flex-col flex-grow"
@@ -148,11 +146,29 @@ const PlaceCard = ({ place }: any) => {
           <span className="absolute bottom-3 right-3 bg-white text-sm px-3 py-1 rounded-lg shadow font-medium">
             ⭐ {place.rating}
           </span>
+
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent opening the card
+              setSaved(!saved);
+            }}
+            className="absolute top-3 right-3 bg-white/90 hover:bg-white rounded-full shadow-md"
+          >
+            <Heart
+              size={20}
+              className={`transition-all duration-300 ${
+                saved
+                  ? "fill-red-500 text-red-500"
+                  : "text-gray-600 hover:text-red-500"
+              }`}
+            />
+          </Button>
         </div>
 
         {/* Content */}
         <div className="p-4 flex flex-col flex-grow">
-
           {/* Name */}
           <h2 className="font-bold text-xl text-gray-800 dark:text-white line-clamp-1 mb-1">
             {place.name}
@@ -167,12 +183,9 @@ const PlaceCard = ({ place }: any) => {
           {place.location && (
             <p className="text-sm text-gray-500 mt-1   flex items-start gap-2 leading-5">
               {/* <span>📍</span> */}
-              <span className="line-clamp-2">
-                {place.location}
-              </span>
+              <span className="line-clamp-2">{place.location}</span>
             </p>
           )}
-
 
           {/* Dynamic Fields */}
           <div className="mt-4 space-y-3 text-sm flex-grow">
@@ -183,10 +196,7 @@ const PlaceCard = ({ place }: any) => {
               if (!value) return null;
 
               // category-specific field
-              if (
-                field.category &&
-                field.category !== place.category
-              ) {
+              if (field.category && field.category !== place.category) {
                 return null;
               }
 
@@ -195,13 +205,10 @@ const PlaceCard = ({ place }: any) => {
                   key={field.key}
                   className="flex items-center justify-between border-b border-gray-100 dark:border-gray-700 pb-2 text-gray-700 dark:text-gray-300"
                 >
-                  <span className="font-medium">
-                    {field.label}
-                  </span>
+                  <span className="font-medium">{field.label}</span>
 
                   <span className="text-right">
-                    {value}{" "}
-                    {field.suffix && field.suffix}
+                    {value} {field.suffix && field.suffix}
                   </span>
                 </div>
               );

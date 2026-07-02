@@ -519,8 +519,8 @@ export const subCategories: Record<
 
   ],
   Stay: [
-    { id: "Hotels", label: "Hotels", icon: "🏨" },
-    { id: "Resorts", label: "Resorts", icon: "🏖️" },
+    { id: "Hotel", label: "Hotels", icon: "🏨" },
+    { id: "Resort", label: "Resorts", icon: "🏖️" },
     { id: "Budget Stay", label: "Budget Stay", icon: "🛏️" },
     { id: "Farmhouses", label: "Farmhouses", icon: "🏡" },
   ],

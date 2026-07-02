@@ -10,16 +10,25 @@ type Place = {
   subcategory: string;
   tags: string[];
   image?: string;
-   location?: string;
+  location?: string;
   distance?: number;
   bestTime?: string;
   timings?: string;
 };
 
-
-export const getPlaces = async (): Promise<Place[]> => {
+export const getPlaces = async (
+  category?: string,
+  subcategory?: string
+): Promise<Place[]> => {
   const res = await axios.get<Place[]>(
-  `${import.meta.env.VITE_API_URL}/api/getPlaces`
-);
+    `${import.meta.env.VITE_API_URL}/api/getPlaces`,
+    {
+      params: {
+        category,
+        subcategory,
+      },
+    }
+  );
+
   return res.data;
 };

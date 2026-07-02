@@ -8,7 +8,7 @@
 //   const [selectedMain, setSelectedMain] = useState("all");
 //   const [selectedSub, setSelectedSub] = useState("");
 //   const [sortBy, setSortBy] = useState("rating");
-//   const { data: places = [], isLoading: loading } = usePlaces();
+//   const { data: places = [], isLoading: isLoading } = usePlaces();
 //   // Fetch API data
 //   // useEffect(() => {
 //   //   const fetchPlaces = async () => {
@@ -197,7 +197,7 @@
 //         {/* Top Bar */}
 //         <div className="flex justify-between mb-6">
 //           <p className="text-gray-600">
-//             {loading ? "Loading..." : `${filteredPlaces.length} places found`}
+//             {isLoading ? "Loading..." : `${filteredPlaces.length} places found`}
 //           </p>
 
 //           <select
@@ -212,7 +212,7 @@
 //         </div>
 
 //         {/* Cards */}
-//         {loading ? (
+//         {isLoading ? (
 //           <div className="text-center py-20">
 //             <h3 className="text-xl font-semibold">Loading places...</h3>
 //           </div>
@@ -257,21 +257,23 @@ import { useMemo, useState } from "react";
 import { mainCategories, subCategories } from "./data";
 
 const ExplorePage = () => {
+
+ 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedMain, setSelectedMain] = useState("all");
   const [selectedSub, setSelectedSub] = useState("");
   const [sortBy, setSortBy] = useState("rating");
-  const { data: places = [], isLoading: loading } = usePlaces();
-
+const { data: places = [], isLoading } = usePlaces(
+  selectedMain === "all" ? undefined : selectedMain,
+  selectedSub || undefined
+);
   // Current sub categories
   const currentSubs =
     selectedMain !== "all" ? subCategories[selectedMain] || [] : [];
 
   // Filter + Search + Sort
   const filteredPlaces = useMemo(() => {
-    const subCategoryGroups: Record<string, string[]> = {
-      Dam: ["Dam", "lake", "Waterfall"],
-    };
+ 
     let result = [...places];
 
     // Search
@@ -287,32 +289,9 @@ const ExplorePage = () => {
       );
     }
 
-    if (selectedSub) {
-      const group = subCategoryGroups[selectedSub];
+  
 
-      if (group) {
-        result = result.filter((place) =>
-          group.some(
-            (item) => item.toLowerCase() === place.subcategory?.toLowerCase(),
-          ),
-        );
-      } else {
-        result = result.filter(
-          (place) =>
-            place.subcategory?.toLowerCase() === selectedSub.toLowerCase(),
-        );
-      }
-    }
-
-    if (selectedMain !== "all") {
-      result = result.filter((place) =>
-        place.category
-          ?.toLowerCase()
-          .trim()
-          .includes(selectedMain.toLowerCase().trim()),
-      );
-    }
-
+ 
     // Sorting
     if (sortBy === "rating") {
       result.sort((a, b) => b.rating - a.rating);
@@ -423,7 +402,7 @@ const ExplorePage = () => {
         {/* Top Bar */}
         <div className="flex justify-between mb-6">
           <p className="text-stone-500 dark:text-gray-400">
-            {loading ? "Loading..." : `${filteredPlaces.length} places found`}
+            {isLoading ? "Loading..." : `${filteredPlaces.length} places found`}
           </p>
 
           <select
@@ -438,7 +417,7 @@ const ExplorePage = () => {
         </div>
 
         {/* Cards */}
-        {loading ? (
+        {isLoading ? (
           <div className="text-center py-20">
             <h3 className="text-xl font-semibold text-stone-500 dark:text-gray-400">
               Loading places...
