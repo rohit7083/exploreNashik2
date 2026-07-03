@@ -487,113 +487,16 @@ setPlaces(res.data.places || []);
               Nearby Places
             </h2>
 
-            {/* <span className="bg-orange-600 dark:bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+            <span className="bg-orange-600 dark:bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">
               {filteredPlaces.length} Found
 
-            </span> */}
-            {/* pagenation */}
-            {/* <div className="flex items-center gap-2 flex-wrap">
-              <span className="bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                {filteredPlaces.length} Found
-              </span>
-
-              <button
-                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                disabled={currentPage === 1}
-                className="px-3 py-2 border rounded disabled:opacity-50"
-              >
-                Prev
-              </button>
-
-              {getPageNumbers().map((page, index) =>
-                page === "..." ? (
-                  <span key={index} className="px-2">
-                    ...
-                  </span>
-                ) : (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentPage(Number(page))}
-                    className={`w-10 h-10 rounded ${currentPage === page
-                        ? "bg-orange-500 text-white"
-                        : "border"
-                      }`}
-                  >
-                    {page}
-                  </button>
-                )
-              )}
-
-              <button
-                onClick={() =>
-                  setCurrentPage((prev) =>
-                    Math.min(prev + 1, totalPages)
-                  )
-                }
-                disabled={currentPage === totalPages}
-                className="px-3 py-2 border rounded disabled:opacity-50"
-              >
-                Next
-              </button>
-            </div> */}
+            </span> 
+           
+            
 
 
 
-            <div className="flex flex-col items-center sm:items-start sm:flex-row gap-3 sm:gap-2 flex-wrap">
-  {/* Found badge */}
-  <span className="bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-    {filteredPlaces.length} Found
-  </span>
-
-  {/* Pagination row */}
-  <div className="flex items-center gap-2">
-    <button
-      onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-      disabled={currentPage === 1}
-      className="px-3 py-2 border rounded disabled:opacity-50 text-sm font-medium"
-    >
-      Prev
-    </button>
-
-    {/* Mobile: compact "Page X of Y" */}
-    <span className="flex sm:hidden items-center px-2 text-sm font-semibold whitespace-nowrap">
-      Page {currentPage} of {totalPages}
-    </span>
-
-    {/* Desktop: numbered pages */}
-    <div className="hidden sm:flex items-center gap-2">
-      {getPageNumbers().map((page, index) =>
-        page === "..." ? (
-          <span key={index} className="px-2">
-            ...
-          </span>
-        ) : (
-          <button
-            key={index}
-            onClick={() => setCurrentPage(Number(page))}
-            className={`w-10 h-10 rounded ${
-              currentPage === page
-                ? "bg-orange-500 text-white"
-                : "border"
-            }`}
-          >
-            {page}
-          </button>
-        )
-      )}
-    </div>
-
-    <button
-      onClick={() =>
-        setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-      }
-      disabled={currentPage === totalPages}
-      className="px-3 py-2 border rounded disabled:opacity-50 text-sm font-medium"
-    >
-      Next
-    </button>
-  </div>
-</div>
+            
           </div>
 
 
