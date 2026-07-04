@@ -171,6 +171,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { CalendarDays, MapPin, Users, Waves } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 function KumbhMela() {
   const schedule = [
@@ -226,6 +227,17 @@ function KumbhMela() {
   ];
 
   return (
+
+    <>
+    
+    <Helmet>
+<title>Nashik Kumbh Mela | Explore Nashik</title>
+
+<meta
+name="description"
+content="Everything about Nashik Kumbh Mela including history, importance and travel guide."
+/>
+</Helmet>
     <div className="bg-orange-50 dark:bg-gray-900">
       {/* HERO */}
       <div className="relative overflow-hidden">
@@ -547,7 +559,7 @@ function KumbhMela() {
           for the millions of expected visitors.
         </p>
       </section>
-    </div>
+    </div></>
   );
 }
 

@@ -261,6 +261,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Toaster, toast } from "sonner";
 
@@ -313,6 +314,15 @@ export default function AboutUs() {
   };
 
   return (
+    <>
+    <Helmet>
+<title>About Explore Nashik</title>
+
+<meta
+name="description"
+content="Learn about Explore Nashik and our mission to promote tourism in Nashik."
+/>
+</Helmet>
     <div className="min-h-screen bg-orange-50 dark:bg-gray-900 text-stone-900 dark:text-white px-4 md:px-10 py-12">
       <Toaster />
 
@@ -511,5 +521,6 @@ export default function AboutUs() {
         </div>
       </section>
     </div>
+    </>
   );
 }
