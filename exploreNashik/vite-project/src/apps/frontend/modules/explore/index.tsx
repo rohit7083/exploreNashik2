@@ -30,8 +30,7 @@
 //   // }, []);
 
 //   // Current sub categories
- 
- 
+
 //  debugger;
 //   const currentSubs =
 //     selectedMain !== "all" ? subCategories[selectedMain] || [] : [];
@@ -245,11 +244,6 @@
 
 // export default ExplorePage;
 
-
-
-
-
-
 import { useEffect, useRef } from "react";
 
 import { usePlaces } from "@/api/usePlaces";
@@ -258,60 +252,44 @@ import { useMemo, useState } from "react";
 import { mainCategories, subCategories } from "./data";
 
 const ExplorePage = () => {
-
- 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedMain, setSelectedMain] = useState("all");
   const [selectedSub, setSelectedSub] = useState("");
   const [sortBy, setSortBy] = useState("rating");
-const {
-  data,
-  isLoading,
-  fetchNextPage,
-  hasNextPage,
-  isFetchingNextPage,
-} = usePlaces(
-  selectedMain === "all" ? undefined : selectedMain,
-  selectedSub || undefined
-);
+  const { data, isLoading, fetchNextPage, hasNextPage, isFetchingNextPage } =
+    usePlaces(
+      selectedMain === "all" ? undefined : selectedMain,
+      selectedSub || undefined,
+    );
 
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
+          fetchNextPage();
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "200px",
+      },
+    );
 
-
-const loadMoreRef = useRef<HTMLDivElement | null>(null);
-
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      if (
-        entries[0].isIntersecting &&
-        hasNextPage &&
-        !isFetchingNextPage
-      ) {
-        fetchNextPage();
-      }
-    },
-    {
-    threshold: 0.1,
-rootMargin: "200px",
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
     }
-  );
 
-  if (loadMoreRef.current) {
-    observer.observe(loadMoreRef.current);
-  }
-
-  return () => observer.disconnect();
-}, [fetchNextPage, hasNextPage, isFetchingNextPage]);
+    return () => observer.disconnect();
+  }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
   // Current sub categories
-  
+
   const currentSubs =
     selectedMain !== "all" ? subCategories[selectedMain] || [] : [];
-const places =
-  data?.pages.flatMap((page) => page.places) ?? [];
+  const places = data?.pages.flatMap((page) => page.places) ?? [];
   // Filter + Search + Sort
   const filteredPlaces = useMemo(() => {
- 
     let result = [...places];
 
     // Search
@@ -323,14 +301,10 @@ const places =
           place.name.toLowerCase().includes(q) ||
           place.description.toLowerCase().includes(q) ||
           place.category.toLowerCase().includes(q) ||
-place.tags?.some((tag: string) =>
-  tag.toLowerCase().includes(q)
-)      );
+          place.tags?.some((tag: string) => tag.toLowerCase().includes(q)),
+      );
     }
 
-  
-
- 
     // Sorting
     if (sortBy === "rating") {
       result.sort((a, b) => b.rating - a.rating);
@@ -345,7 +319,7 @@ place.tags?.some((tag: string) =>
     }
 
     return result;
-}, [places, searchQuery, sortBy]);
+  }, [places, searchQuery, sortBy]);
   const handleMainSelect = (mainId: string) => {
     setSelectedMain(mainId);
     setSelectedSub("");
@@ -440,7 +414,9 @@ place.tags?.some((tag: string) =>
         {/* Top Bar */}
         <div className="flex justify-between mb-6">
           <p className="text-stone-500 dark:text-gray-400">
-            {isLoading ? "Loading..." : `${data?.pages?.[0]?.total} places found`}
+            {isLoading
+              ? "Loading..."
+              : `${data?.pages?.[0]?.total} places found`}
           </p>
 
           <select
@@ -463,18 +439,18 @@ place.tags?.some((tag: string) =>
           </div>
         ) : filteredPlaces.length > 0 ? (
           <>
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-  {filteredPlaces.map((place) => (
-    <PlaceCard key={place._id} place={place} />
-  ))}
-</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {filteredPlaces.map((place) => (
+                <PlaceCard key={place._id} place={place} />
+              ))}
+            </div>
 
-<div ref={loadMoreRef} className="h-10" />
+            <div ref={loadMoreRef} className="h-10" />
 
-{isFetchingNextPage && (
-  <p className="text-center py-4">Loading more...</p>
-)}
-</>
+            {isFetchingNextPage && (
+              <p className="text-center py-4">Loading more...</p>
+            )}
+          </>
         ) : (
           <div className="text-center py-20">
             <h3 className="text-xl font-semibold mb-2 text-stone-900 dark:text-white">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 interface Attraction {
@@ -59,52 +59,77 @@ const attractions: Attraction[] = [
     priceRange: "₹50-₹100",
   },
   {
-  id: 4,
-  name: "Pavwada",
-  imageUrl: "https://res.cloudinary.com/dq7re39ys/image/upload/v1782015103/places/aumat6zhtz0i38lupgci.jpg",
-  category: "Food",
-  subcategory: "Local",
-  description:
-    "Authentic Maharashtrian Pavwada, a popular street food served with spicy chutney and traditional flavors.",
-  location: "Nashik",
-  rating: 4.7,
-  reviews: 980,
-  cuisine: ["Maharashtrian", "Street Food"],
-  priceRange: "₹80-₹200"
-},{
-  id: 5,
-  name: "Kala Mutton Rassa",
-  imageUrl: "https://res.cloudinary.com/dq7re39ys/image/upload/v1782015107/places/f0rtwfzjtl5l0b6g2ue0.jpg",
-  category: "Food",
-  subcategory: "Local",
-  description:
-    "Traditional Maharashtrian black mutton curry prepared with roasted spices, coconut, and a rich, spicy gravy. its bold flavor and authentic taste.",
-  location: "Nashik",
-  rating: 4.8,
-  reviews: 1250,
-  cuisine: ["Maharashtrian", "Non-Vegetarian"],
-  priceRange: "₹300-₹700"
-},
-{
-  id: 5,
-  name: "Puran Poli",
-  imageUrl: "https://res.cloudinary.com/dq7re39ys/image/upload/v1782015108/places/jqzptvsakezmngyvgr5w.jpg",
-  category: "Food",
-  subcategory: "Local",
-  description:
-    "Puran Poli is a traditional Maharashtrian sweet flatbread stuffed with a delicious mixture of jaggery and chana dal. It is especially popular during festivals and celebrations for its rich taste and cultural significance.",
-  location: "Nashik",
-  rating: 4.8,
-  reviews: 1250,
-  cuisine: ["Maharashtrian", "Sweet"],
-  priceRange: "₹80-₹250"
-}
+    id: 4,
+    name: "Pavwada",
+    imageUrl: "https://res.cloudinary.com/dq7re39ys/image/upload/v1782015103/places/aumat6zhtz0i38lupgci.jpg",
+    category: "Food",
+    subcategory: "Local",
+    description:
+      "Authentic Maharashtrian Pavwada, a popular street food served with spicy chutney and traditional flavors.",
+    location: "Nashik",
+    rating: 4.7,
+    reviews: 980,
+    cuisine: ["Maharashtrian", "Street Food"],
+    priceRange: "₹80-₹200",
+  },
+  {
+    id: 5,
+    name: "Kala Mutton Rassa",
+    imageUrl: "https://res.cloudinary.com/dq7re39ys/image/upload/v1782015107/places/f0rtwfzjtl5l0b6g2ue0.jpg",
+    category: "Food",
+    subcategory: "Local",
+    description:
+      "Traditional Maharashtrian black mutton curry prepared with roasted spices, coconut, and a rich, spicy gravy. its bold flavor and authentic taste.",
+    location: "Nashik",
+    rating: 4.8,
+    reviews: 1250,
+    cuisine: ["Maharashtrian", "Non-Vegetarian"],
+    priceRange: "₹300-₹700",
+  },
+  {
+    id: 6,
+    name: "Puran Poli",
+    imageUrl: "https://res.cloudinary.com/dq7re39ys/image/upload/v1782015108/places/jqzptvsakezmngyvgr5w.jpg",
+    category: "Food",
+    subcategory: "Local",
+    description:
+      "Puran Poli is a traditional Maharashtrian sweet flatbread stuffed with a delicious mixture of jaggery and chana dal. It is especially popular during festivals and celebrations for its rich taste and cultural significance.",
+    location: "Nashik",
+    rating: 4.8,
+    reviews: 1250,
+    cuisine: ["Maharashtrian", "Sweet"],
+    priceRange: "₹80-₹250",
+  },
 ];
+
+// Matches your Tailwind breakpoints: base=1 card, md=2, lg=3
+const getVisibleCount = () => {
+  if (typeof window === "undefined") return 3;
+  const w = window.innerWidth;
+  if (w >= 1024) return 3; // lg
+  if (w >= 768) return 2; // md
+  return 1; // base/mobile
+};
 
 const TopAttraction = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(getVisibleCount());
 
-  const maxIndex = Math.max(attractions.length - 3, 0);
+  useEffect(() => {
+    const handleResize = () => {
+      const newVisible = getVisibleCount();
+      setVisibleCount(newVisible);
+      setCurrentIndex((prev) =>
+        Math.min(prev, Math.max(0, attractions.length - newVisible))
+      );
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const maxIndex = Math.max(attractions.length - visibleCount, 0);
+  const slideWidthPercent = 100 / visibleCount;
 
   const nextSlide = () => {
     if (currentIndex < maxIndex) {
@@ -190,7 +215,7 @@ const TopAttraction = () => {
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(-${currentIndex * 33.3333}%)`,
+                transform: `translateX(-${currentIndex * slideWidthPercent}%)`,
               }}
             >
               {attractions.map((place) => (
