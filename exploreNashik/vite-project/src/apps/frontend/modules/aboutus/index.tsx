@@ -261,9 +261,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Toaster, toast } from "sonner";
+import SEO from "../../../../components/seo/SEO";
 
 type ContactForm = {
   name: string;
@@ -315,14 +315,11 @@ export default function AboutUs() {
 
   return (
     <>
-    <Helmet>
-<title>About Explore Nashik</title>
-
-<meta
-name="description"
-content="Learn about Explore Nashik and our mission to promote tourism in Nashik."
+<SEO
+title="About Explore Nashik"
+description="Know more about Explore Nashik and our mission."
+url="https://explorenashik.in/about"
 />
-</Helmet>
     <div className="min-h-screen bg-orange-50 dark:bg-gray-900 text-stone-900 dark:text-white px-4 md:px-10 py-12">
       <Toaster />
 

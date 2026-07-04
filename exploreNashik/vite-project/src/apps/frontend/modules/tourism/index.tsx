@@ -1,18 +1,15 @@
 // import { placeData } from "../.";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../../../components/seo/SEO";
 import FilterSection from "../../filter/index";
 import HeroBaner from "./HeroBaner";
 function Tourism() {
   return (
     <>
-    <Helmet>
-<title>Nashik Tourism Guide | Explore Nashik</title>
-
-<meta
-name="description"
-content="Complete tourism guide of Nashik including famous places, travel tips and attractions."
+ <SEO
+title="Nashik Tourism Guide | Explore Nashik"
+description="Complete tourism guide of Nashik including famous places, travel tips and attractions."
+url="https://explorenashik.in/tourism"
 />
-</Helmet>
       <HeroBaner />
       <FilterSection />
       {/* <PlaceCard place={placeData} /> */}

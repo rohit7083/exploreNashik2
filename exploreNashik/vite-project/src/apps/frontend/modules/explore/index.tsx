@@ -249,7 +249,7 @@ import { useEffect, useRef } from "react";
 import { usePlaces } from "@/api/usePlaces";
 import PlaceCard from "@/components/ui/PlaceCard";
 import { useMemo, useState } from "react";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../../../components/seo/SEO";
 import { mainCategories, subCategories } from "./data";
 
 const ExplorePage = () => {
@@ -336,14 +336,11 @@ const ExplorePage = () => {
 
   return (
     <>
-    <Helmet>
-<title>Explore Nashik Attractions</title>
-
-<meta
-name="description"
-content="Explore famous tourist attractions, temples, forts, waterfalls and hidden gems of Nashik."
+  <SEO
+  title="Explore Attractions | Explore Nashik"
+  description="Discover famous tourist attractions in Nashik."
+  url="https://explorenashik.in/explore"
 />
-</Helmet>
     <div className="min-h-screen bg-orange-50 dark:bg-gray-900">
       {/* Header */}
       <div className="pt-10 pb-8 px-4 text-orange-50 bg-stone-900 dark:bg-black">

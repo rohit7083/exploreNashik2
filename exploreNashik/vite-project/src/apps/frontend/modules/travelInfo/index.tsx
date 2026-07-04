@@ -694,7 +694,7 @@
 
 
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../../../../components/seo/SEO';
 import { travelInfo } from './data';
 
 type TransportKey = 'byRoad' | 'byRail' | 'byAir';
@@ -796,14 +796,11 @@ const TravelInfoPage = () => {
   const activeColor = resolveColor(transportColors[activeTransport]);
 
   return (
-    <><Helmet>
-<title>Travel Information | Explore Nashik</title>
-
-<meta
-name="description"
-content="Travel information, transport, weather and useful tips for visiting Nashik."
+    <><SEO
+title="Travel Information | Explore Nashik"
+description="Travel information, transport guide and useful tips for visiting Nashik."
+url="https://explorenashik.in/travel-info"
 />
-</Helmet>
     <div className="min-h-screen bg-orange-50 dark:bg-gray-900">
       {/* HEADER */}
       <div className="pt-16 pb-14 px-4 bg-stone-900 dark:bg-black text-orange-50 relative overflow-hidden">

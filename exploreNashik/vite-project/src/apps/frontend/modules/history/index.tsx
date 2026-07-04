@@ -1,17 +1,14 @@
-import { Helmet } from 'react-helmet-async';
+import SEO from '../../../../components/seo/SEO';
 import YearlyHistory from './YearlyHistory';
 
 export default function HistoryIndex() {
   return (
     <>
-      <Helmet>
-        <title>History of Nashik | Explore Nashik</title>
-
-        <meta
-          name="description"
-          content="Read about the rich history, culture and heritage of Nashik city."
-        />
-      </Helmet>
+     <SEO
+title="History of Nashik | Explore Nashik | Itihas of Nashik | Nashik cha Itihas"
+description="Learn about the history, heritage and culture of Nashik."
+url="https://explorenashik.in/history"
+/>
 
       <YearlyHistory />
     </>

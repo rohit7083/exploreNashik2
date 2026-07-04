@@ -171,7 +171,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { CalendarDays, MapPin, Users, Waves } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../../../components/seo/SEO";
 
 function KumbhMela() {
   const schedule = [
@@ -230,14 +230,11 @@ function KumbhMela() {
 
     <>
     
-    <Helmet>
-<title>Nashik Kumbh Mela | Explore Nashik</title>
-
-<meta
-name="description"
-content="Everything about Nashik Kumbh Mela including history, importance and travel guide."
+<SEO
+title="Nashik Kumbh Mela | Explore Nashik"
+description="Complete guide to Nashik Kumbh Mela, its history and significance."
+url="https://explorenashik.in/kumbh-mela"
 />
-</Helmet>
     <div className="bg-orange-50 dark:bg-gray-900">
       {/* HERO */}
       <div className="relative overflow-hidden">
@@ -245,6 +242,8 @@ content="Everything about Nashik Kumbh Mela including history, importance and tr
           <img
             src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=1600&auto=format&fit=crop"
             alt=""
+            loading="lazy"
+decoding="async"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/80 via-stone-900/70 to-stone-900 dark:from-black/85 dark:via-black/75 dark:to-black" />
@@ -330,6 +329,8 @@ content="Everything about Nashik Kumbh Mela including history, importance and tr
           <div className="overflow-hidden rounded-xl">
             <img
               src="https://res.cloudinary.com/dq7re39ys/image/upload/v1781953286/places/ho16ohej07zc7u1tp1px.jpg"
+              loading="lazy"
+decoding="async"
               alt="Ramkund, Nashik"
               className="w-full h-56 object-cover"
             />
@@ -349,6 +350,8 @@ content="Everything about Nashik Kumbh Mela including history, importance and tr
             <img
               src="https://res.cloudinary.com/dq7re39ys/image/upload/v1781953232/tourism-app/xos2aomfsj9ctkoxg3gu.png"
               alt="Trimbakeshwar Temple"
+                 loading="lazy"
+decoding="async"
               className="w-full h-56 object-cover"
             />
           </div>

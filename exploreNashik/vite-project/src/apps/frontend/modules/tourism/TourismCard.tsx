@@ -29,6 +29,8 @@ const TourismCard: React.FC<Props> = ({ place= { id: 0, name: "", image: "", cat
         <img
           alt={place.name}
           src={place.image}
+             loading="lazy"
+decoding="async"
           className="w-full h-48 object-cover"
         />
         <CardContent>

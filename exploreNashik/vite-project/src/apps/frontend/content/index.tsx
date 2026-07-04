@@ -193,6 +193,8 @@ const TopAttraction = () => {
                     <img
                       src={`${place.image}?w=600&auto=format&fit=crop`}
                       alt={place.name}
+                      loading="lazy"
+decoding="async"
                       className="w-full h-52 object-cover"
                     />
 

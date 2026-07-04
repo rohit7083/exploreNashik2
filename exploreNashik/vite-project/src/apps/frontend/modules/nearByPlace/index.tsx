@@ -299,7 +299,7 @@
 import PlaceCard from "@/components/ui/PlaceCard";
 import axios from "axios";
 import { useEffect, useMemo, useState } from "react";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../../../components/seo/SEO";
 
 interface PlaceImage {
   imageUrl: string;
@@ -441,14 +441,11 @@ setPlaces(res.data.places || []);
 
   return (
     <>
-    <Helmet>
-<title>Nearby Places | Explore Nashik</title>
-
-<meta
-name="description"
-content="Discover amazing tourist destinations near Nashik for one-day and weekend trips."
+<SEO
+title="Nearby Places | Explore Nashik"
+description="Discover amazing places near Nashik for one-day and weekend trips."
+url="https://explorenashik.in/nearby-place"
 />
-</Helmet>
     <div className="min-h-screen bg-orange-50 dark:bg-gray-900">
       {/* Hero Section */}
       <div className="bg-stone-900 dark:bg-black text-orange-50">

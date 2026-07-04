@@ -1,8 +1,8 @@
+import SEO from "@/components/seo/SEO";
 import { MapPin } from "lucide-react";
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { usePlace } from "../../../../api/usePlaces";
-
 // ✅ Types
 // interface Review {
 //   id: number;
@@ -12,10 +12,6 @@ import { usePlace } from "../../../../api/usePlaces";
 //   date: string;
 //   comment: string;
 // }
-
-
-
-
 
 // Star Rating
 const StarRating: React.FC<{ rating: number }> = ({ rating }) => (
@@ -55,7 +51,6 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => (
 // ];
 
 const AttractionDetailPage: React.FC = () => {
-
   const navigate = useNavigate();
 
   const { id } = useParams();
@@ -68,28 +63,66 @@ const AttractionDetailPage: React.FC = () => {
   // जर data nasel
   if (!attraction) {
     if (isLoading) {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      Loading...
-    </div>
-  );
-}
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-         
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">
-            Attraction Not Found
-          </h1>
-
-          <button
-            onClick={() => navigate(-1)}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-          >
-            Go Back
-          </button>
+      return (
+        <div className="min-h-screen flex items-center justify-center">
+          Loading...
         </div>
-      </div>
+      );
+    }
+    const pageTitle = `${attraction.name} - ${attraction.location} | Explore Nashik`;
+    const touristSchema = {
+      "@context": "https://schema.org",
+      "@type": "TouristAttraction",
+
+      name: attraction.name,
+
+      description: attraction.shortDescription || attraction.description,
+
+      image: attraction.images?.[0]?.imageUrl,
+
+      url: `https://explorenashik.in/open-card/${id}`,
+
+      address: {
+        "@type": "PostalAddress",
+
+        addressLocality: attraction.location,
+
+        addressRegion: "Maharashtra",
+
+        addressCountry: "India",
+      },
+    };
+    const pageDescription =
+      attraction.shortDescription || attraction.description;
+
+    const pageImage =
+      attraction.images?.[0]?.imageUrl ||
+      "https://explorenashik.in/enCover.png";
+
+    return (
+      <>
+        <SEO
+          title={pageTitle}
+          description={pageDescription}
+          url={`https://explorenashik.in/open-card/${id}`}
+          image={pageImage}
+          schema={touristSchema}
+        />
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-800 mb-4">
+              Attraction Not Found
+            </h1>
+
+            <button
+              onClick={() => navigate(-1)}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+            >
+              Go Back
+            </button>
+          </div>
+        </div>
+      </>
     );
   }
 
@@ -148,11 +181,13 @@ const AttractionDetailPage: React.FC = () => {
 
         {/* Main Image */}
         <div className="mb-6">
-          <img
-            src={gallery[activeImage] || attraction.images?.[0]?.imageUrl}
-            alt={attraction.name}
-            className="w-full h-96 object-cover rounded-lg shadow-lg"
-          />
+        <img
+  src={gallery[activeImage] || attraction.images?.[0]?.imageUrl}
+  alt={`${attraction.name} - Tourist Attraction in Nashik`}
+  loading="eager"
+  decoding="async"
+  className="w-full h-96 object-cover rounded-lg shadow-lg"
+/>
         </div>
 
         {/* Gallery */}
@@ -168,7 +203,9 @@ const AttractionDetailPage: React.FC = () => {
               >
                 <img
                   src={img}
-                  alt={`Gallery ${i + 1}`}
+alt={`${attraction.name} - Image ${i + 1}`}
+loading="lazy"
+decoding="async"
                   className="w-20 h-20 object-cover"
                 />
               </button>

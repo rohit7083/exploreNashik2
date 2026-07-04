@@ -133,6 +133,8 @@ navigate(`/open-card/${place._id}`);  };
           <img
             src={place.images?.[0]?.imageUrl}
             alt={place.name}
+               loading="lazy"
+decoding="async"
             className="w-full h-50 object-cover"
           />
 
