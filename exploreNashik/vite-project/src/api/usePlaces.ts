@@ -1,6 +1,5 @@
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import { getPlaceById, getPlaces } from "./exploreApi";
-
+import { getPlaceBySlug, getPlaces } from "./exploreApi";
 // export const usePlaces = (
 //   category?: string,
 //   subcategory?: string
@@ -33,10 +32,10 @@ export const usePlaces = (
   });
 };
 
-export const usePlace = (id: string) => {
+export const usePlace = (slug: string) => {
   return useQuery({
-    queryKey: ["place", id],
-    queryFn: () => getPlaceById(id),
-    enabled: !!id,
+    queryKey: ["place", slug],
+    queryFn: () => getPlaceBySlug(slug),
+    enabled: !!slug,
   });
 };

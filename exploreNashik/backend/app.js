@@ -30,7 +30,7 @@ app.use(
 
 
 app.use(express.json());
-
+app.use("/", require("./routes/sitemapRoutes"));
 // routes
 app.use("/api", require("./routes/placeRoutes"));
 app.use("/api", require("./routes/contactRoutes"));

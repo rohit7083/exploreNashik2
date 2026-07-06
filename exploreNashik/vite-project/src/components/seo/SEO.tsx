@@ -5,8 +5,7 @@ type SEOProps = {
   description: string;
   url: string;
   image?: string;
-  schema?: object;
-};
+schema?: object | object[];};
 
 export default function SEO({
   title,

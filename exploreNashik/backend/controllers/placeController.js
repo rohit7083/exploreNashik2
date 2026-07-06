@@ -369,3 +369,64 @@ exports.bulkUploadProducts = async (req, res) => {
     });
   }
 };
+
+
+const slugify = require("slugify");
+
+exports.generateSlugs = async (req, res) => {
+  try {
+    const places = await place.find();
+
+    let updated = 0;
+
+    for (const item of places) {
+      const slug = slugify(item.name, {
+        lower: true,
+        strict: true,
+        trim: true,
+      });
+
+      if (item.slug !== slug) {
+       await place.updateOne(
+  { _id: item._id },
+  {
+    $set: {
+      slug,
+    },
+  }
+);
+        updated++;
+      }
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: `${updated} places updated successfully`,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+exports.getPlaceBySlug = async (req, res) => {
+  try {
+    const placeBySlug = await place.findOne({
+      slug: req.params.slug,
+    });
+
+    if (!placeBySlug) {
+      return res.status(404).json({
+        message: "Place not found",
+      });
+    }
+
+    res.status(200).json(placeBySlug);
+  } catch (error) {
+    res.status(500).json({
+      error: error.message,
+    });
+  }
+};

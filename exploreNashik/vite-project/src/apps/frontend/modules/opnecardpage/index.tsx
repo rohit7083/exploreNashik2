@@ -53,87 +53,101 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => (
 const AttractionDetailPage: React.FC = () => {
   const navigate = useNavigate();
 
-  const { id } = useParams();
+const { slug } = useParams();
 
-  const { data: attraction, isLoading } = usePlace(id!);
-
+const { data: attraction, isLoading } = usePlace(slug!);
   const [activeImage, setActiveImage] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false);
-
-  // जर data nasel
-  if (!attraction) {
-    if (isLoading) {
+if (isLoading) {
       return (
         <div className="min-h-screen flex items-center justify-center">
           Loading...
         </div>
       );
     }
-    const pageTitle = `${attraction.name} - ${attraction.location} | Explore Nashik`;
-    const touristSchema = {
-      "@context": "https://schema.org",
-      "@type": "TouristAttraction",
+  // जर data nasel
+if (isLoading) {
+  return <div>Loading...</div>;
+}
 
-      name: attraction.name,
+if (!attraction) {
+  return <div>Attraction not found</div>;
+}
 
-      description: attraction.shortDescription || attraction.description,
+// 👇 आता attraction available आहे
 
-      image: attraction.images?.[0]?.imageUrl,
+const pageTitle = `${attraction.name} - ${attraction.location} | Explore Nashik`;
 
-      url: `https://explorenashik.in/open-card/${id}`,
+const pageDescription =
+  attraction.shortDescription || attraction.description;
 
-      address: {
-        "@type": "PostalAddress",
+const pageImage =
+  attraction.images?.[0]?.imageUrl ||
+  "https://explorenashik.in/enCover.png";
 
-        addressLocality: attraction.location,
+const touristSchema = {
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
 
-        addressRegion: "Maharashtra",
+  name: attraction.name,
 
-        addressCountry: "India",
-      },
-    };
-    const pageDescription =
-      attraction.shortDescription || attraction.description;
+  description: pageDescription,
 
-    const pageImage =
-      attraction.images?.[0]?.imageUrl ||
-      "https://explorenashik.in/enCover.png";
+  image: attraction.images?.map((img: any) => img.imageUrl),
 
-    return (
-      <>
-        <SEO
-          title={pageTitle}
-          description={pageDescription}
-          url={`https://explorenashik.in/open-card/${id}`}
-          image={pageImage}
-          schema={touristSchema}
-        />
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-800 mb-4">
-              Attraction Not Found
-            </h1>
+url: `https://explorenashik.in/open-card/${slug}`,
+  touristType: attraction.category,
 
-            <button
-              onClick={() => navigate(-1)}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-            >
-              Go Back
-            </button>
-          </div>
-        </div>
-      </>
-    );
-  }
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: attraction.location,
+    addressRegion: "Maharashtra",
+    addressCountry: "India",
+  },
+
+  aggregateRating: attraction.rating
+    ? {
+        "@type": "AggregateRating",
+        ratingValue: attraction.rating,
+        reviewCount: 1,
+      }
+    : undefined,
+};
 
   // Gallery Images
   const gallery = attraction.images?.map((img: any) => img.imageUrl) || [];
 
-  // const displayedReviews = showAllReviews
-  //   ? dummyReviews
-  //   : dummyReviews.slice(0, 2);
-
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://explorenashik.in/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Explore",
+      item: "https://explorenashik.in/explore",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: attraction.name,
+item: `https://explorenashik.in/open-card/${slug}`,    },
+  ],
+};
   return (
+    <> <SEO
+      title={pageTitle}
+      description={pageDescription}
+      url={`https://explorenashik.in/open-card/${slug}`}
+      image={pageImage}
+  schema={[touristSchema, breadcrumbSchema]}
+    />
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white shadow-sm sticky top-0 z-10">
@@ -403,6 +417,7 @@ decoding="async"
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -42,6 +42,8 @@ const onSubmit = async (data: ContactFormData) => {
           <img
             src="https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200"
             alt="Nashik"
+            loading="lazy"
+decoding="async"
             className="w-full h-full object-cover"
           />
 

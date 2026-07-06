@@ -55,9 +55,9 @@ export const getPlaces = async (
 }; 
 
 
-export const getPlaceById = async (id: string) => {
+export const getPlaceBySlug = async (slug: string) => {
   const res = await axios.get(
-    `${import.meta.env.VITE_API_URL}/api/places/${id}`
+    `${import.meta.env.VITE_API_URL}/api/places/slug/${slug}`
   );
 
   return res.data;

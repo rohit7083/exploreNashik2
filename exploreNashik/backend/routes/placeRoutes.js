@@ -17,7 +17,7 @@ const upload = require("../middleware/upload");
 
 // Get all places
 router.get("/getPlaces", placeController.getAllPlaces);
-
+router.get("/places/slug/:slug", placeController.getPlaceBySlug);
 // Get single place
 router.get("/places/:id", placeController.getPlaceById);
 
@@ -49,5 +49,7 @@ router.post(
   placeController.bulkUploadProducts
 );
 
+
+router.get("/generate-slugs", placeController.generateSlugs);
 
 module.exports = router;
