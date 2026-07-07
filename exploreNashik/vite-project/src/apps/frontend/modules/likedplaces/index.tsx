@@ -134,16 +134,37 @@ const FavoritePlaces = () => {
     return pages;
   };
 
+  // const handleRemoveFavorite = (placeId: string) => {
+  //   setRemovingId(placeId);
+
+  //   // small delay just so the spinner/feedback is visible; remove if not needed
+  //   setTimeout(() => {
+  //     setPlaces((prev) => {
+  //       const updated = prev.filter((p) => p._id !== placeId);
+  //       writeFavorites(updated);
+  //       return updated;
+  //     });
+  //     setRemovingId(null);
+  //   }, 150);
+  // };
+
+
+
   const handleRemoveFavorite = (placeId: string) => {
     setRemovingId(placeId);
 
-    // small delay just so the spinner/feedback is visible; remove if not needed
     setTimeout(() => {
       setPlaces((prev) => {
         const updated = prev.filter((p) => p._id !== placeId);
+
         writeFavorites(updated);
+
+        // Navbar update kar
+        window.dispatchEvent(new Event("favoritesUpdated"));
+
         return updated;
       });
+
       setRemovingId(null);
     }, 150);
   };
@@ -269,11 +290,10 @@ const FavoritePlaces = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentPage(Number(page))}
-                  className={`w-10 h-10 rounded ${
-                    currentPage === page
+                  className={`w-10 h-10 rounded ${currentPage === page
                       ? "bg-orange-500 text-white"
                       : "border"
-                  }`}
+                    }`}
                 >
                   {page}
                 </button>

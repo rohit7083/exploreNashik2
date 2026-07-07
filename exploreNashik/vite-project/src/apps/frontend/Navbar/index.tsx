@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet } from "@/components/ui/sheet";
 import { useTheme } from "@/context/ThemeContext";
 import { Heart, Menu, Moon, Sun, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const items = [
@@ -16,12 +16,39 @@ const items = [
   { key: "7", label: "About Us", path: "/about" },
 ];
 
+//heart counting
+
+const FAVORITES_KEY = "favoritePlaces";
+
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
   const [saved, setSaved] = useState(false);
+
+  //heart counting
+
+  const [favoriteCount, setFavoriteCount] = useState(0);
+
+  const loadFavorites = () => {
+    const data = JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]");
+    setFavoriteCount(data.length);
+  };
+
+  useEffect(() => {
+    loadFavorites();
+
+    window.addEventListener("favoritesUpdated", loadFavorites);
+    window.addEventListener("storage", loadFavorites);
+
+    return () => {
+      window.removeEventListener("favoritesUpdated", loadFavorites);
+      window.removeEventListener("storage", loadFavorites);
+    };
+  }, []);
+
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
@@ -41,11 +68,10 @@ const Navbar = () => {
                   navigate(item.path);
                   setOpen(false);
                 }}
-                className={`px-4 h-full flex items-center text-sm cursor-pointer transition-colors border-b-2 ${
-                  location.pathname === item.path
+                className={`px-4 h-full flex items-center text-sm cursor-pointer transition-colors border-b-2 ${location.pathname === item.path
                     ? "text-blue-600 border-blue-600"
                     : "text-gray-800 dark:text-gray-200 border-transparent hover:text-blue-600"
-                }`}
+                  }`}
               >
                 {item.label}
               </button>
@@ -59,7 +85,7 @@ const Navbar = () => {
           <Search className="absolute left-[calc(100%-4.5rem)] text-gray-400" size={16} /> */}
 
           <div className="hidden md:flex items-center gap-1">
-            <Button
+            {/* <Button
               variant="ghost"
               size="icon"
               onClick={() => setSaved(!saved)}
@@ -70,6 +96,22 @@ const Navbar = () => {
                   saved ? "fill-red-500 text-red-500" : ""
                 }`}
               />
+            </Button> */}
+
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="relative"
+              onClick={() => navigate("/likedplaces")}
+            >
+              <Heart size={20} />
+
+              {favoriteCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-600 text-white rounded-full h-5 w-5 flex items-center justify-center text-[10px]">
+                  {favoriteCount}
+                </span>
+              )}
             </Button>
 
             <Button variant="ghost" size="icon" onClick={toggleTheme}>
@@ -81,13 +123,29 @@ const Navbar = () => {
         {/* Mobile Hamburger + Theme Toggle */}
 
         <div className="md:hidden flex items-center gap-1">
-          <Button variant="ghost" size="icon" onClick={() => setSaved(!saved)}>
+          {/* <Button variant="ghost" size="icon" onClick={() => setSaved(!saved)}>
             <Heart
               size={20}
               className={`transition-colors ${
                 saved ? "fill-red-500 text-red-500" : ""
               }`}
             />
+          </Button> */}
+
+
+          <Button
+            variant="ghost"
+            size="icon"
+            className="relative"
+            onClick={() => navigate("/likedplaces")}
+          >
+            <Heart size={20} />
+
+            {favoriteCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-red-600 text-white rounded-full h-5 w-5 flex items-center justify-center text-[10px]">
+                {favoriteCount}
+              </span>
+            )}
           </Button>
 
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
@@ -116,11 +174,10 @@ const Navbar = () => {
                 navigate(item.path);
                 setOpen(false);
               }}
-              className={`px-4 py-3 text-sm text-left transition-colors ${
-                location.pathname === item.path
+              className={`px-4 py-3 text-sm text-left transition-colors ${location.pathname === item.path
                   ? "text-blue-600 bg-blue-50 dark:bg-blue-950"
                   : "text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800"
-              }`}
+                }`}
             >
               {item.label}
             </button>

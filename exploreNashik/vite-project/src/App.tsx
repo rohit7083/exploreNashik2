@@ -10,6 +10,7 @@ import NearByPlace from "./apps/frontend/modules/nearByPlace/index";
 import OpenCardPage from "./apps/frontend/modules/opnecardpage/index";
 import Tourism from "./apps/frontend/modules/tourism/index";
 import TravelInfo from "./apps/frontend/modules/travelInfo/index";
+import FavoritePlaces from "./apps/frontend/modules/likedplaces";
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +25,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/travel-info" element={<TravelInfo/>}/>
 <Route path="/open-card/:slug" element={<OpenCardPage />} />
+      <Route path="/likedplaces" element={<FavoritePlaces />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

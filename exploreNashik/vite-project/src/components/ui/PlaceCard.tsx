@@ -81,11 +81,23 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "./button";
 
 const PlaceCard = ({ place }: any) => {
-  const [saved, setSaved] = useState(false);
+  // const [saved, setSaved] = useState(false);
   const navigate = useNavigate();
 
+  // heart code
+
+  const FAVORITES_KEY = "favoritePlaces";
+
+  const [saved, setSaved] = useState(() => {
+    const favorites = JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]");
+    return favorites.some((item: any) => item._id === place._id);
+  });
+
+  // ///
+
   const handleOpen = () => {
-navigate(`/open-card/${place.slug}`) };
+    navigate(`/open-card/${place.slug}`)
+  };
 
   // Dynamic fields config
   const cardFields = [
@@ -133,8 +145,8 @@ navigate(`/open-card/${place.slug}`) };
           <img
             src={place.images?.[0]?.imageUrl}
             alt={place.name}
-               loading="lazy"
-decoding="async"
+            loading="lazy"
+            decoding="async"
             className="w-full h-50 object-cover"
           />
 
@@ -151,19 +163,50 @@ decoding="async"
           <Button
             variant="ghost"
             size="icon"
+            // onClick={(e) => {
+            //   e.stopPropagation(); // Prevent opening the card
+            //   setSaved(!saved);
+            // }}
+
             onClick={(e) => {
-              e.stopPropagation(); // Prevent opening the card
-              setSaved(!saved);
+              e.stopPropagation();
+
+              let favorites = JSON.parse(
+                localStorage.getItem(FAVORITES_KEY) || "[]"
+              );
+
+              const exists = favorites.find(
+                (item: any) => item._id === place._id
+              );
+
+              if (exists) {
+                favorites = favorites.filter(
+                  (item: any) => item._id !== place._id
+                );
+                setSaved(false);
+              } else {
+                favorites.push(place);
+                setSaved(true);
+              }
+
+              localStorage.setItem(
+                FAVORITES_KEY,
+                JSON.stringify(favorites)
+              );
+
+              // Navbar la notify kar
+              window.dispatchEvent(new Event("favoritesUpdated"));
             }}
+
+
             className="absolute top-3 right-3 bg-white/90 hover:bg-white rounded-full shadow-md"
           >
             <Heart
               size={20}
-              className={`transition-all duration-300 ${
-                saved
-                  ? "fill-red-500 text-red-500"
-                  : "text-gray-600 hover:text-red-500"
-              }`}
+              className={`transition-all duration-300 ${saved
+                ? "fill-red-500 text-red-500"
+                : "text-gray-600 hover:text-red-500"
+                }`}
             />
           </Button>
         </div>
