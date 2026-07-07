@@ -81,7 +81,6 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "./button";
 
 const PlaceCard = ({ place }: any) => {
-  // const [saved, setSaved] = useState(false);
   const navigate = useNavigate();
 
   // heart code
