@@ -26,7 +26,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
-  const [saved, setSaved] = useState(false);
 
   //heart counting
 
