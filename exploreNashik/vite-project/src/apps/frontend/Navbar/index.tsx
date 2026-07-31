@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-
+import logoForNavbar from '../../../../logo.png';
 
 
 
@@ -69,7 +69,7 @@ const Navbar = () => {
             className="flex items-center whitespace-nowrap mr-4"
           >
             <img
-              src="/logo.png"
+              src={logoForNavbar}
               alt="Explore Nashik Logo"
               className="w-8 h-8 mr-2"
             />
