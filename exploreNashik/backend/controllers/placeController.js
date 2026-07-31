@@ -7,6 +7,8 @@ const streamifier = require("streamifier");
 // Get all places
 exports.getAllPlaces = async (req, res) => {
   try {
+      console.time("getPlaces");
+
     const { category, subcategory } = req.query;
 
     const page = Number(req.query.page) || 1;
@@ -22,14 +24,19 @@ exports.getAllPlaces = async (req, res) => {
     if (subcategory) {
       filter.subcategory = { $regex: `^${subcategory}$`, $options: "i" };
     }
+    console.time("find");
 
     const places = await place
       .find(filter)
       .skip(skip)
       .limit(limit);
+ console.timeEnd("find");
 
+    console.time("count");
     const total = await place.countDocuments(filter);
+  console.timeEnd("count");
 
+    console.timeEnd("getPlaces");
     res.status(200).json({
       places,
       page,
@@ -430,3 +437,6 @@ exports.getPlaceBySlug = async (req, res) => {
     });
   }
 };
+
+
+

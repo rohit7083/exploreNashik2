@@ -2,30 +2,34 @@ import { Button } from "@/components/ui/button";
 import { Sheet } from "@/components/ui/sheet";
 import { useTheme } from "@/context/ThemeContext";
 import { Heart, Menu, Moon, Sun, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const items = [
-  { key: "1", label: "Home", path: "/" },
-  { key: "3", label: "Explore", path: "/explore" },
-  // { key: "4", label: "Tourism", path: "/tourism" },
-  { key: "5", label: "Near By Place", path: "/nearby-place" },
-  { key: "6", label: "Kumbha-Mela", path: "/kumbh-mela" },
-  { key: "8", label: "Travel Info", path: "/travel-info" },
-  { key: "8", label: "History", path: "/history" },
-  { key: "7", label: "About Us", path: "/about" },
-];
 
-//heart counting
+
+
+
 
 const FAVORITES_KEY = "favoritePlaces";
-
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
+  const { t } = useTranslation();
+
+  const items = [
+    { key: "1", label: t("navbar.home"), path: "/" },
+    { key: "3", label: t("navbar.explore"), path: "/explore" },
+    { key: "5", label: t("navbar.nearbyPlaces"), path: "/nearby-place" },
+    { key: "6", label: t("navbar.kumbhMela"), path: "/kumbh-mela" },
+    { key: "8", label: t("navbar.travelInfo"), path: "/travel-info" },
+    { key: "9", label: t("navbar.history"), path: "/history" },
+    { key: "7", label: t("navbar.about"), path: "/about" },
+  ];
 
   //heart counting
 
@@ -48,15 +52,31 @@ const Navbar = () => {
     };
   }, []);
 
-
   return (
     <header className="sticky top-0 z-50 w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
       <div className="flex items-center justify-between px-5 h-16">
         {/* Logo + Desktop Menu grouped at start */}
 
         <div className="flex items-center h-16">
-          <span role="button" style={{ cursor: "pointer" }} onClick={() => navigate("/")} className="font-bold text-lg text-black dark:text-white whitespace-nowrap mr-4">
+          {/* <span role="button" style={{ cursor: "pointer" }} onClick={() => navigate("/")} className="font-bold text-lg text-black dark:text-white whitespace-nowrap mr-4">
             Explore <span className="text-red-800 font-bold">नाशिक </span>
+          </span> */}
+
+          <span
+            role="button"
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/")}
+            className="flex items-center whitespace-nowrap mr-4"
+          >
+            <img
+              src="/logo.png"
+              alt="Explore Nashik Logo"
+              className="w-8 h-8 mr-2"
+            />
+
+            <span className="font-bold text-lg text-black dark:text-white">
+              Explore <span className="text-red-800">नाशिक</span>
+            </span>
           </span>
 
           <nav className="hidden md:flex h-16 items-end">
@@ -67,10 +87,11 @@ const Navbar = () => {
                   navigate(item.path);
                   setOpen(false);
                 }}
-                className={`px-4 h-full flex items-center text-sm cursor-pointer transition-colors border-b-2 ${location.pathname === item.path
+                className={`px-4 h-full flex items-center text-sm cursor-pointer transition-colors border-b-2 ${
+                  location.pathname === item.path
                     ? "text-blue-600 border-blue-600"
                     : "text-gray-800 dark:text-gray-200 border-transparent hover:text-blue-600"
-                  }`}
+                }`}
               >
                 {item.label}
               </button>
@@ -97,7 +118,6 @@ const Navbar = () => {
               />
             </Button> */}
 
-
             <Button
               variant="ghost"
               size="icon"
@@ -112,6 +132,8 @@ const Navbar = () => {
                 </span>
               )}
             </Button>
+
+            <LanguageSwitcher />
 
             <Button variant="ghost" size="icon" onClick={toggleTheme}>
               {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
@@ -131,7 +153,6 @@ const Navbar = () => {
             />
           </Button> */}
 
-
           <Button
             variant="ghost"
             size="icon"
@@ -146,6 +167,8 @@ const Navbar = () => {
               </span>
             )}
           </Button>
+
+          <LanguageSwitcher />
 
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
@@ -173,10 +196,11 @@ const Navbar = () => {
                 navigate(item.path);
                 setOpen(false);
               }}
-              className={`px-4 py-3 text-sm text-left transition-colors ${location.pathname === item.path
+              className={`px-4 py-3 text-sm text-left transition-colors ${
+                location.pathname === item.path
                   ? "text-blue-600 bg-blue-50 dark:bg-blue-950"
                   : "text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800"
-                }`}
+              }`}
             >
               {item.label}
             </button>

@@ -19,18 +19,22 @@ export default function ContactForm() {
 
  
 
+const sanitize = (val: string) => val.replace(/[\r\n]/g, " ");
+
 const onSubmit = async (data: ContactFormData) => {
-    console.log("FORM SUBMITTED", data);
+  console.log("FORM SUBMITTED", sanitize(data.name), sanitize(data.email));
   try {
+    const csrfToken = crypto.randomUUID();
+    sessionStorage.setItem("csrfToken", csrfToken);
     const response = await axios.post(
       "http://localhost:5000/api/about",
-      data
+      data,
+      { headers: { "X-CSRF-Token": csrfToken } }
     );
-
-    console.log(response);
+    console.log(sanitize(String(response.status)));
     reset();
   } catch (error) {
-    console.error(error);
+    console.error("Submission failed");
   }
 };
   return (

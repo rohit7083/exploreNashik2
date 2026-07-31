@@ -77,6 +77,7 @@
 
 import { Heart } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { Button } from "./button";
 
@@ -92,7 +93,24 @@ const PlaceCard = ({ place }: any) => {
     return favorites.some((item: any) => item._id === place._id);
   });
 
-  // ///
+const { t, i18n } = useTranslation();
+
+const currentLang = i18n.language;
+
+const displayName =
+  currentLang !== "en" &&
+  place?.translations?.[currentLang]?.name
+    ? place.translations[currentLang].name
+    : place.name;
+
+const displayLocation =
+  currentLang !== "en" &&
+  place?.translations?.[currentLang]?.location
+    ? place.translations[currentLang].location
+    : Array.isArray(place.location)
+    ? place.location[0]
+    : place.location;
+
 
   const handleOpen = () => {
     navigate(`/open-card/${place.slug}`)
@@ -214,7 +232,9 @@ const PlaceCard = ({ place }: any) => {
         <div className="p-4 flex flex-col flex-grow">
           {/* Name */}
           <h2 className="font-bold text-xl text-gray-800 dark:text-white line-clamp-1 mb-1">
-            {place.name}
+            {/* {place.name} */}
+              {displayName}
+
           </h2>
 
           {/* Description */}
@@ -226,7 +246,7 @@ const PlaceCard = ({ place }: any) => {
           {place.location && (
             <p className="text-sm text-gray-500 mt-1   flex items-start gap-2 leading-5">
               {/* <span>📍</span> */}
-              <span className="line-clamp-2">{place.location}</span>
+              <span className="line-clamp-2">{displayLocation}</span>
             </p>
           )}
 

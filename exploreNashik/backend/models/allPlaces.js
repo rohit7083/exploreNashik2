@@ -6,11 +6,11 @@ const placeSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-slug: {
-  type: String,
-  unique: true,
-  index: true,
-},
+    slug: {
+      type: String,
+      unique: true,
+      index: true,
+    },
     images: {
       type: [
         {
@@ -20,7 +20,6 @@ slug: {
           },
           publicId: {
             type: String,
-            
           },
         },
       ],
@@ -32,6 +31,51 @@ slug: {
         message: "At least one image is required",
       },
     },
+
+    translations: {
+  en: {
+    name: {
+      type: String,
+      default: "",
+    },
+    description: {
+      type: String,
+      default: "",
+    },
+    location: {
+      type: String,
+      default: "",
+    },
+  },
+  mr: {
+    name: {
+      type: String,
+      default: "",
+    },
+    description: {
+      type: String,
+      default: "",
+    },
+    location: {
+      type: String,
+      default: "",
+    },
+  },
+  hi: {
+    name: {
+      type: String,
+      default: "",
+    },
+    description: {
+      type: String,
+      default: "",
+    },
+    location: {
+      type: String,
+      default: "",
+    },
+  },
+},
     category: {
       type: String,
       required: true,
@@ -45,6 +89,7 @@ slug: {
       type: String,
       required: true,
     },
+    
     location: {
       type: [String],
       // required: true,

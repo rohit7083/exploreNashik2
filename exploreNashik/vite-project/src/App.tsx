@@ -3,14 +3,16 @@ import Home from "./apps/frontend/app/Home";
 import Layout from "./apps/frontend/app/Layout";
 import About from "./apps/frontend/modules/aboutus/index";
 // import Contact from "./apps/frontend/modules/contact/index";
-import Explore from './apps/frontend/modules/explore/index';
+import Explore from "./apps/frontend/modules/explore/index";
 import History from "./apps/frontend/modules/history/index";
 import KumbhaMela from "./apps/frontend/modules/kumbhMela/index";
+import FavoritePlaces from "./apps/frontend/modules/likedplaces";
 import NearByPlace from "./apps/frontend/modules/nearByPlace/index";
 import OpenCardPage from "./apps/frontend/modules/opnecardpage/index";
 import Tourism from "./apps/frontend/modules/tourism/index";
 import TravelInfo from "./apps/frontend/modules/travelInfo/index";
-import FavoritePlaces from "./apps/frontend/modules/likedplaces";
+import WeatherDashboard from "./weatherDashboard/WeatherDashboard";
+
 function App() {
   return (
     <BrowserRouter>
@@ -23,10 +25,10 @@ function App() {
           <Route path="/kumbh-mela" element={<KumbhaMela />} />
           <Route path="/history" element={<History />} />
           <Route path="/about" element={<About />} />
-          <Route path="/travel-info" element={<TravelInfo/>}/>
-<Route path="/open-card/:slug" element={<OpenCardPage />} />
-      <Route path="/likedplaces" element={<FavoritePlaces />} />
-
+          <Route path="/travel-info" element={<TravelInfo />} />
+          <Route path="/open-card/:slug" element={<OpenCardPage />} />
+          <Route path="/likedplaces" element={<FavoritePlaces />} />
+          <Route path="/weather-dashboard" element={<WeatherDashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>

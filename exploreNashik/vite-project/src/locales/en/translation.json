@@ -1,0 +1,529 @@
+{
+  "common": {
+    "home": "Home",
+    "explore": "Explore",
+    "tourism": "Tourism",
+    "nearby": "Nearby Places",
+    "kumbhMela": "Kumbh Mela",
+    "history": "History",
+    "about": "About",
+    "travelInfo": "Travel Info",
+    "search": "Search",
+    "language": "Language"
+  },
+   "detail": {
+    "back": "Back"
+    
+  },
+  "home": {
+    "title": "Explore Nashik",
+    "subtitle": "Discover the Beauty of Nashik - Temples, History & Nature",
+    "description": "Welcome to Explore Nashik, your ultimate guide to exploring the beautiful city of Nashik. Discover famous temples, historical sites, natural attractions, and travel information.",
+    "exploreNow": "Explore Now",
+    "attractions": "Top Attractions",
+    "tourism": "Tourism Guide",
+    "travelTips": "Travel Tips"
+  },
+  "explore": {
+    "title": "Explore Nashik",
+    "description": "Browse all major tourist attractions and places to visit in Nashik",
+    "searchPlaces": "Search Places",
+    "filter": "Filter",
+    "noResults": "No places found matching your search"
+  },
+  "tourism": {
+    "title": "Tourism in Nashik",
+    "description": "Complete tourism guide including famous places, travel tips and attractions",
+    "attractions": "Attractions",
+    "temples": "Temples",
+    "forts": "Forts",
+    "naturalPlaces": "Natural Places",
+    "restaurants": "Restaurants",
+    "hotels": "Hotels"
+  },
+  "places": {
+    "rating": "Rating",
+    "location": "Location",
+    "description": "Description",
+    "visitNow": "Visit Now",
+    "moreInfo": "More Information",
+    "reviews": "Reviews",
+    "gallery": "Gallery",
+    "nearby": "Nearby Places"
+  },
+  "travel": {
+    "title": "Travel Information",
+    "howToReach": "How to Reach Nashik",
+    "bestTime": "Best Time to Visit",
+    "thingsToCarry": "Things to Carry",
+    "localTransport": "Local Transport",
+    "accommodation": "Accommodation"
+  },
+  "footer": {
+    "about": "About Us",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "followUs": "Follow Us",
+    "copyright": "All rights reserved"
+  },
+  "navbar": {
+    "home": "Home",
+    "explore": "Explore",
+    "tourism": "Tourism",
+    "nearbyPlaces": "Nearby Places",
+    "kumbhMela": "Kumbh Mela",
+    "history": "History",
+    "about": "About",
+    "travelInfo": "Travel Info"
+  },  
+  "kumbhMela": {
+  "seo": {
+    "title": "Nashik Kumbh Mela | Explore Nashik",
+    "description": "Complete guide to Nashik Kumbh Mela, its history and significance."
+  },
+  "hero": {
+    "badge": "World's Largest Spiritual Gathering",
+    "title": "Nashik–Trimbakeshwar",
+    "subtitle": "Simhastha Kumbh Mela",
+    "description": "Once every twelve years, when Jupiter enters Leo, millions gather on the banks of the Godavari to take a sacred dip — a ritual unbroken since legend says drops of celestial nectar fell here.",
+    "date": "31 Oct 2026 — 24 Jul 2028",
+    "location": "Ramkund & Kushavarta Kund"
+  },
+  "info": {
+    "sites": {
+      "title": "Two Sacred Sites",
+      "description": "Ramkund in Nashik city, and Kushavarta Kund at Trimbakeshwar, 30 km away — where the Godavari is born."
+    },
+    "cycle": {
+      "title": "Once Every 12 Years",
+      "description": "Timed to Jupiter's entry into Leo — this cycle runs an unusually long 21 months, ending July 2028."
+    },
+    "pilgrims": {
+      "title": "Millions of Pilgrims",
+      "description": "Over 30 million devotees attended in 2015 — 2027 is expected to draw even larger crowds."
+    }
+  },
+  "sites": {
+    "ramkund": {
+      "title": "Ramkund, Nashik",
+      "description": "The river city of ritual memory. Tradition holds that Lord Rama bathed here during his exile — giving Ramkund its name and its place at the heart of the Vaishnavite Amrit Snan."
+    },
+    "trimbakeshwar": {
+      "title": "Trimbakeshwar",
+      "description": "Home to one of the twelve Jyotirlingas of Shiva, and the source of the Godavari itself. The Shaivite akharas hold Trimbakeshwar as the original seat of the Mela."
+    }
+  },
+  "history": {
+    "label": "Why it's celebrated",
+    "title": "History & Mythology",
+    "paragraph1": "The story begins long before Nashik existed as a city. According to the Puranas, the gods and demons once joined forces to churn the cosmic ocean in search of Amrit, the nectar of immortality. They used Mount Mandara as the churning rod and the serpent Vasuki as the rope, with Vishnu himself, in the form of a giant tortoise, steadying the mountain beneath the waves. As the ocean turned, it released both poison and treasure — Shiva drank the poison to save creation, and eventually the Kumbh, a pot brimming with Amrit, rose out of the water.",
+    "paragraph2": "What followed was a chase, not a celebration. Gods and demons fought over the pot for twelve divine days — which, in human time, stretched to twelve years. As Garuda carried the Kumbh across the sky, four drops of nectar spilled to Earth, landing at Prayagraj, Haridwar, Ujjain, and Nashik. Each place absorbed a measure of that power, and each has held a Kumbh Mela ever since, roughly once every twelve years, timed to the same planetary rhythm that marked the original chase.",
+    "simhasthaQuestion": "Why \"Simhastha,\" specifically?",
+    "simhasthaAnswer": "The Mela is named for the moment it occurs, not the place. It falls when Jupiter — Guru, the teacher of the gods — moves into Leo (Simha) in Vedic astrology, an alignment that recurs roughly once every twelve years. Nashik and Ujjain share this particular alignment, which is why their Kumbh Melas both carry the name Simhastha, distinct from the Haridwar and Prayagraj gatherings.",
+    "paragraph4": "Nashik's claim to the tradition runs deeper than astrology alone. The region is part of the Dandakaranya forest where the Ramayana places Rama, Sita, and Lakshmana during their years of exile — which is why the bathing spot in Nashik city is named Ramkund, \"Rama's pool.\" Thirty kilometres away, Trimbakeshwar holds one of the twelve Jyotirlingas of Shiva and marks the source of the Godavari river itself — giving the Simhastha its dual character, shared between a Vaishnavite city and a Shaivite source.",
+    "paragraph5": "Today, the ritual stays remarkably close to what it has always been. Pilgrims bathe in the Godavari believing it dissolves the weight of past karma; akharas process through the streets ahead of each Amrit Snan; and for a few months, caste, region, and background fall away in a crowd united by nothing but the river and the calendar.",
+    "twelveYearsQuestion": "Why does it happen every twelve years?",
+    "twelveYearsAnswer": "The answer lies in both mythology and astronomy. According to tradition, the struggle between the gods and demons for the Kumbh of Amrit lasted twelve divine days, which came to symbolize twelve human years. In astronomical terms, Jupiter — known as Guru or Brihaspati in Vedic astrology — takes nearly twelve years to complete one journey through the zodiac. Simhastha is celebrated when Jupiter returns to Leo (Simha Rashi) and aligns with specific positions of the Sun and Moon, recreating the celestial conditions associated with the original legend. This rare alignment is why Nashik's Simhastha Kumbh Mela is held only once every twelve years."
+  },
+  "timeline": {
+    "label": "The 21-month cycle",
+    "title": "Kumbh Mela Timeline",
+    "events": {
+      "flag": {
+        "date": "31 Oct 2026",
+        "title": "Dhwajarohan (Flag Hoisting)",
+        "desc": "The Simhastha Kumbh Mela begins with a ceremonial flag hoisting at Ramkund, Nashik and Trimbakeshwar."
+      },
+      "parikrama": {
+        "date": "29 Jul 2027",
+        "title": "Nagar Parikrama",
+        "desc": "Devotees and saints perform a sacred procession around Nashik city. (Date subject to final confirmation by the Akhada Parishad.)"
+      },
+      "firstSnan": {
+        "date": "2 Aug 2027",
+        "title": "First Amrit Snan",
+        "desc": "First holy dip in the Godavari river during Shravan Shuddha, marking the formal opening of the bathing phase."
+      },
+      "secondSnan": {
+        "date": "31 Aug 2027",
+        "title": "Second Amrit Snan",
+        "desc": "Shravan Amavasya holy dip — regarded as the most spiritually potent bathing day, attended by millions of devotees."
+      },
+      "thirdSnan": {
+        "date": "11 Sep 2027",
+        "title": "Third Amrit Snan",
+        "desc": "Bhadrapada Shukla Ekadashi holy dip at Ramkund, Nashik, concluding the royal bathing cycle."
+      },
+      "conclusion": {
+        "date": "24 Jul 2028",
+        "title": "Conclusion Ceremony",
+        "desc": "Official conclusion of the Simhastha Kumbh Mela, after a sacred cycle of nearly 21 months."
+      }
+    }
+  },
+  "rituals": {
+    "title": "Major Rituals",
+    "amritSnan": {
+      "title": "Amrit Snan",
+      "description": "The royal bath, led by the akharas in order of precedence — the most sacred and most crowded ritual of the Mela."
+    },
+    "akhada": {
+      "title": "Akhada Procession",
+      "description": "Sacred marches of sadhus, elephants, and chariots toward the river ahead of each Amrit Snan."
+    },
+    "holyDip": {
+      "title": "Holy Dip",
+      "description": "Open to every pilgrim throughout the Parva days — bathing in the Godavari is believed to cleanse karmic sin."
+    }
+  },
+  "faq": {
+    "title": "Good to Know",
+    "items": {
+      "simhastha": {
+        "q": "Why is it called Simhastha?",
+        "a": "The name comes from \"Simha,\" the Leo zodiac sign. The Mela is held when Jupiter enters Leo — an alignment that occurs roughly once every 12 years."
+      },
+      "pass": {
+        "q": "Do I need a pass to attend?",
+        "a": "No. Entry to the Kumbh Mela is free for all pilgrims. Special arrangements are made for the Amrit Snan days due to the scale of the crowds."
+      },
+      "dates": {
+        "q": "Are the Amrit Snan dates final?",
+        "a": "The dates listed follow current astrological calculations and government notifications. Final muhurtas are confirmed closer to the event by the Akhada Parishad."
+      },
+      "travel": {
+        "q": "How do I get to Nashik?",
+        "a": "Nashik is well connected by rail and road from Mumbai (~180 km) and Pune (~210 km). During the Mela, the state runs additional trains, buses, and shuttle services to Trimbakeshwar."
+      }
+    }
+  },
+  "travel": {
+    "title": "Planning Your Visit",
+    "description": "Nashik is well connected by road and rail from Mumbai and Pune. During the Mela, special trains, buses, and shuttle services run to Trimbakeshwar, alongside expanded medical and accommodation facilities for the millions of expected visitors."
+  }
+},
+  "history": {
+    "hero": {
+      "label": "A Stratigraphy of Nashik · 2000 BCE — Today",
+      "title": "History & Culture",
+      "description": "Four thousand years don't stack neatly. They settle in layers — myth pressed under empire, empire under devotion, devotion under steel and vineyard. Scroll down through the strata."
+    },
+    "showLess": "Show less",
+    "readMore": "Read more",
+    "timeline": {
+      "vedic": {
+        "era": "Vedic Age",
+        "title": "Nashik in Ancient Texts",
+        "description": "Nashik, known in ancient times as Padmavati, Janasthana, and Trinkha, holds a sacred place in Indian mythology and early history. It is prominently mentioned in the Ramayana, where Lord Rama, along with Sita and Lakshmana, spent a significant part of their 14-year exile in the forest region of Panchavati. Sages performed rituals, meditation, and teaching along its riverbanks, shaping its identity as a pilgrimage destination for centuries to come."
+      },
+      "buddhist": {
+        "era": "Buddhist Period",
+        "title": "A Center of Monks and Merchants",
+        "description": "Under the Satavahana dynasty, Nashik emerged as a major center for Buddhism and trade. Its most remarkable legacy is the Pandav Leni caves — 24 rock-cut monasteries and prayer halls carved into the Trirashmi hills. Inscriptions found there record donors, merchants, and rulers, evidence of a city thriving on trade routes connecting northern and southern India."
+      },
+      "satavahana": {
+        "era": "Satavahana Rule",
+        "title": "Provincial Capital",
+        "description": "By 100 CE, Nashik had become an administrative and economic center under the Satavahanas. Inscriptions in the Nashik caves from this period are among the most important historical records of the dynasty, naming kings, traders, and monks. Economic stability and religious tolerance laid the foundation for the city's long-term importance."
+      },
+      "medieval": {
+        "era": "Medieval Period",
+        "title": "Rise of Shaiva Worship",
+        "description": "Nashik grew into a major center for Shaivism, the worship of Lord Shiva. The Trimbakeshwar Temple, one of the twelve sacred Jyotirlingas, was established in this period and became a major pilgrimage site. The Godavari's origin nearby deepened the city's religious standing — pilgrims arrived in growing numbers to bathe and seek blessings."
+      },
+      "yadava": {
+        "era": "Yadava Dynasty",
+        "title": "Temples in Black Stone",
+        "description": "Under the Yadavas, ruling from Devagiri, Nashik saw significant growth in temple architecture, much of it in the Hemadpanthi style — dense, dark basalt carved with intricate detail. Proximity to the Godavari kept Nashik a pilgrimage destination, while trade and agriculture expanded alongside it."
+      },
+      "maratha": {
+        "era": "Maratha & Peshwa Era",
+        "title": "Kalaram Temple Built",
+        "description": "Sardar Rangarao Odhekar built the Kalaram Temple in Panchavati after the Maratha victory era, dedicating it to a black-stone idol of Rama recovered from the Godavari. The Trimbakeshwar Temple was also rebuilt and expanded under Peshwa Balaji Bajirao, cementing Nashik's place as both a spiritual and administrative center."
+      },
+      "british": {
+        "era": "British Period",
+        "title": "Colonial Administration Begins",
+        "description": "After the Marathas' defeat in the Third Anglo-Maratha War, Nashik came under British rule. The East India Company built roads, government offices, and a central jail, introducing Western education and legal systems — modernizing infrastructure while unsettling traditional local autonomy."
+      },
+      "satyagraha": {
+        "era": "Freedom Movement",
+        "title": "Kalaram Temple Entry Satyagraha",
+        "description": "Dr. B.R. Ambedkar led a landmark protest at the Kalaram Temple, demanding the right for Dalits to enter Hindu temples. Thousands joined the peaceful demonstration. Though immediate temple entry was not won, the satyagraha became a defining moment in India's struggle against caste-based exclusion."
+      },
+      "independence": {
+        "era": "Independence Era",
+        "title": "An Industrial City Takes Shape",
+        "description": "After independence, Nashik transformed into a major industrial hub. MIDC zones drew engineering, manufacturing, and defense industries — including the Currency Note Press and an Ordnance Factory — balancing the city's ancient religious identity with new economic weight."
+      },
+      "modern": {
+        "era": "Modern Era",
+        "title": "India's Wine Capital",
+        "description": "Favorable climate and soil turned Nashik into India's wine country, anchored by Sula Vineyards and now home to over 100 wineries. Annual festivals and wine tourism draw visitors nationwide — a modern layer atop four millennia of sacred and political history."
+      }
+    }
+  }
+,
+  "infoOfNashik": {
+    "intro": {
+      "label": "One layer, many identities",
+      "title": "What Makes Nashik Different",
+      "description": "Most Indian cities pick one identity and keep it. Nashik never picked just one — it's a pilgrimage town, a grape-growing district, and a wine region, all running at the same time, all genuinely true."
+    },
+    "highlights": {
+      "grapeCapital": {
+        "title": "India's Grape Capital",
+        "description": "Nashik is the country's leading grape producer, growing more than half of India's grape exports. The same hills that grow table grapes also feed its wine industry."
+      },
+      "wineCapital": {
+        "title": "India's Wine Capital",
+        "description": "Home to over 50 wineries, including Sula — the winery that put Indian wine on the map in 1999. Roughly half of all wineries in Maharashtra sit in this one district."
+      },
+      "pilgrimageCity": {
+        "title": "A Living Pilgrimage City",
+        "description": "Trimbakeshwar's Jyotirlinga, Ramkund, and Panchavati aren't museum pieces — they're active sites of daily worship, exactly as they've been for centuries."
+      },
+      "onionCapital": {
+        "title": "The Onion Capital, Too",
+        "description": "Less photographed than the vineyards, but just as real: Nashik district is one of India's largest onion-producing regions, especially around Lasalgaon's wholesale market."
+      },
+      "kumbhSite": {
+        "title": "One of Four Kumbh Sites",
+        "description": "Nashik-Trimbakeshwar is one of only four places in India that host the Kumbh Mela, alongside Haridwar, Prayagraj, and Ujjain — sharing the Simhastha cycle with Ujjain alone."
+      },
+      "westernGhats": {
+        "title": "Western Ghats on Its Doorstep",
+        "description": "Hill forts, the Anjneri range, and trekking country sit within an hour of the city center — a side of Nashik that rarely makes the postcards."
+      }
+    },
+    "comparison": {
+      "title": "How Nashik Compares",
+      "varanasi": {
+        "label": "vs. Varanasi",
+        "description": "Both are sacred river cities, but Nashik pairs its temples with a modern wine industry — a combination no other Indian pilgrimage city offers."
+      },
+      "goa": {
+        "label": "vs. Goa",
+        "description": "Where Goa built its identity around beaches, Nashik built one around vineyards in the hills — India's closest answer to wine country, without the coastline."
+      },
+      "pune": {
+        "label": "vs. Pune",
+        "description": "Pune is the bigger metro nearby, but Nashik holds the older, deeper religious history — the Ramayana connection runs through Nashik, not Pune."
+      }
+    }
+  }
+,
+  "aboutUs": {
+    "seo": {
+      "title": "About Explore Nashik",
+      "description": "Know more about Explore Nashik and our mission."
+    },
+    "hero": {
+      "badge": "Nashik, Maharashtra · Built by two people",
+      "title": "About Explore Nashik",
+      "description": "A digital guide to Nashik's temples, vineyards, food, and hidden corners — built by two people who wanted one place that actually covers all of it."
+    },
+    "stats": {
+      "places": "Places listed",
+      "categories": "Categories",
+      "people": "People building it"
+    },
+    "whyExists": {
+      "label": "Why this exists",
+      "paragraph1": "We kept noticing the same thing: information about Nashik was scattered across ten different blogs, none of them current, half of them written for a city that's changed since. The temple hours were wrong, the \"hidden gem\" cafés had closed down, and nobody mentioned that the wine tour and the Kumbh Mela calendar might matter to the same traveler.",
+      "paragraph2": "So we're building the version we wanted to find — one place for heritage, food, travel logistics, and the practical stuff like distances and emergency numbers. No ads deciding what you see first, no listicle padding. Just what's actually useful, kept up to date by two people who live here."
+    },
+    "contact": {
+      "title": "Get in touch",
+      "subtitle": "Spotted something wrong, or have a place we should know about? Tell us.",
+      "location": "Nashik, Maharashtra, India",
+      "hours": "Mon–Sat, 9am–6pm IST"
+    },
+    "form": {
+      "nameLabel": "Your name",
+      "namePlaceholder": "e.g. Priya Sharma",
+      "nameRequired": "Name is required",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us how we can help...",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters",
+      "submit": "Send Message",
+      "success": "Message sent successfully",
+      "error": "Failed to send message. Please try again."
+    }
+  },
+  "wineTourism": {
+  "badge": "Wine Capital of India",
+  "title": "Nashik Wine Country",
+  "description": "Nashik produces over 40% of India's wine. With 100+ wineries in the region, experience world-class wine tourism amid the beautiful Sahyadri hills. From Sula to York, embark on an unforgettable vineyard trail.",
+  "features": {
+    "harvestSeason": "🍇 Harvest Season: Jan-Feb",
+    "wineries": "🥂 30+ Wineries",
+    "sulaFest": "🎵 Annual SulaFest",
+    "vineyardStays": "🏡 Vineyard Stays"
+  },
+  "cta": "Explore Wine Tours"
+}
+,
+  "travelInfo": {
+    "seo": { "title": "Travel Information | Explore Nashik", "description": "Travel information, transport guide and useful tips for visiting Nashik." },
+    "hero": { "label": "Routes In · Routes Around", "title": "Travel Information", "description": "By road, rail, or air — how to get to Nashik, how to move once you're here, and what to know before you go." },
+    "transport": { "byRoad": "By Road", "byRail": "By Train", "byAir": "By Air" },
+    "bestTime": {
+      "label": "Plan ahead",
+      "title": "Best Time to Visit",
+      "seasons": {
+        "winter": { "season": "Winter (Oct–Feb)", "weather": "15°C – 25°C, Pleasant", "recommendation": "Best time to visit", "highlights": "Perfect for sightseeing, wine tours, and outdoor activities" },
+        "summer": { "season": "Summer (Mar–Jun)", "weather": "25°C – 42°C, Hot", "recommendation": "Avoid if possible", "highlights": "Plan indoor attractions; early morning temple visits" },
+        "monsoon": { "season": "Monsoon (Jul–Sep)", "weather": "20°C – 30°C, Heavy Rains", "recommendation": "Great for waterfalls", "highlights": "Dugarwadi Waterfall at best; Gangapur Dam scenic; avoid trekking" }
+      }
+    },
+    "howToReach": {
+      "label": "Getting here",
+      "title": "How to Reach Nashik",
+      "from": "From",
+      "tip": "Tip",
+      "modes": {
+        "byAir": { "title": "By Air", "description": "Ozar Airport (IATA: ISK) is 24 km from Nashik city. It has limited commercial flights. The nearest major airport is Chhatrapati Shivaji Maharaj International Airport, Mumbai (165 km).", "tips": "Most travelers fly into Mumbai and take a road or rail connection to Nashik." },
+        "byRail": { "title": "By Train", "description": "Nashik Road Railway Station is the main railway station, well-connected to major Indian cities. Mumbai Central to Nashik takes 3-4 hours. Many Rajdhani and Express trains stop here.", "tips": "Nashik Road station is 8 km from city center. Autos and taxis available." },
+        "byRoad": { "title": "By Road", "description": "Nashik is very well-connected by road. NH-3 (Mumbai-Agra Highway) passes through Nashik. Excellent bus services from Mumbai, Pune, and other Maharashtra cities.", "tips": "Shivneri (MSRTC AC Volvo) buses from Mumbai are comfortable and frequent. Book online at msrtcotix.in" }
+      },
+      "durations": { "3h": "3 hours", "45min": "45 min", "4h": "4 hours", "3-4h": "3-4 hours", "4.5h": "4.5 hours", "18-22h": "18-22 hours", "10-12h": "10-12 hours", "3.5-4h": "3.5-4 hours", "2h": "2 hours", "1.5-2h": "1.5-2 hours", "1.5h": "1.5 hours", "1h": "1 hour" },
+      "trains": { "panchavatiTapovan": "Panchavati Express, Tapovan Express", "multipleExpress": "Multiple Express trains", "rajdhaniKerala": "Rajdhani, Kerala Express", "multipleOptions": "Multiple options" },
+      "buses": { "shivneriAc": "MSRTC Shivneri (AC)", "msrtcPrivate": "MSRTC & Private buses", "regularMsrtc": "Regular MSRTC", "regularBuses": "Regular buses" }
+    },
+    "places": {
+      "mumbaiAirport": "Mumbai Airport", "nashikOzarAirport": "Nashik Ozar Airport", "puneAirport": "Pune Airport",
+      "mumbai": "Mumbai", "pune": "Pune", "delhi": "Delhi", "hyderabad": "Hyderabad",
+      "aurangabad": "Aurangabad", "shirdi": "Shirdi",
+      "trimbakeshwar": "Trimbakeshwar", "saptashringi": "Saptashringi (Vani)", "igatpuri": "Igatpuri", "dhule": "Dhule"
+    },
+    "distances": {
+      "label": "Connectivity",
+      "title": "Distances from Nashik",
+      "compass": { "n": "N", "s": "S", "e": "E", "w": "W" },
+      "directions": { "Southwest": "Southwest", "South": "South", "Southeast": "Southeast", "East": "East", "West": "West", "North": "North" }
+    },
+    "localTransport": {
+      "label": "Around the city",
+      "title": "Local Transport",
+      "perTrip": "per trip",
+      "modes": {
+        "autoRickshaw": { "type": "Auto Rickshaw", "description": "Metered autos available throughout the city. Insist on meter or agree price before boarding.", "tips": "Readily available, fastest for short distances" },
+        "cityBus": { "type": "City Bus (MSRTC)", "description": "MSRTC city buses connect major areas. Routes cover Panchvati, MIDC, Satpur, Gangapur.", "tips": "Cheapest option, but can be crowded and slow" },
+        "appCab": { "type": "App Cab (Ola/Uber)", "description": "Ola and Uber available in Nashik. Good for comfortable point-to-point travel.", "tips": "Best for airport transfers and late-night travel" },
+        "rentedBike": { "type": "Rented Bike/Scooter", "description": "Available from rental shops near railway station. Great for vineyard hopping and exploring at your own pace.", "tips": "International driving license required for some rentals" },
+        "cycleRickshaw": { "type": "Cycle Rickshaw", "description": "Available in the old city and near Panchvati area. Eco-friendly for short distances.", "tips": "Good for exploring the Panchvati area" },
+        "taxiDayHire": { "type": "Taxi/Cab (Day Hire)", "description": "Full-day taxi hire for visiting multiple attractions. Best for Trimbakeshwar, Saptashringi trips.", "tips": "Negotiate rates beforehand; AC vehicles recommended in summer" }
+      }
+    },
+    "emergency": { "title": "Emergency Numbers", "police": "Police", "ambulance": "Ambulance", "fire": "Fire", "touristHelpline": "Tourist Helpline" }
+  }
+,
+  "travelTips": {
+    "title": "Travel Tips",
+    "subtitle": "Essential information to plan your perfect Nashik trip",
+    "cta": "Complete Travel Guide →",
+    "items": {
+      "bestTime": {
+        "title": "Best Time",
+        "desc": "October to March for pleasant weather. Monsoon (July-Sept) for waterfalls and lush greenery."
+      },
+      "howToReach": {
+        "title": "How to Reach",
+        "desc": "Via Mumbai (3hrs road/rail), Pune (4hrs), or fly to Mumbai and drive."
+      },
+      "budget": {
+        "title": "Budget",
+        "desc": "₹1,500/day (budget), ₹4,000/day (mid), ₹15,000+/day (luxury including stay & food)."
+      },
+      "language": {
+        "title": "Language",
+        "desc": "Marathi is the local language. Hindi and English widely understood."
+      }
+    }
+  }
+  ,
+  "topAttraction": {
+    "title": "Must-Try Food in Nashik",
+    "subtitle": "Discover the best restaurants, cafes, and local flavors in Nashik",
+    "viewDetails": "View Details →",
+    "prev": "Previous",
+    "next": "Next",
+    "goToSlide": "Go to slide",
+    "items": {
+      "misalPav": {
+        "name": "Misal Pav",
+        "description": "Nashik's iconic spicy Misal served with pav, farsan, onions, and lemon."
+      },
+      "sabudanaVada": {
+        "name": "Sabudana Vada",
+        "description": "Crispy sabudana fritters served with coconut and peanut chutney."
+      },
+      "kandaBhaji": {
+        "name": "Kanda Bhaji",
+        "description": "Crispy onion fritters best enjoyed during monsoon evenings."
+      },
+      "pavwada": {
+        "name": "Pavwada",
+        "description": "Authentic Maharashtrian Pavwada, a popular street food served with spicy chutney and traditional flavors."
+      },
+      "kalaMuttonRassa": {
+        "name": "Kala Mutton Rassa",
+        "description": "Traditional Maharashtrian black mutton curry prepared with roasted spices, coconut, and a rich, spicy gravy. Its bold flavor and authentic taste stand out."
+      },
+      "puranPoli": {
+        "name": "Puran Poli",
+        "description": "Puran Poli is a traditional Maharashtrian sweet flatbread stuffed with a delicious mixture of jaggery and chana dal. It is especially popular during festivals and celebrations for its rich taste and cultural significance."
+      }
+    }
+  }
+,
+  "topAttractions": {
+    "title": "Top Attractions",
+    "subtitle": "Essential information to plan your perfect Nashik trip",
+    "viewDetails": "View Details →",
+    "prev": "Previous",
+    "next": "Next",
+    "goToSlide": "Go to slide",
+    "items": {
+      "trimbakeshwarTemple": {
+        "name": "Trimbakeshwar Temple",
+        "location": "Trimbak",
+        "description": "One of the twelve sacred Jyotirlingas of Lord Shiva and a major pilgrimage destination in India."
+      },
+      "sulaVineyards": {
+        "name": "Sula Vineyards",
+        "location": "Gangapur Road, Nashik",
+        "description": "India's most famous winery offering vineyard tours, wine tastings, and stunning views of the surrounding hills."
+      },
+      "hariharFort": {
+        "name": "Harihar Fort",
+        "location": "Trimbak Range",
+        "description": "Famous for its steep rock-cut staircase and breathtaking trekking experience."
+      },
+      "ramkund": {
+        "name": "Ramkund",
+        "location": "Panchavati",
+        "description": "Sacred bathing ghat on the Godavari River, an important pilgrimage site."
+      },
+      "kalaramTemple": {
+        "name": "Kalaram Temple",
+        "location": "Panchavati",
+        "description": "Historic temple dedicated to Lord Rama, known for its black stone architecture."
+      },
+      "saptashrungiDeviTemple": {
+        "name": "Saptashrungi Devi Temple",
+        "location": "Vani",
+        "description": "One of Maharashtra's most revered Shakti Peethas, located amidst seven hills."
+      }
+    }
+  }
+
+
+}
