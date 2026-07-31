@@ -93,7 +93,7 @@ const PlaceCard = ({ place }: any) => {
     return favorites.some((item: any) => item._id === place._id);
   });
 
-const { t, i18n } = useTranslation();
+const {  i18n } = useTranslation();
 
 const currentLang = i18n.language;
 
