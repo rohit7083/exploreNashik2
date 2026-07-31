@@ -9,16 +9,6 @@ import { usePlace } from "../../../../api/usePlaces";
 const FAVORITES_KEY = "favoritePlaces";
 
 // Star Rating
-const StarRating: React.FC<{ rating: number }> = ({ rating }) => (
-  <div className="flex items-center">
-    {[1, 2, 3, 4, 5].map((i) => (
-      <span key={i} className={`text-xl ${i <= rating ? "text-yellow-400" : "text-gray-300"}`}>
-        ★
-      </span>
-    ))}
-    <span className="ml-2 text-sm text-gray-600">({rating}/5)</span>
-  </div>
-);
 
 const InfoCard: React.FC<{ label: string; value: string }> = ({ label, value }) => (
   <div className="bg-white p-4 rounded-lg shadow-sm">
