@@ -318,6 +318,7 @@ export default function AboutUs() {
       toast.error(t("aboutUs.form.error"));
     }
   };
+  
 
   return (
     <>
