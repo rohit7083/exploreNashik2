@@ -300,8 +300,8 @@ export default function AboutUs() {
   } = useForm<ContactForm>();
 
   const stats = [
-    { num: "500+", label: t("aboutUs.stats.places") },
-    { num: "12+", label: t("aboutUs.stats.categories") },
+    { num: "92+", label: t("aboutUs.stats.places") },
+    { num: "30+", label: t("aboutUs.stats.categories") },
     { num: "2", label: t("aboutUs.stats.people") },
   ];
 
@@ -309,7 +309,7 @@ export default function AboutUs() {
     try {
       const csrfToken = crypto.randomUUID();
       sessionStorage.setItem("csrfToken", csrfToken);
-      await axios.post("http://localhost:5000/api/about", data, {
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/about`, data, {
         headers: { "X-CSRF-Token": csrfToken },
       });
       reset();
